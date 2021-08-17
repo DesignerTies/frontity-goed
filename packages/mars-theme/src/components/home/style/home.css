@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-homepage {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://lirp.cdn-website.com/8eeecf01/dms3rep/multi/opt/Francisca+Urk-1920w.jpg");
+  margin: auto;
+}
+
+.form {
+  margin: auto;
+}

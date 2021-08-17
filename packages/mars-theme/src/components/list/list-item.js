@@ -24,7 +24,7 @@ const Item = ({ state, item }) => {
         {/* If the post has an author, we render a clickable author text. */}
         {author && (
           <StyledLink link={author.link}>
-            <AuthorName>
+            <AuthorName className="AuthorName">
               By <b>{author.name}</b>
             </AuthorName>
           </StyledLink>

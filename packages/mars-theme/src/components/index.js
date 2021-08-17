@@ -6,6 +6,7 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import Home from "./home/home"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -33,15 +34,18 @@ const Theme = ({ state }) => {
       <Global styles={globalStyles} />
 
       {/* Add the header of the site. */}
-      <HeadContainer>
-        <Header />
-      </HeadContainer>
+      <div className="App">
+        <HeadContainer>
+          <Header />
+        </HeadContainer>
+      </div>
 
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          <Home when={state.router.link =='/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
@@ -61,7 +65,7 @@ const globalStyles = css`
   }
   a,
   a:visited {
-    color: inherit;
+    color: black;
     text-decoration: none;
   }
 `;
@@ -70,7 +74,9 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background-color: blue;
+  position: sticky;
+  top: 0px;
 `;
 
 const Main = styled.div`
