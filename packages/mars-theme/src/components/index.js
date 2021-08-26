@@ -7,6 +7,7 @@ import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home"
+import Kaas from "./kaas/kaas"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -37,7 +38,8 @@ const Theme = ({ state }) => {
       <div className="App">
         <HeadContainer>
           <Header />
-        </HeadContainer>
+        </HeadContainer><Kaas/>
+        {/* <Kaas /> */}
       </div>
 
       {/* Add the main section. It renders a different component depending
@@ -45,6 +47,7 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          
           <Home when={state.router.link =='/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

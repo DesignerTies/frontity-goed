@@ -39,13 +39,15 @@ const marsTheme = {
       },
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
+      },      
+      beforeSSR: async ({actions}) => {
+        await Promise.all([
+          actions.source.fetch("/contact-form"),
+          actions.source.fetch("/category/test")
+        ])
       },
 
-      beforeSSR: async ({actions}) => {
-        await actions.source.fetch("/contact-form");
-      }
-
-    },
+    },  
   },
   libraries: {
     html2react: {

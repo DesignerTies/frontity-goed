@@ -18,6 +18,7 @@ const settings = {
               "/"
             ],
             ["Blog", "blog"],
+            ["Test", "kaas"]
           ],
           "featured": {
             "showOnList": true,
