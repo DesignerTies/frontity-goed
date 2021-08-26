@@ -1,0 +1,14 @@
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.samenvatting {
+  text-align: center;
+  font-size: larger;
+}

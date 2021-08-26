@@ -38,7 +38,7 @@ const Theme = ({ state }) => {
       <div className="App">
         <HeadContainer>
           <Header />
-        </HeadContainer><Kaas/>
+        </HeadContainer>
         {/* <Kaas /> */}
       </div>
 
@@ -49,6 +49,7 @@ const Theme = ({ state }) => {
           <Loading when={data.isFetching} />
           
           <Home when={state.router.link =='/'} />
+          <Kaas when={state.router.link =='/kaas/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
