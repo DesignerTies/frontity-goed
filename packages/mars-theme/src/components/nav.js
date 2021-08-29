@@ -1,5 +1,7 @@
+import React, { useState, Fragment } from 'react';
 import { connect, styled } from "frontity";
 import Link from "./link";
+
 
 /**
  * Navigation Component
@@ -7,6 +9,7 @@ import Link from "./link";
  * It renders the navigation links
  */
 const Nav = ({ state }) => (
+
   <NavContainer>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
@@ -29,7 +32,7 @@ const NavContainer = styled.nav`
   position: fixed;
   top: 0;
   list-style: none;
-  display: flex;top: 
+  display: flex; 
   max-width: 100%;
   box-sizing: border-box;
   padding: 0 24px;

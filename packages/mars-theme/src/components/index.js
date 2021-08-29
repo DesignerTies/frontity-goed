@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -20,6 +21,18 @@ import Kaas from "./kaas/kaas"
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  const [colorChange, setColorchange] = useState(false);
+
+  React.useEffect(() => {  
+    const changeColorNavbar = () => {
+      if(window.scrollY >= 80) {
+        setColorchange(true)
+      } else {
+        setColorchange(false)
+      }
+    };
+    window.addEventListener("scroll", changeColorNavbar)
+  });
 
   return (
     <>
@@ -36,7 +49,7 @@ const Theme = ({ state }) => {
 
       {/* Add the header of the site. */}
       <div className="App">
-        <HeadContainer>
+        <HeadContainer className={colorChange ? 'colorChange' : ''}>
           <Header />
         </HeadContainer>
         {/* <Kaas /> */}
@@ -71,6 +84,16 @@ const globalStyles = css`
   a:visited {
     color: black;
     text-decoration: none;
+  }
+
+  .colorChange {
+    display: flex;
+    flex-direction: column;
+    background-color: blue; 
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0px;
   }
 `;
 
