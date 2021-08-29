@@ -7,10 +7,6 @@ const Header = ({ state }) => {
   return (
     <>
       <Container>
-        <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
-        </StyledLink>
-        <Description>{state.frontity.description}</Description>
         <MobileMenu />
       </Container>
       <Nav />
@@ -25,8 +21,8 @@ const Container = styled.div`
   width: 848px;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 24px;
-  color: #fff;
+  padding: 10px;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

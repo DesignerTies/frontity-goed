@@ -76,10 +76,11 @@ const globalStyles = css`
 
 const HeadContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: blue;
-  position: sticky;
+  background-color: transparent; 
+  width: 100%;
+  height: 40px;
+  position: fixed;
   top: 0px;
 `;
 

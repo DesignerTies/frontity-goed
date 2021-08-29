@@ -17,6 +17,12 @@ const settings = {
               "Home",
               "/"
             ],
+            ["OVER", "over-mij"],
+            ["THERAPIE & COACHING", "therapie-coaching"],
+            ["WERJWIJZE & TARIEF", "werkwijze-tarief"],
+            ["E-BOEKEN", "localhost:4242/checkout.html"],
+            ["JOURNALISTIEKE PRODUCTIES", "journalistieke-producties"],
+            ["ERVARINGEN", "ervaringen"],
             ["Blog", "blog"],
             ["Test", "kaas"]
           ],
@@ -32,7 +38,7 @@ const settings = {
       "state": {
         "source": {
           "url": "https://corleone-paah.nl/wp",
-          "postsPage": "/blog",
+          "postsPage": "/posts",
           "homepage": "/home"
         }
       }
