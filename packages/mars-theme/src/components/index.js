@@ -21,18 +21,22 @@ import Kaas from "./kaas/kaas"
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  const [colorChange, setColorchange] = useState(false);
+  const [colorChange, setColorchange] = useState('');
+  
 
-  React.useEffect(() => {  
-    const changeColorNavbar = () => {
-      if(window.scrollY >= 80) {
-        setColorchange(true)
-      } else {
-        setColorchange(false)
-      }
-    };
-    window.addEventListener("scroll", changeColorNavbar)
-  });
+  if (typeof window !== "undefined") {
+      const changeColorNavbar = () => {
+        if(window.scrollY >= 80) {
+          setColorchange('colorChanged')
+        } else {
+          setColorchange('')
+        }
+      };
+      window.addEventListener("scroll", changeColorNavbar);
+      console.log(colorChange)
+  }
+
+
 
   return (
     <>
@@ -49,9 +53,9 @@ const Theme = ({ state }) => {
 
       {/* Add the header of the site. */}
       <div className="App">
-        <HeadContainer className={colorChange ? 'colorChange' : ''}>
+        <header className={colorChange}>
           <Header />
-        </HeadContainer>
+        </header>
         {/* <Kaas /> */}
       </div>
 
@@ -85,27 +89,29 @@ const globalStyles = css`
     color: black;
     text-decoration: none;
   }
-
-  .colorChange {
+  header {
     display: flex;
     flex-direction: column;
-    background-color: blue; 
+    background-color: transparent; 
     width: 100%;
     height: 40px;
     position: fixed;
     top: 0px;
   }
+  header.colorChanged {
+    background-color: blue;
+  }
 `;
 
-const HeadContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: transparent; 
-  width: 100%;
-  height: 40px;
-  position: fixed;
-  top: 0px;
-`;
+// const HeadContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   background-color: transparent; 
+//   width: 100%;
+//   height: 40px;
+//   position: fixed;
+//   top: 0px;
+// `;
 
 const Main = styled.div`
   display: flex;
