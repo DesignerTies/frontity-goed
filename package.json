@@ -18,12 +18,13 @@
   "prettier": {},
   "dependencies": {
     "@aamodtgroup/frontity-contact-form-7": "^0.2.7",
+    "@arctext/react": "^1.0.0",
     "@frontity/core": "^1.14.3",
     "@frontity/html2react": "^1.7.0",
-    "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.5",
     "frontity": "^1.17.0",
-    "frontity-contact-form-7": "^0.1.7"
+    "frontity-contact-form-7": "^0.1.7",
+    "psycholooginbloemendaal": "./packages/psycholooginbloemendaal"
   }
 }

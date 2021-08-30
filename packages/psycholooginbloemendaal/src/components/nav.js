@@ -26,6 +26,8 @@ const Nav = ({ state }) => (
   </NavContainer>
 );
 
+
+
 export default connect(Nav);
 
 const NavContainer = styled.nav`
@@ -47,7 +49,7 @@ const NavContainer = styled.nav`
 
 const NavItem = styled.div`
   padding: 0;
-  margin: 0 16px 5px 16px;
+  margin: 10px 16px 5px 16px;
   color: #fff;
   font-size: 0.9em;
   box-sizing: border-box;
@@ -56,12 +58,18 @@ const NavItem = styled.div`
   & > a {
     display: inline-block;
     line-height: 2em;
+    color: #000;
     border-bottom: 2px solid;
     border-bottom-color: transparent;
     /* Use for semantic approach to style the current link */
-    &[aria-current="page"] {
-      border-bottom-color: #fff;
-    }
+  }
+
+  &.colorChanged > a {
+    color: #fff;
+  }
+
+  a[aria-current="page"] {
+    border-bottom-color: #fff !important;
   }
 
   &:first-of-type {

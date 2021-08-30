@@ -9,12 +9,12 @@ const settings = {
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "psycholooginbloemendaal",
       "state": {
         "theme": {
           "menu": [
             [
-              "Home",
+              "HOME",
               "/"
             ],
             ["OVER", "over-mij"],

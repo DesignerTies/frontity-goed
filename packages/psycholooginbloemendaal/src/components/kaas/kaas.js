@@ -10,7 +10,6 @@ const Kaas = ({ state, actions, libraries }) => {
 
   const data = state.source.get(state.router.link)
   const postsPerCategory = getPostsGroupedByCategory(state.source)
-  console.log(postsPerCategory)
   const Html2React = libraries.html2react.Component; 
 
   return (
@@ -23,7 +22,6 @@ const Kaas = ({ state, actions, libraries }) => {
                 {posts.map((post, index) => (
                   <article key={index}>
                     <div>
-                      {console.log(post.author)}
                         <div px={2}>
                           <Link link={post.link}>
                             <h2>

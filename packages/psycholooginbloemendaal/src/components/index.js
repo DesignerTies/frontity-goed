@@ -26,16 +26,14 @@ const Theme = ({ state }) => {
 
   if (typeof window !== "undefined") {
       const changeColorNavbar = () => {
-        if(window.scrollY >= 80) {
+        if(window.scrollY >= 40) {
           setColorchange('colorChanged')
         } else {
           setColorchange('')
         }
       };
       window.addEventListener("scroll", changeColorNavbar);
-      console.log(colorChange)
   }
-
 
 
   return (
@@ -83,10 +81,10 @@ const globalStyles = css`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: aqua;
   }
   a,
   a:visited {
-    color: black;
     text-decoration: none;
   }
   header {
@@ -94,12 +92,12 @@ const globalStyles = css`
     flex-direction: column;
     background-color: transparent; 
     width: 100%;
-    height: 40px;
+    height: 50px;
     position: fixed;
     top: 0px;
   }
   header.colorChanged {
-    background-color: blue;
+    background-color: #395174;
   }
 `;
 

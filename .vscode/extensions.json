@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "paulmolluzzo.convert-css-in-js"
+        "paulmolluzzo.convert-css-in-js",
+        "github.copilot"
     ]
 }
