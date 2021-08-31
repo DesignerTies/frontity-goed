@@ -23,7 +23,7 @@ const getPostsFromCategoryBlog = ({ post }, categoryId) =>
 export const getPostsGroupedByCategoryBlog = source =>  {
   return Object.values(categorieWidgetBlog)
     .reduce((acc, categoryId) => {
-      const posts = getPostsFromCategoryBlog(source, categoryId)
+      const posts = getPostsFromCategoryBlog(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1)
       const category = source.category[categoryId] 
       return [...acc, {posts, category}]
     }, [])
