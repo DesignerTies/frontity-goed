@@ -34,7 +34,6 @@ body {
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 50%;
-  text-align: center;
 }
 
 .rounded-div p {
@@ -43,11 +42,27 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   word-wrap: unset;
+  font-size: smaller;
+  opacity: 0.6;
 }
 
 .curved-text {
   margin-top: 40px;
   margin-left: 50px;
+}
+
+.tc-container {
+  width: 75%;
+  height: 45vh;
+  display: flex;
+  background-color: #fff;
+  z-index: 1;
+  margin: auto;
+}
+
+.tc-container h4 {
+  margin-top: 5em;
+  color: rgb(124, 124, 124);
 }
 
 .form {

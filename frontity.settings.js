@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "Psycholoog Bloemendaal",
+      "description": "Website voor psycholooginbloemendaal.nl"
     }
   },
   "packages": [
@@ -23,8 +23,8 @@ const settings = {
             ["E-BOEKEN", "localhost:4242/checkout.html"],
             ["JOURNALISTIEKE PRODUCTIES", "journalistieke-producties"],
             ["ERVARINGEN", "ervaringen"],
-            ["Blog", "blog"],
-            ["Test", "kaas"]
+            ["BLOG", "blog"],
+            ["TEST", "kaas"]
           ],
           "featured": {
             "showOnList": true,

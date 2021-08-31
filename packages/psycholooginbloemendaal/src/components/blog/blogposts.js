@@ -1,15 +1,15 @@
 import React, {useEffect} from "react";
 import { connect, styled } from "frontity";
 import { Global, css } from 'frontity'; 
-import {getPostsGroupedByCategoryKaas} from "../../helpers";
+import {getPostsGroupedByCategoryBlog} from "../../helpers";
 import externalCss from "../style/kaasje.css"
 import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
 
-const Kaas = ({ state, actions, libraries }) => {
+const Blog = ({ state, actions, libraries }) => {
 
   const data = state.source.get(state.router.link)
-  const postsPerCategory = getPostsGroupedByCategoryKaas(state.source)
+  const postsPerCategory = getPostsGroupedByCategoryBlog(state.source)
   const Html2React = libraries.html2react.Component; 
 
   return (
@@ -68,4 +68,4 @@ const BoxCategory = styled.div`
   margin: auto;
 `
 
-export default connect(Kaas);
+export default connect(Blog);

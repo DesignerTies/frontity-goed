@@ -3,8 +3,8 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
-const marsTheme = {
-  name: "@frontity/mars-theme",
+const psycholooginbloemendaal = {
+  name: "psycholooginbloemendaal",
   roots: {
     /**
      * In Frontity, any package can add React components to the site.
@@ -43,6 +43,7 @@ const marsTheme = {
       beforeSSR: async ({actions}) => {
         await Promise.all([
           actions.source.fetch("/contact-form"),
+          actions.source.fetch("/category/blog"),
           actions.source.fetch("/category/test")
         ])
       },
@@ -61,4 +62,4 @@ const marsTheme = {
   },
 };
 
-export default marsTheme;
+export default psycholooginbloemendaal;

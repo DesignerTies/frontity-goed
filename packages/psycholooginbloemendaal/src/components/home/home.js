@@ -4,6 +4,7 @@ import externalCss from '../style/home.css'
 import { connect, styled } from 'frontity';
 import Banner from './banner'
 import RoundedDiv from './circle-text'
+import TcHome from './tc-home';
 import Form from './form'
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
                 <Banner> 
                 </Banner>
                 <RoundedDiv />
+                <TcHome />
                 
                 {/* <Form /> */}
             </div>

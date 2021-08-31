@@ -9,6 +9,7 @@ import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home"
 import Kaas from "./kaas/kaas"
+import Blog from "./blog/blogposts"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -63,8 +64,9 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           
-          <Home when={state.router.link =='/'} />
-          <Kaas when={state.router.link =='/kaas/'} />
+          <Home when={state.router.link == '/'} />
+          <Kaas when={state.router.link == '/kaas/'} />
+          <Blog when={state.router.link == '/blog/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
