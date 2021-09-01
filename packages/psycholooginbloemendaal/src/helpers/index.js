@@ -1,5 +1,5 @@
 import {categorieWidgetKaas, categorieWidgetBlog} from '../config'
-// const MAXIMUM_POSTS = 10000000
+// const MAXIMUM_POSTS = 5
 
 const getPostsFromCategoryKaas = ({ post }, categoryId) =>
   Object.keys(post)

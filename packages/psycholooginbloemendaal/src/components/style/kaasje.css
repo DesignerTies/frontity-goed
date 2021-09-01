@@ -12,3 +12,7 @@ a {
 .samenvatting {
   font-size: normal;
 }
+
+.datum {
+  opacity: 0.8;
+}

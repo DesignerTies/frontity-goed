@@ -5,6 +5,7 @@ import {getPostsGroupedByCategoryBlog} from "../../helpers";
 import externalCss from "../style/kaasje.css"
 import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
+import dayjs from "dayjs";
 
 const Blog = ({ state, actions, libraries }) => {
 
@@ -29,12 +30,12 @@ const Blog = ({ state, actions, libraries }) => {
                             </h2>
                           </Link>
 
-                          <p className="samenvatting">
                             <Html2React html={post.excerpt.rendered} />
-                          </p>  
+
                           {state.theme.featured.showOnPost && (
                             <FeaturedMedia id={post.featured_media} />
                           )}
+                          <p className="datum">{dayjs(post.date).format("DD/MM/YY")}</p>
 						  {/* <p>
 							  <Html2React html={post.author} />
 						  </p> */}

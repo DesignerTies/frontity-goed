@@ -1,0 +1,24 @@
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+<<<<<<< HEAD:packages/psycholooginbloemendaal/src/components/style/kaasje.css
+a {
+  color: #000;
+}
+
+.samenvatting {
+  font-size: normal;
+=======
+h2 {
+  text-align: center;
+}
+
+.samenvatting {
+  text-align: center;
+  font-size: larger;
+>>>>>>> parent of a041063... added featuredmedia on kaas:packages/mars-theme/src/components/style/kaasje.css
+}
