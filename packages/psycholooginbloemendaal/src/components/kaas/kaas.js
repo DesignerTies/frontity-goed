@@ -13,13 +13,19 @@ const Kaas = ({ state, actions, libraries }) => {
   // console.log(postsPerCategory)
   const Html2React = libraries.html2react.Component; 
 
+  postsPerCategory.map(({posts, categoy}, index) => (
+    posts.map((post, index) => (
+      console.log(post.featured_media)
+    ))
+  ))
+
   return (
     <>
       <FlexContainer>
         {
           postsPerCategory.map(({ posts, category }, index) => (
             <BoxCategory key={index}>
-                <Heading>{category.name}</Heading>
+                <Heading className="title-page">{category.name}</Heading>
                 {posts.map((post, index) => (
                   <article key={index}>
                     <div>
@@ -30,10 +36,10 @@ const Kaas = ({ state, actions, libraries }) => {
                               <Html2React html={post.title.rendered} />
                             </h2>
                           </Link>
-                          <p className="samenvatting">
-                            <Html2React html={post.excerpt.rendered} />
-                          </p>                        
-                          {state.theme.featured.showOnPost && (
+
+                          <Html2React className="samenvatting" html={post.excerpt.rendered} />
+
+                          {state.theme.featured.showOnPost && (   
                           <FeaturedMedia id={post.featured_media} />
                         )}
                         </div>

@@ -9,7 +9,7 @@ const getPostsFromCategoryKaas = ({ post }, categoryId) =>
 export const getPostsGroupedByCategoryKaas = source =>  {
   return Object.values(categorieWidgetKaas)
     .reduce((acc, categoryId) => {
-      const posts = getPostsFromCategoryKaas(source, categoryId)
+      const posts = getPostsFromCategoryKaas(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1)
       const category = source.category[categoryId] 
       return [...acc, {posts, category}]
     }, [])

@@ -3,7 +3,7 @@ export const categorieWidgetKaas = {
 }
 
 export const categorieWidgetBlog = {
-  "blog": 4
+  "blog": 2
 }
 
 

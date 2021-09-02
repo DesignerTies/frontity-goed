@@ -19,7 +19,7 @@ const Blog = ({ state, actions, libraries }) => {
         {
           postsPerCategory.map(({ posts, category }, index) => (
             <BoxCategory key={index}>
-                <Heading>{category.name}</Heading>
+                <Heading className="title-page">{category.name}</Heading>
                 {posts.map((post, index) => (
                   <article key={index}>
                     <div>
