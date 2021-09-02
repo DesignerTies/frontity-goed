@@ -4,6 +4,7 @@ import { Global, css } from 'frontity';
 import {getPostsGroupedByCategoryKaas} from "../../helpers";
 import externalCss from "../style/kaasje.css"
 import Link from "@frontity/components/link";
+import FeaturedMedia from '../featured-media'
 
 const Kaas = ({ state, actions, libraries }) => {
 
@@ -31,9 +32,12 @@ const Kaas = ({ state, actions, libraries }) => {
                           </Link>
                           <p className="samenvatting">
                             <Html2React html={post.excerpt.rendered} />
-                          </p>
+                          </p>                        
+                          {state.theme.featured.showOnPost && (
+                          <FeaturedMedia id={post.featured_media} />
+                        )}
                         </div>
-                      
+
                     </div>
                   </article>
                   ))}
