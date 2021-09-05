@@ -2,7 +2,6 @@ import React, { useState, Fragment } from 'react';
 import { connect, styled } from "frontity";
 import Link from "./link";
 
-
 /**
  * Navigation Component
  *

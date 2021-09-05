@@ -17,14 +17,14 @@ const settings = {
               "HOME",
               "/"
             ],
-            ["OVER", "over-mij"],
-            ["THERAPIE & COACHING", "therapie-coaching"],
-            ["WERJWIJZE & TARIEF", "werkwijze-tarief"],
-            ["E-BOEKEN", "localhost:4242/checkout.html"],
-            ["JOURNALISTIEKE PRODUCTIES", "journalistieke-producties"],
-            ["ERVARINGEN", "ervaringen"],
-            ["BLOG", "blog"],
-            ["TEST", "kaas"]
+            ["OVER", "/over-mij/"],
+            ["THERAPIE & COACHING", "/therapie-coaching/"],
+            ["WERJWIJZE & TARIEF", "/werkwijze-tarief/"],
+            ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
+            ["JOURNALISTIEKE PRODUCTIES", "/journalistieke-producties/"],
+            ["ERVARINGEN", "/ervaringen/"],
+            ["BLOG", "/blog/"],
+            ["TEST", "/kaas/"]
           ],
           "featured": {
             "showOnList": true,
