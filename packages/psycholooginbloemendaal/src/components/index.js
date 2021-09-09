@@ -36,7 +36,6 @@ const Theme = ({ state }) => {
       window.addEventListener("scroll", changeColorNavbar);
   }
 
-
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -97,6 +96,7 @@ const globalStyles = css`
     height: 50px;
     position: fixed;
     top: 0px;
+    z-index: 1;
   }
   header.colorChanged {
     background-color: #395174;
