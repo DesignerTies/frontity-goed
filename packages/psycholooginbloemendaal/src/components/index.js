@@ -23,7 +23,9 @@ const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
   const [colorChange, setColorchange] = useState('');
-  
+  const [dropDown, setDropDown] = useState(false);
+
+
 
   if (typeof window !== "undefined") {
       const changeColorNavbar = () => {
@@ -35,6 +37,8 @@ const Theme = ({ state }) => {
       };
       window.addEventListener("scroll", changeColorNavbar);
   }
+
+  console.log(dropDown)
 
   return (
     <>
@@ -52,8 +56,16 @@ const Theme = ({ state }) => {
       {/* Add the header of the site. */}
       <div className="App">
         <header className={colorChange}>
-          <Header />
-        </header>
+          <Header />   
+          <div className="dropdown-trigger" onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+            &MEER
+          </div>
+          {dropDown && (
+            <div className="container-dropdown">
+
+            </div>
+          )}
+        </header>          
         {/* <Kaas /> */}
       </div>
 
@@ -90,7 +102,8 @@ const globalStyles = css`
   }
   header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
     background-color: transparent; 
     width: 100%;
     height: 50px;
@@ -100,6 +113,23 @@ const globalStyles = css`
   }
   header.colorChanged {
     background-color: #395174;
+  }
+  .dropdown-trigger {
+    background-color: yellow;
+    width: 80px;
+    height: 40px;
+    margin-left: 230px;
+    margin-top: 13px;
+  }
+  @media screen and (max-width: 560px) {
+    .dropdown-trigger {
+      display: none;
+    }
+  }
+  .container-dropdown {
+    background-color: red;
+    width: 250px;
+    height: 250px;
   }
 `;
 
