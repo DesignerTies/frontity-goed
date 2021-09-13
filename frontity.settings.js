@@ -13,18 +13,20 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "HOME",
-              "/"
-            ],
-            ["OVER", "/over-mij/"],
+            // [
+            //   "HOME",
+            //   "/"
+            // ],
+            
             ["THERAPIE & COACHING", "/therapie-coaching/"],
-            ["WERJWIJZE & TARIEF", "/werkwijze-tarief/"],
-            ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
-            ["JOURNALISTIEKE PRODUCTIES", "/journalistieke-producties/"],
+            ["OVER", "/over-mij/"],
+            ["WERJWIJZE & TARIEVEN", "/werkwijze-tarief/"],
+            // ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
+            // ["JOURNALISTIEKE PRODUCTIES", "/journalistieke-producties/"],
             ["ERVARINGEN", "/ervaringen/"],
-            ["BLOG", "/blog/"],
-            ["TEST", "/kaas/"]
+            ["CONTACT", "/contact/"]
+            // ["BLOG", "/blog/"],
+            // ["TEST", "/kaas/"]
           ],
           "featured": {
             "showOnList": true,

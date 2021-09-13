@@ -56,14 +56,16 @@ const Theme = ({ state }) => {
       {/* Add the header of the site. */}
       <div className="App">
         <header className={colorChange}>
-          <Header />   
+          <Header className="navigation"/>   
           <div className="dropdown-trigger" onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
             &MEER
           </div>
           {dropDown && (
-            <div className="container-dropdown">
-
-            </div>
+            <ul className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+              <li className="dropdown-item">BLOG</li>
+              <li className="dropdown-item">E-BOOKS</li>
+              <li className="dropdown-item">PRODUCTIES</li>
+            </ul>
           )}
         </header>          
         {/* <Kaas /> */}
@@ -100,10 +102,13 @@ const globalStyles = css`
   a:visited {
     text-decoration: none;
   }
+  li {
+    list-style: none;
+  }
   header {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: initial;
     background-color: transparent; 
     width: 100%;
     height: 50px;
@@ -115,21 +120,58 @@ const globalStyles = css`
     background-color: #395174;
   }
   .dropdown-trigger {
-    background-color: yellow;
-    width: 80px;
-    height: 40px;
-    margin-left: 230px;
-    margin-top: 13px;
+    display: flex;
+    flex-direction: colum;
+    align-items: flex-start;
+    width: 60px;
+    height: 30px;
+    margin-top: 14.2px;
+    opacity: 0.7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   @media screen and (max-width: 560px) {
     .dropdown-trigger {
       display: none;
     }
   }
-  .container-dropdown {
-    background-color: red;
-    width: 250px;
-    height: 250px;
+  ul {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: aboslute;
+    transform: translate(-60%, 40%);
+    animation: slideup .5s;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  ul.colorChanged {
+    background-color: #395174;
+  }
+  .dropdown-item {
+    margin: .8em;
+    font-size: smaller;
+
+    &:hover {
+      border-bottom: solid #fff 2px;
+    }
+  }
+
+  @keyframes slideup {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+      transform: translate(-60%, 40%)
+    }
   }
 `;
 
