@@ -38,7 +38,6 @@ const Theme = ({ state }) => {
       window.addEventListener("scroll", changeColorNavbar);
   }
 
-  console.log(dropDown)
 
   return (
     <>
@@ -56,13 +55,15 @@ const Theme = ({ state }) => {
       {/* Add the header of the site. */}
       <div className="App">
         <header className={colorChange}>
+          <div className="logo">
+          </div>
           <Header className="navigation"/>   
           <div className="dropdown-trigger" onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
             &MEER
           </div>
           {dropDown && (
             <ul className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
-              <li className="dropdown-item">BLOG</li>
+              <a href="/blog/"><li className="dropdown-item">BLOG</li></a>
               <li className="dropdown-item">E-BOOKS</li>
               <li className="dropdown-item">PRODUCTIES</li>
             </ul>
@@ -92,6 +93,11 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 
 const globalStyles = css`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -118,6 +124,9 @@ const globalStyles = css`
   }
   header.colorChanged {
     background-color: #395174;
+  }
+  header .logo {
+    background-image: url("https://github.com/DesignerTies/frontity-goed/blob/main/packages/psycholooginbloemendaal/src/components/assets/logo.svg");
   }
   .dropdown-trigger {
     display: flex;
