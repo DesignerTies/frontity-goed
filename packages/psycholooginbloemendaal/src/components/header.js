@@ -9,7 +9,7 @@ const Header = ({ state }) => {
       <Container>
         <MobileMenu />
       </Container>
-      <Nav />
+      {/* <Nav /> */}
     </>
   );
 };

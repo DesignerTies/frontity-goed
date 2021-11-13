@@ -6,15 +6,32 @@ import Link from "./link";
  * Navigation Component
  *
  * It renders the navigation links
- */
+ */  
+
+
+
 const Nav = ({ state }) => (
+
 
   <NavContainer>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
       const isCurrentPage = state.router.link === link;
+      const [colorChange, setColorchange] = useState('')
+
+      if (typeof window !== "undefined") {
+          const changeColorNavbar = () => {
+            if(window.scrollY >= 40) {
+              setColorchange('colorChanged')
+            } else {
+              setColorchange('')
+            }
+          };
+          window.addEventListener("scroll", changeColorNavbar);
+      }
+
       return (
-        <NavItem key={name}>
+        <NavItem key={name} className={colorChange}>
           <Link link={link} aria-current={isCurrentPage ? "page" : undefined}>
             {name}
           </Link>
@@ -23,6 +40,7 @@ const Nav = ({ state }) => (
     })}
   </NavContainer>
 );
+
 
 
 
@@ -40,7 +58,7 @@ const NavContainer = styled.nav`
   
   
 
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 950px) {
     display: none;
   }
 `;
@@ -82,5 +100,8 @@ const NavItem = styled.div`
       display: inline-block;
       width: 24px;
     }
+  }
+  @media screen and (max-width: 1075px) {
+    font-size: 0.9em;
   }
 `;

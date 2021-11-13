@@ -24,6 +24,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   const [colorChange, setColorchange] = useState('');
   const [dropDown, setDropDown] = useState(false);
+  const classes = `${colorChange}`;
 
 
 
@@ -51,25 +52,34 @@ const Theme = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
-
       {/* Add the header of the site. */}
       <div className="App">
         <header className={colorChange}>
-          <div className="logo">
-          </div>
-          <Header className="navigation"/>   
-          <div className="dropdown-trigger" onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
-            &MEER
-          </div>
-          {dropDown && (
+          {/* <div className="logo">
+          </div> */}
+          <nav>
+            <ul>
+              <li>THERAPIE & COACHING</li>    
+              <li>OVER</li>
+              <li>WERKWIJZE & TARIEVEN</li>
+              <li>REVIEWS</li>
+              <li className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+                &MEER
+              </li>
+              <li>CONTACT</li>
+            </ul>
+            <Header className="navigation" colorChange={colorChange}/> 
+          </nav>
+            
+          {/* {dropDown && (
             <ul className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
-              <a href="/blog/"><li className="dropdown-item">BLOG</li></a>
+              <li className="dropdown-item"><a href="/blog/" className={colorChange}>BLOG</a></li>
               <li className="dropdown-item">E-BOOKS</li>
               <li className="dropdown-item">PRODUCTIES</li>
             </ul>
-          )}
+          )} */}
         </header>          
-        {/* <Kaas /> */}
+        
       </div>
 
       {/* Add the main section. It renders a different component depending
@@ -86,6 +96,8 @@ const Theme = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </Main>
+      
+      <div className="logo"></div>
     </>
   );
 };
@@ -107,6 +119,10 @@ const globalStyles = css`
   a,
   a:visited {
     text-decoration: none;
+    color: #000;
+  }
+  a.colorChanged {
+    color: white;
   }
   li {
     list-style: none;
@@ -114,7 +130,8 @@ const globalStyles = css`
   header {
     display: flex;
     flex-direction: row;
-    justify-content: initial;
+    justify-content: center;
+    align-items: center;
     background-color: transparent; 
     width: 100%;
     height: 50px;
@@ -125,16 +142,29 @@ const globalStyles = css`
   header.colorChanged {
     background-color: #395174;
   }
-  header .logo {
-    background-image: url("https://github.com/DesignerTies/frontity-goed/blob/main/packages/psycholooginbloemendaal/src/components/assets/logo.svg");
+  nav ul {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul li {
+    margin-right: 1.4rem;
+  }
+  .logo {
+    width: 180px;
+    height: 95px;
+    background-image: url("https://raw.githubusercontent.com/DesignerTies/frontity-goed/d0d88f9ce49c54e427a21dae30888eeef80f8967/packages/psycholooginbloemendaal/src/components/assets/logo.svg");
+    position: absolute;
+    top: -5%;
+    left: 2%;
+    transform: translate(50%, 50%);
   }
   .dropdown-trigger {
-    display: flex;
-    flex-direction: colum;
-    align-items: flex-start;
+    position: absolute;
+    margin-left: 45rem;
     width: 60px;
     height: 30px;
-    margin-top: 14.2px;
+    margin-top: .9rem;
     opacity: 0.7;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -142,36 +172,57 @@ const globalStyles = css`
     &:hover {
       cursor: pointer;
     }
+    &.colorChanged {
+      color: #fff;
+      opacity: 1;
+    }
+    &.colorChanged a {
+      color: #fff;
+    }
   }
-  @media screen and (max-width: 560px) {
+
+  @media screen and (max-width: 1200px) {
+    .logo {
+      left: -5%;
+    }
+  }
+
+  @media screen and (max-width: 1075px) {
+    .logo {
+      top: -2%;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
     .dropdown-trigger {
       display: none;
     }
   }
-  ul {
-    background-color: transparent;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    position: aboslute;
-    transform: translate(-60%, 40%);
-    animation: slideup .5s;
+  // ul {
+  //   background-color: transparent;
+  //   width: 100px;
+  //   height: 100px;
+  //   border-radius: 5px;
+  //   position: aboslute;
+  //   transform: translate(23%, 40%);
+  //   animation: slideup .5s;
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  ul.colorChanged {
-    background-color: #395174;
-  }
-  .dropdown-item {
-    margin: .8em;
-    font-size: smaller;
+  //   &:hover {
+  //     cursor: pointer;
+  //   }
+  // }
+  // ul.colorChanged {
+  //   background-color: #395174;
+  //   color: white;
+  // }
+  // .dropdown-item {
+  //   margin: .8em;
+  //   font-size: smaller;
 
-    &:hover {
-      border-bottom: solid #fff 2px;
-    }
-  }
+  //   &:hover {
+  //     border-bottom: solid #fff 2px;
+  //   }
+  // }
 
   @keyframes slideup {
     from {
@@ -179,7 +230,7 @@ const globalStyles = css`
     }
     to {
       transform: translateY(0%);
-      transform: translate(-60%, 40%)
+      transform: translate(23%, 40%)
     }
   }
 `;
