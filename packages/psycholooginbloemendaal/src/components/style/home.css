@@ -17,7 +17,7 @@ body {
 .banner-homepage {
   width: 100%;
   height: 75vh;
-  background-image: url("../assets/banner-foto.png");
+  background-image: url("https://github.com/DesignerTies/frontity-goed/blob/8b5c7c4aeade58d72d145d21693770802fd4fc8a/packages/psycholooginbloemendaal/src/components/assets/banner-foto.png?raw=true");
   background-color: aqua;
   background-position: center;
   background-size: cover;
@@ -26,14 +26,14 @@ body {
 }
 
 .rounded-div {
-  width: 500px;
-  height: 500px;
+  width: 730px;
+  height: 405px;
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  border-radius: 50%;
+  z-index: 1;
 }
 
 .rounded-div p {
@@ -55,8 +55,9 @@ body {
   width: 75%;
   height: 45vh;
   display: flex;
-  background-color: #fff;
-  z-index: 1;
+  background-color: #000;
+  opacity: 0.04;
+  z-index: 0;
   margin: auto;
 }
 

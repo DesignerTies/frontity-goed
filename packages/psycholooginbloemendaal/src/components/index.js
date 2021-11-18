@@ -149,6 +149,9 @@ const globalStyles = css`
   }
   nav ul li {
     margin-right: 1.4rem;
+    color: #51615F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
   }
   .logo {
     width: 180px;
