@@ -1,4 +1,4 @@
-import {categorieWidgetKaas, categorieWidgetBlog} from '../config'
+import {categorieWidgetKaas, categorieWidgetBlog, categorieWidgetTC} from '../config'
 // const MAXIMUM_POSTS = 5
 
 const getPostsFromCategoryKaas = ({ post }, categoryId) =>
@@ -24,6 +24,20 @@ export const getPostsGroupedByCategoryBlog = source =>  {
   return Object.values(categorieWidgetBlog)
     .reduce((acc, categoryId) => {
       const posts = getPostsFromCategoryBlog(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1)
+      const category = source.category[categoryId] 
+      return [...acc, {posts, category}]
+    }, [])
+}
+
+const getPostsFromCategoryTC = ({ post }, categoryId) =>
+  Object.keys(post)
+    .map(postID => post[postID])
+    .filter(({categories}) => categories.includes(parseInt(categoryId)) )
+
+export const getPostsGroupedByCategoryTC = source =>  {
+  return Object.values(categorieWidgetTC)
+    .reduce((acc, categoryId) => {
+      const posts = getPostsFromCategoryTC(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1)
       const category = source.category[categoryId] 
       return [...acc, {posts, category}]
     }, [])

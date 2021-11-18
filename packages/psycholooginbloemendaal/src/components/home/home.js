@@ -15,8 +15,7 @@ const Home = () => {
                 <Banner> 
                 </Banner>
                 <RoundedDiv />
-                <TcHome />
-                
+                <TcHome /> 
                 {/* <Form /> */}
             </div>
             <Global styles={css(externalCss)} />

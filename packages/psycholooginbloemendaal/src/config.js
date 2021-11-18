@@ -3,7 +3,11 @@ export const categorieWidgetKaas = {
 }
 
 export const categorieWidgetBlog = {
-  "blog": 2
+  "blog": 2,
+}
+
+export const categorieWidgetTC = {
+  "TC": 4
 }
 
 

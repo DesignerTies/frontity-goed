@@ -137,7 +137,7 @@ const globalStyles = css`
     height: 50px;
     position: fixed;
     top: 0px;
-    z-index: 1;
+    z-index: 10;
   }
   header.colorChanged {
     background-color: #395174;
