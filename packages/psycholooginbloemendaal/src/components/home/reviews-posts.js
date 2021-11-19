@@ -7,6 +7,7 @@ import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
 import dayjs from "dayjs";
 
+
 const ReviewPosts = ({ state, actions, libraries }) => {
 
   const data = state.source.get(state.router.link)
@@ -15,7 +16,6 @@ const ReviewPosts = ({ state, actions, libraries }) => {
 
   return (
     <>
-      <FlexContainer className="flex-wrapper-review-posts">
         {
           postsPerCategory.map(({ posts, category }, index) => (
             <BoxCategory key={index} className="inner-wrapper-review-posts">
@@ -36,7 +36,6 @@ const ReviewPosts = ({ state, actions, libraries }) => {
             </BoxCategory>
           ))
         }
-      </FlexContainer>
       <Global styles={css(externalCss)} />
     </>
   );

@@ -26,6 +26,7 @@
     "dayjs": "^1.10.6",
     "frontity": "^1.17.0",
     "frontity-contact-form-7": "^0.1.7",
-    "psycholooginbloemendaal": "./packages/psycholooginbloemendaal"
+    "psycholooginbloemendaal": "./packages/psycholooginbloemendaal",
+    "react-slideshow-image": "^3.6.0"
   }
 }
