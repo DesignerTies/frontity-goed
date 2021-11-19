@@ -10,4 +10,7 @@ export const categorieWidgetTC = {
   "TC": 4
 }
 
+export const categorieWidgetReviews = {
+  "reviews": 5
+}
 

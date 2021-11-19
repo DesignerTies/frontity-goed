@@ -59,14 +59,14 @@ const Theme = ({ state }) => {
           </div> */}
           <nav>
             <ul>
-              <li>THERAPIE & COACHING</li>    
-              <li>OVER</li>
-              <li>WERKWIJZE & TARIEVEN</li>
-              <li>REVIEWS</li>
+              <li className={colorChange}>THERAPIE & COACHING</li>    
+              <li className={colorChange}>OVER</li>
+              <li className={colorChange}>WERKWIJZE & TARIEVEN</li>
+              <li className={colorChange}>REVIEWS</li>
               <li className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
                 &MEER
               </li>
-              <li>CONTACT</li>
+              <li className={colorChange}>CONTACT</li>
             </ul>
             <Header className="navigation" colorChange={colorChange}/> 
           </nav>
@@ -143,7 +143,7 @@ const globalStyles = css`
     background-color: #395174;
   }
   nav ul {
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
     display: flex;
     justify-content: space-between;
   }
@@ -152,6 +152,9 @@ const globalStyles = css`
     color: #51615F;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+  }
+  nav ul li.colorChanged {
+    color: #fff;
   }
   .logo {
     width: 180px;

@@ -18,7 +18,7 @@ const TCPosts = ({ state, actions, libraries }) => {
       <FlexContainer>
         {
           postsPerCategory.map(({ posts, category }, index) => (
-            <BoxCategory key={index}>
+            <BoxCategory key={index} className="wrapper-articles">
                 {posts.map((post, index) => (
                   <article key={index}>                    
                     {state.theme.featured.showOnPost && (
@@ -50,12 +50,12 @@ const TCPosts = ({ state, actions, libraries }) => {
 
 const FlexContainer = styled.div`
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   flex-direction: row;
 `
 
 const BoxCategory = styled.div`
-  display: flex;
-  margin: auto;
 `
 
 export default connect(TCPosts);

@@ -45,7 +45,8 @@ const psycholooginbloemendaal = {
           actions.source.fetch("/contact-form"),
           actions.source.fetch("/category/blog"),
           actions.source.fetch("/category/test"),
-          actions.source.fetch("/category/tc")
+          actions.source.fetch("/category/tc"),
+          actions.source.fetch("/category/reviews")
         ])
       },
 
