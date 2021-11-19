@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import { connect, styled } from "frontity";
 import { Global, css } from 'frontity'; 
 import {getPostsGroupedByCategoryReviews} from "../../helpers";
-import externalCss from "../style/kaasje.css"
+import externalCss from "../style/home.css"
 import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
 import dayjs from "dayjs";
@@ -22,10 +22,9 @@ const ReviewPosts = ({ state, actions, libraries }) => {
                 {posts.map((post, index) => (
                   <article key={index} className="review-posts-article">
                     <div>
-                        <div px={2}>
-                            {/* <Html2React html={post.excerpt.rendered} /> */}
-                            <Html2React html={post.content.rendered} />
-                          	<p className="datum">{dayjs(post.date).format("DD/MM/YY")}</p>
+                        <div px={2} className="article-inner-wrapper-reviews">
+                          <img src="https://raw.githubusercontent.com/DesignerTies/frontity-goed/0a598ca22a3dbc4ff4eb041463fdf3ba23b6f9e6/packages/psycholooginbloemendaal/src/components/assets/citate.svg" alt="" />
+                          <p><Html2React html={post.content.rendered} /></p>
 						  {/* <p>
 							  <Html2React html={post.author} />
 						  </p> */}
@@ -38,7 +37,7 @@ const ReviewPosts = ({ state, actions, libraries }) => {
           ))
         }
       </FlexContainer>
-
+      <Global styles={css(externalCss)} />
     </>
   );
 };
