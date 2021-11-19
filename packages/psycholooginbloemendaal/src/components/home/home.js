@@ -6,6 +6,7 @@ import Banner from './banner'
 import RoundedDiv from './circle-text'
 import TcHome from './tc-home';
 import Reviews from './reviews';
+import OverPreview from  "./over-mij-preview";
 import Form from './form'
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                 <RoundedDiv />
                 <TcHome /> 
                 <Reviews />
+                <OverPreview />
                 {/* <Form /> */}
             </div>
             <Global styles={css(externalCss)} />
