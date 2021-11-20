@@ -188,7 +188,7 @@ article p {
 }
 
 .review-posts-article {
-  width: 60%;
+  width: 60vw;
   margin: auto;
   height: 300px;
   background-color: transparent;
@@ -197,6 +197,7 @@ article p {
 .article-inner-wrapper-reviews {
   display: flex;
   margin-top: 1rem;
+  margin-left: 4rem;
 }
 
 .review-posts-article p {
@@ -217,7 +218,7 @@ article p {
   height: 405px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 285%;
+  top: 300%;
   left: 50%;
   background-color: #fff;
   display: flex;
@@ -279,6 +280,45 @@ a {
   margin-right: 2.5rem;
 }
 
-.werkwijze-wrapper {
+.werkwijze-outer-wrapper {
   height: 150vh;
+  color: rgba(0, 0, 0, 0.02);
+}
+
+.werkwijze-inner-wrapper {
+  margin: auto;
+  margin-top: 32vh;
+}
+
+.werkwijze-inner-wrapper h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.werkwijze-inner-wrapper h2::before {
+  display: inline-block;
+  content: "";
+  border-top: 3px solid black;
+  width: 60%;
+  margin: 0 1rem 0 14vw;
+  transform: translateY(-0.2rem);
+}
+
+.werkwijze-inner-wrapper h4 {
+  color: #51615f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 0.5em;
+  margin-left: 74.5vw;
+}
+
+.werkwijze-picture-wrapper {
+  width: 1140px;
+  height: 430px;
+  background-color: orange;
+  margin: auto;
+  margin-top: 7vh;
 }

@@ -5,7 +5,7 @@ const Reviews = () => {
 	return (
 		<div className="reviews-wrapper">
 			<h1 className="reviews-title">Reviews</h1>
-			<ReviewPosts className="each-slide"/>
+			<ReviewPosts className="review-tekst"/>
 		</div>
 	)
 }
