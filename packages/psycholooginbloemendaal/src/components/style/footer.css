@@ -1,5 +1,5 @@
 @import url("//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular");
-
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,9 @@ footer {
   background-color: #51615f;
   opacity: 1;
   margin-top: 20rem;
+}
+
+.flex-container-footer {
   display: flex;
 }
 
@@ -39,7 +42,55 @@ footer {
   font-weight: normal;
   color: #fff;
 }
+.socials-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+
+.socials-wrapper h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
 
 .social-img-wrapper {
+  margin-top: 0.7rem;
   display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.socials-wrapper ul li {
+  margin-top: 1rem;
+}
+
+/* .citates-wrapper-footer {
+  text-align: center;
+} */
+
+.citate-footer {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: normal;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.citate-footer span {
+  font-weight: bold;
+}
+
+.info-makers {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #fff;
 }
