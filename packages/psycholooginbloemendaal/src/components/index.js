@@ -140,7 +140,7 @@ const globalStyles = css`
     z-index: 10;
   }
   header.colorChanged {
-    background-color: #395174;
+    background-color: #51615F;
   }
   nav ul {
     margin-top: 1.3rem;
@@ -189,13 +189,14 @@ const globalStyles = css`
 
   @media screen and (max-width: 1200px) {
     .logo {
-      left: -5%;
+      top: 1%;
+      transform: scale(0.9, 0.9);
     }
   }
 
   @media screen and (max-width: 1075px) {
     .logo {
-      top: -2%;
+      top: 4%;
     }
   }
 

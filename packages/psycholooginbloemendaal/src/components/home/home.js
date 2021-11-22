@@ -8,6 +8,7 @@ import TcHome from './tc-home';
 import Reviews from './reviews';
 import OverPreview from  "./over-mij-preview";
 import WerkwijzePrev from './werkwijze'
+import MeerPreview from './meer'
 import Form from './form'
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
                 <Reviews />
                 <OverPreview />
                 <WerkwijzePrev />
+                <MeerPreview />
                 {/* <Form /> */}
             </div>
             <Global styles={css(externalCss)} />

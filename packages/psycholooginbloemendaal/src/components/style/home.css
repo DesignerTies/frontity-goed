@@ -281,13 +281,13 @@ a {
 }
 
 .werkwijze-outer-wrapper {
-  height: 150vh;
+  height: 130vh;
   color: rgba(0, 0, 0, 0.02);
 }
 
 .werkwijze-inner-wrapper {
   margin: auto;
-  margin-top: 32vh;
+  margin-top: 35vh;
 }
 
 .werkwijze-inner-wrapper h2 {
@@ -354,4 +354,90 @@ a {
   font-weight: bold;
   margin: auto auto auto 47vw;
   color: #000;
+}
+
+.meer-wrapper {
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.meer-title {
+  margin-top: 7vh;
+  margin-left: 15vh;
+  margin-bottom: 6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.meer-title::after {
+  display: inline-block;
+  content: "";
+  border-top: 3px solid black;
+  width: 85%;
+  margin: 0 0 0 2vw;
+  transform: translateY(-0.2rem);
+}
+
+.meer-inner-wrapper {
+  width: 950px;
+  height: 620px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.inside-inner-wrapper-div {
+  width: 300px;
+  height: 560px;
+  margin: 0 auto auto auto;
+  background-color: rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.prev-img-wrapper {
+  width: 210px;
+  height: 295px;
+  margin: auto;
+}
+
+.meer-inner-wrapper div div img {
+  width: 210px;
+  height: 295px;
+  transform: rotate(180deg);
+}
+
+.prev-text-wrapper {
+  height: 325px !important;
+  width: 85% !important;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(180deg);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.prev-text-wrapper h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #51615f;
+  margin-bottom: 5rem;
+}
+
+.title-journ-prod {
+  margin-bottom: 4rem !important;
+}
+
+.prev-text-wrapper p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 5rem;
+}
+
+.prev-text-wrapper a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
 }
