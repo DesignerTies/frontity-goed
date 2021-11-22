@@ -10,6 +10,7 @@ import PageError from "./page-error";
 import Home from "./home/home"
 import Kaas from "./kaas/kaas"
 import Blog from "./blog/blogposts"
+import Footer from "./footer"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -95,9 +96,11 @@ const Theme = ({ state }) => {
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
+        
       </Main>
       
-      <div className="logo"></div>
+      <div className="logo"></div><Footer />
+      
     </>
   );
 };
