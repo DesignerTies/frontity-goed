@@ -21,12 +21,12 @@ const settings = {
             ["THERAPIE & COACHING", "/therapie-coaching/"],
             ["OVER", "/over-mij/"],
             ["WERJWIJZE & TARIEVEN", "/werkwijze-tarief/"],
-            // ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
-            // ["JOURNALISTIEKE PRODUCTIES", "/journalistieke-producties/"],
-            ["ERVARINGEN", "/ervaringen/"],
+            ["REVIEWS", "/reviews/"],
+            ["JOURNALISTIEKE PRODUCTIES", "/journalistieke-producties/"],
+            ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
+            ["BLOG", "/blog/"],
             ["CONTACT", "/contact/"]
-            // ["BLOG", "/blog/"],
-            // ["TEST", "/kaas/"]
+            
           ],
           "featured": {
             "showOnList": true,

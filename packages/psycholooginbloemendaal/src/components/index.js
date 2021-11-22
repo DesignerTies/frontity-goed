@@ -48,6 +48,7 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -117,7 +118,6 @@ const globalStyles = css`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: aqua;
   }
   a,
   a:visited {
@@ -137,13 +137,17 @@ const globalStyles = css`
     align-items: center;
     background-color: transparent; 
     width: 100%;
-    height: 50px;
     position: fixed;
     top: 0px;
     z-index: 10;
   }
   header.colorChanged {
     background-color: #51615F;
+  }
+  @media screen and (max-width: 950px) {
+    header nav ul {
+      display: none;
+    }
   }
   nav ul {
     margin-top: 1.3rem;

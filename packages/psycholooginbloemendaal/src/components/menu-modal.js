@@ -1,4 +1,4 @@
-import { styled, connect, useConnect } from "frontity";
+import { Global, css, styled, connect, useConnect } from "frontity";
 import Link from "./link";
 
 /**
@@ -22,11 +22,13 @@ const MenuModal = ({ ...props }) => {
               key={name}
               link={link}
               aria-current={state.router.link === link ? "page" : undefined}
+              className="link-mobile-menu"
             >
               {name}
             </MenuLink>
           ))}
       </MenuContent>
+      <Global styles={globalStyles} />
     </div>
   );
 };
@@ -51,10 +53,14 @@ const MenuLink = styled(Link)`
   width: 100%;
   display: inline-block;
   outline: 0;
-  font-size: 20px;
+  font-size: 11px;
+  font-family: "Arial, Helvetica, sans-serif";
+  color: white !important;
   text-align: center;
   padding: 1.2rem 0;
-
+  &:first-of-type {
+    margin-top: 2rem;
+  }
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.05);
@@ -65,5 +71,13 @@ const MenuLink = styled(Link)`
     font-weight: bold;
   }
 `;
+
+const globalStyles = css`
+  @media screen and (max-width: 560px) {
+    .link-mobile-menu {
+      font-size: smaller;
+    }
+  }
+`
 
 export default connect(MenuModal, { injectProps: false });
