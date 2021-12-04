@@ -25,7 +25,8 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   const [colorChange, setColorchange] = useState('');
   const [dropDown, setDropDown] = useState(false);
-  const classes = `${colorChange}`;
+  const classes = `${colorChange} dropdown-container`;
+  const linkClasses = `${colorChange} nav-link-dropdown-container`
 
 
 
@@ -60,27 +61,31 @@ const Theme = ({ state }) => {
           {/* <div className="logo">
           </div> */}
           <nav>
-            <ul>
+            <ul className="main-nav-list">
               <li className={colorChange}>THERAPIE & COACHING</li>    
               <li className={colorChange}>OVER</li>
               <li className={colorChange}>WERKWIJZE & TARIEVEN</li>
               <li className={colorChange}>REVIEWS</li>
-              <li className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
-                &MEER
+              <li className={`${colorChange} dropdown-trigger`} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+                &MEER ▼
               </li>
               <li className={colorChange}>CONTACT</li>
             </ul>
+            {dropDown && (     
+             <div className={classes} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+                <ul className={colorChange}>
+                  <li className="dropdown-item"><a href="/blog/" className={linkClasses}>BLOG</a></li>
+                  <li className="dropdown-item"><a href="" className={linkClasses}>E-BOOKS</a></li>
+                  <li className="dropdown-item"><a href="" className={linkClasses}>PRODUCTIES</a></li>
+                </ul>
+              </div>    
+            )}  
+
             <Header className="navigation" colorChange={colorChange}/> 
-          </nav>
-            
-          {/* {dropDown && (
-            <ul className={colorChange} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
-              <li className="dropdown-item"><a href="/blog/" className={colorChange}>BLOG</a></li>
-              <li className="dropdown-item">E-BOOKS</li>
-              <li className="dropdown-item">PRODUCTIES</li>
-            </ul>
-          )} */}
-        </header>          
+          </nav> 
+
+        </header>            
+
         
       </div>
 
@@ -144,25 +149,20 @@ const globalStyles = css`
   header.colorChanged {
     background-color: #51615F;
   }
-  @media screen and (max-width: 950px) {
-    header nav ul {
-      display: none;
-    }
-  }
-  nav ul {
+  .main-nav-list {
     margin-top: 1.3rem;
     display: flex;
     justify-content: space-between;
   }
-  nav ul li {
+  .main-nav-list li {
     margin-right: 1.4rem;
     color: #51615F;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
   }
   nav ul li.colorChanged {
     color: #fff;
   }
+
   .logo {
     width: 180px;
     height: 95px;
@@ -173,31 +173,27 @@ const globalStyles = css`
     transform: translate(50%, 50%);
   }
   .dropdown-trigger {
-    position: absolute;
-    margin-left: 45rem;
-    width: 60px;
-    height: 30px;
-    margin-top: .9rem;
-    opacity: 0.7;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
     &:hover {
       cursor: pointer;
     }
-    &.colorChanged {
-      color: #fff;
-      opacity: 1;
-    }
-    &.colorChanged a {
-      color: #fff;
-    }
   }
-
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 33rem;
+  }
   @media screen and (max-width: 1200px) {
     .logo {
       top: 1%;
       transform: scale(0.9, 0.9);
+    }
+  }
+  .nav-link-dropdown-container {
+    font-size: 13px;
+    color: #51615F !important; 
+    font-weight: normal;
+    &.colorChanged {
+      color: #fff !important;
     }
   }
 
@@ -206,38 +202,16 @@ const globalStyles = css`
       top: 4%;
     }
   }
-
-  @media screen and (max-width: 950px) {
+ @media screen and (max-width: 950px) {
+    .main-nav-list {
+      display: none;
+    }
     .dropdown-trigger {
       display: none;
     }
-  }
-  // ul {
-  //   background-color: transparent;
-  //   width: 100px;
-  //   height: 100px;
-  //   border-radius: 5px;
-  //   position: aboslute;
-  //   transform: translate(23%, 40%);
-  //   animation: slideup .5s;
-
-  //   &:hover {
-  //     cursor: pointer;
-  //   }
-  // }
-  // ul.colorChanged {
-  //   background-color: #395174;
-  //   color: white;
-  // }
-  // .dropdown-item {
-  //   margin: .8em;
-  //   font-size: smaller;
-
-  //   &:hover {
-  //     border-bottom: solid #fff 2px;
-  //   }
-  // }
-
+    header {
+      height: 50px;
+    }
   @keyframes slideup {
     from {
       transform: translateY(100%);

@@ -47,6 +47,7 @@ const MenuOverlay = styled.div`
 const MenuContent = styled.div`
   z-index: 3;
   position: relative;
+  padding-top: 25em !important;
 `;
 
 const MenuLink = styled(Link)`
@@ -58,9 +59,6 @@ const MenuLink = styled(Link)`
   color: white !important;
   text-align: center;
   padding: 1.2rem 0;
-  &:first-of-type {
-    margin-top: 2rem;
-  }
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.05);
