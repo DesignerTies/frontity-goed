@@ -23,7 +23,7 @@ const ReviewPosts = ({ state, actions, libraries }) => {
                   <article key={index} className="review-posts-article">
                     <div>
                         <div px={2} className="article-inner-wrapper-reviews">
-                          <img src="https://raw.githubusercontent.com/DesignerTies/frontity-goed/0a598ca22a3dbc4ff4eb041463fdf3ba23b6f9e6/packages/psycholooginbloemendaal/src/components/assets/citate.svg" alt="" />
+                          <img src="https://raw.githubusercontent.com/DesignerTies/frontity-goed/0a598ca22a3dbc4ff4eb041463fdf3ba23b6f9e6/packages/psycholooginbloemendaal/src/components/assets/citate.svg" alt="" id="citate" />
                           <p><Html2React html={post.content.rendered} /></p>
 						  {/* <p>
 							  <Html2React html={post.author} />

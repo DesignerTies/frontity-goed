@@ -73,6 +73,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 1100px) {
+  .rounded-div {
+    top: 75%;
+  }
+}
+
 @media screen and (max-width: 710px) {
   .rounded-div {
     width: 500px;
@@ -86,6 +92,30 @@ body {
   }
   .text-wrap {
     margin: 0 auto auto 6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rounded-div {
+    width: 80%;
+    height: 100%;
+    top: 80%;
+    word-wrap: break-word;
+  }
+  .text-wrap {
+    margin: auto;
+    width: 80%;
+  }
+  .rounded-div h1 {
+    font-size: 12px;
+    margin-top: 1rem;
+  }
+  .rounded-div h2 {
+    font-size: 11px;
+  }
+  .rounded-div p {
+    font-size: 10px;
+    font-weight: normal;
   }
 }
 
@@ -141,6 +171,8 @@ body {
   display: flex;
   margin: auto auto auto 13rem;
   width: 90%;
+  overflow-x: auto;
+  overflow-y: hidden;
   /* align-self: flex-end; */
 }
 
@@ -189,9 +221,13 @@ article p {
 @media screen and (max-width: 1100px) {
   .tc-outer-container {
     height: 120vh;
+    margin-top: 40vh;
   }
   .wrapper-articles {
     margin-left: 2rem;
+  }
+  .how-help {
+    display: none;
   }
 }
 
@@ -217,12 +253,25 @@ article p {
   article {
     margin-top: 3rem;
     flex: auto auto auto;
+    height: 430px;
   }
   .wrapper-articles {
     margin-left: 1rem;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .tc-outer-container {
+    height: 120vh;
+  }
+  .tc-inner-container {
+    height: 90%;
+    overflow-y: hidden;
+    margin-top: 0;
+  }
   article {
-    height: 430px;
+    height: 60%;
+    width: 80%;
   }
 }
 
@@ -272,7 +321,22 @@ article p {
   }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 600px) {
+  #citate {
+    transform: scale(0.6);
+    margin: 0;
+  }
+  .reviews-title {
+    margin-top: 1rem;
+  }
+  .article-inner-wrapper-reviews {
+    margin-left: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .review-posts-article {
+    margin-top: 0;
+  }
 }
 
 .over-wrapper {
@@ -355,7 +419,7 @@ a {
     width: 500px;
     height: 600px;
     flex-direction: column;
-    top: 300%;
+    top: 350%;
   }
   .over-text-wrapper {
     order: 1;
@@ -374,19 +438,28 @@ a {
 
 @media screen and (max-width: 710px) {
   .over-inner-wrapper {
-    top: 340%;
+    top: 380%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .over-inner-wrapper {
+    top: 390%;
+    width: 80%;
   }
 }
 
 .werkwijze-outer-wrapper {
   height: 130vh;
   color: rgba(0, 0, 0, 0.02);
+  overflow-y: hidden;
 }
 
 .werkwijze-inner-wrapper {
   margin: auto;
   margin-top: 35vh;
   text-align: center;
+  overflow-y: hidden;
 }
 
 .werkwijze-inner-wrapper h2 {
@@ -457,7 +530,7 @@ a {
 
 @media screen and (max-width: 1100px) {
   .werkwijze-picture-wrapper {
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     width: unset;
     height: 450px;
@@ -476,8 +549,6 @@ a {
   .werkwijze-inner-wrapper h4 {
     font-size: 12px;
   }
-  .werkwijze-tarieven-text-wrapper {
-  }
 }
 
 @media screen and (max-width: 710px) {
@@ -491,6 +562,28 @@ a {
   .werkwijze-picture-wrapper {
     overflow-x: visible;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .werkwijze-outer-wrapper {
+    margin-top: 7rem;
+  }
+  .werkwijze-inner-wrapper h2:before {
+    margin-left: 0;
+  }
+  .werkwijze-picture-wrapper img {
+    width: 50%;
+    height: 50%;
+  }
+  .werkwijze-tarieven-text-wrapper {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+  .werkwijze-inner-wrapper h4 {
+    font-size: 10px;
+    margin-left: 70%;
   }
 }
 
@@ -583,11 +676,13 @@ a {
 @media screen and (max-width: 1100px) {
   .meer-title {
     font-size: 12px;
+    margin-bottom: 0;
   }
   .meer-inner-wrapper {
     width: unset;
     overflow-y: hidden;
     overflow-x: auto;
+    margin-top: 0;
   }
   .inside-inner-wrapper-div {
     margin-right: 1rem;
@@ -597,5 +692,19 @@ a {
     height: 195px;
     width: 140px;
     margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .meer-title {
+    font-size: 10px;
+    margin-bottom: 3rem;
+  }
+  .meer-title::after {
+    width: 70%;
+    margin-left: 0;
+  }
+  .meer-inner-wrapper {
+    height: 70%;
   }
 }
