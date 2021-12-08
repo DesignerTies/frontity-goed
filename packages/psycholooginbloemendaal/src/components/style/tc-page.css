@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tc-wrapper {
+  max-width: 750px;
+  width: 90%;
+  margin-top: 10rem;
+}
+
+.wrapper-articles {
+  overflow-y: hidden;
+}
+
+.article-tc {
+  height: 1030px;
+}
+
+.frontity-lazy-image {
+  height: 90px !important;
+  width: 90px !important;
+  margin: auto;
+  margin-top: 0 !important;
+}
+
+.etzcgit1 {
+  height: unset !important;
+}
+
+/* .article-tc div div {
+  text-align: center;
+} */
+
+.article-tc-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #51615f;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.wp-block-image img {
+  width: 100% !important;
+  height: 145px !important;
+  object-fit: cover;
+  object-position: 100% 20%;
+}
+
+.content {
+  text-align: center;
+}
+
+.content p:first-of-type {
+  margin-top: 3rem !important;
+}
+
+.content p:nth-of-type(3) {
+  margin-top: 2rem;
+}
+
+.lees-meer {
+  text-align: center;
+  margin-top: 2rem;
+}

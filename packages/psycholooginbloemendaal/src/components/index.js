@@ -11,6 +11,8 @@ import Home from "./home/home"
 import Kaas from "./kaas/kaas"
 import Blog from "./blog/blogposts"
 import Footer from "./footer"
+import TcPage from "./tc-page/tc-page"
+import Link from "./link"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -26,7 +28,8 @@ const Theme = ({ state }) => {
   const [colorChange, setColorchange] = useState('');
   const [dropDown, setDropDown] = useState(false);
   const classes = `${colorChange} dropdown-container`;
-  const linkClasses = `${colorChange} nav-link-dropdown-container`
+  const linkClasses = `${colorChange} link-header`
+  const linkClassesDropdown = `${colorChange} nav-link-dropdown-container`
 
 
 
@@ -62,21 +65,21 @@ const Theme = ({ state }) => {
           </div> */}
           <nav>
             <ul className="main-nav-list">
-              <li className={colorChange}>THERAPIE & COACHING</li>    
-              <li className={colorChange}>OVER</li>
-              <li className={colorChange}>WERKWIJZE & TARIEVEN</li>
-              <li className={colorChange}>REVIEWS</li>
+              <li><Link link="/therapie-coaching/" className={linkClasses}>THERAPIE & COACHING</Link></li>    
+              <li><Link link="/over/" className={linkClasses}>OVER</Link></li>
+              <li><Link link="/werkwijze-tarieven/" className={linkClasses}>WERKWIJZE & TARIEVEN</Link></li>
+              <li><Link link="/werkwijze/" className={linkClasses}>REVIEWS</Link></li>
               <li className={`${colorChange} dropdown-trigger`} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
                 &MEER ▼
               </li>
-              <li className={colorChange}>CONTACT</li>
+              <li><Link link="/contact/" className={linkClasses}>CONTACT</Link></li>
             </ul>
             {dropDown && (     
              <div className={classes} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
                 <ul className={colorChange}>
-                  <li className="dropdown-item"><a href="/blog/" className={linkClasses}>BLOG</a></li>
-                  <li className="dropdown-item"><a href="" className={linkClasses}>E-BOOKS</a></li>
-                  <li className="dropdown-item"><a href="" className={linkClasses}>PRODUCTIES</a></li>
+                  <li className="dropdown-item"><Link link="/blog/" className={linkClassesDropdown}>BLOG</Link></li>
+                  <li className="dropdown-item"><a link="#" className={linkClassesDropdown}>E-BOOKS</a></li>
+                  <li className="dropdown-item"><Link link="/producties/" className={linkClassesDropdown}>PRODUCTIES</Link></li>
                 </ul>
               </div>    
             )}  
@@ -96,6 +99,7 @@ const Theme = ({ state }) => {
           <Loading when={data.isFetching} />
           
           <Home when={state.router.link == '/'} />
+          <TcPage when={state.router.link == '/therapie-coaching/'} />
           <Kaas when={state.router.link == '/kaas/'} />
           <Blog when={state.router.link == '/blog/'} />
           <List when={data.isArchive} />
@@ -105,7 +109,8 @@ const Theme = ({ state }) => {
         
       </Main>
       
-      <div className="logo"></div><Footer />
+      <Link link="/" className="logo"><div></div></Link>
+      <Footer />
       
     </>
   );
@@ -166,7 +171,14 @@ const globalStyles = css`
   nav ul li.colorChanged {
     color: #fff;
   }
-
+  .link-header {
+    color: #51615F !important;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .link-header.colorChanged {
+    color: #fff !important;
+  }
   .logo {
     width: 180px;
     height: 95px;

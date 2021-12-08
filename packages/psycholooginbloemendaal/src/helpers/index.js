@@ -56,3 +56,21 @@ export const getPostsGroupedByCategoryReviews = source =>  {
       return [...acc, {posts, category}]
     }, [])
 }
+
+// function getPostsFromCategory(nameCat, category, maxPosts) {
+//   const nameCat = ({ post }, categoryId) => 
+//     Object.keys(post)
+//       .map(postID => post[postID])
+//       .filter(({categories}) => categories.includes(parseInt(categoryId)) )
+
+//   export const nameCat = source => {
+//     return Object.values(category)
+//       .reduce((acc, categoryId) => {
+//         const posts = nameCat(source, categoryId).sort((a, b) => a.date < b.date ? 1 :-1).slice(0, maxPosts)
+//         const category = source.category[categoryId]
+//         return [...acc, {posts, category}]
+//       }, []);
+//   };
+// };
+
+// getPostsFromCategory(getPostsFromCategoryReviews, categorieWidgetReviews, 1)
