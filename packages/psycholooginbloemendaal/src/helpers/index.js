@@ -43,34 +43,34 @@ export const getPostsGroupedByCategoryTC = source =>  {
     }, [])
 }
 
-const getPostsFromCategoryReviews = ({ post }, categoryId) =>
-  Object.keys(post)
-    .map(postID => post[postID])
-    .filter(({categories}) => categories.includes(parseInt(categoryId)) )
+// const getPostsFromCategoryReviews = ({ post }, categoryId) =>
+//   Object.keys(post)
+//     .map(postID => post[postID])
+//     .filter(({categories}) => categories.includes(parseInt(categoryId)) )
 
-export const getPostsGroupedByCategoryReviews = source =>  {
-  return Object.values(categorieWidgetReviews)
-    .reduce((acc, categoryId) => {
-      const posts = getPostsFromCategoryReviews(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1).slice(0,MAXIMUM_POSTS)
-      const category = source.category[categoryId] 
-      return [...acc, {posts, category}]
-    }, [])
+// export const getPostsGroupedByCategoryReviews = source =>  {
+//   return Object.values(categorieWidgetReviews)
+//     .reduce((acc, categoryId) => {
+//       const posts = getPostsFromCategoryReviews(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1).slice(0,MAXIMUM_POSTS)
+//       const category = source.category[categoryId] 
+//       return [...acc, {posts, category}]
+//     }, [])
+// }
+
+function getPostsFromCat(nameCat, catWidg) {
+  const nameCat = ({ post }, categoryId) => 
+    Object.keys(post)
+      .map(postID => post[postID])
+      .filter(({categories}) => categories.includes(parseInt(categoryId)) )
+
+  export const nameCat = source =>  {
+    return Object.values(catWidg)
+      .reduce((acc, categoryId) => {
+        const posts = nameCat (source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1).slice(0,MAXIMUM_POSTS)
+        const category = source.category[categoryId] 
+        return [...acc, {posts, category}]
+      }, [])
+  }
 }
 
-// function getPostsFromCategory(nameCat, category, maxPosts) {
-//   const nameCat = ({ post }, categoryId) => 
-//     Object.keys(post)
-//       .map(postID => post[postID])
-//       .filter(({categories}) => categories.includes(parseInt(categoryId)) )
-
-//   export const nameCat = source => {
-//     return Object.values(category)
-//       .reduce((acc, categoryId) => {
-//         const posts = nameCat(source, categoryId).sort((a, b) => a.date < b.date ? 1 :-1).slice(0, maxPosts)
-//         const category = source.category[categoryId]
-//         return [...acc, {posts, category}]
-//       }, []);
-//   };
-// };
-
-// getPostsFromCategory(getPostsFromCategoryReviews, categorieWidgetReviews, 1)
+export default getPostsFromCat

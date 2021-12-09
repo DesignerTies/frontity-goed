@@ -8,6 +8,7 @@ body {
   max-width: 750px;
   width: 90%;
   margin-top: 10rem;
+  background-color: #fff;
 }
 
 .wrapper-articles {
@@ -15,14 +16,19 @@ body {
 }
 
 .article-tc {
-  height: 1030px;
+  height: 950px;
+}
+
+hr {
+  size: 2px;
+  color: #000;
 }
 
 .frontity-lazy-image {
   height: 90px !important;
   width: 90px !important;
   margin: auto;
-  margin-top: 0 !important;
+  margin-top: 3rem !important;
 }
 
 .etzcgit1 {
@@ -39,8 +45,8 @@ body {
   font-weight: bold;
   color: #51615f;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .wp-block-image img {
@@ -48,10 +54,32 @@ body {
   height: 145px !important;
   object-fit: cover;
   object-position: 100% 20%;
+  margin-top: 0 !important;
 }
 
-.content {
+.content p,
+.content strong,
+.content li {
+  width: 80%;
+  margin: auto;
+  word-wrap: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
   text-align: center;
+}
+
+.content li {
+  list-style-type: none;
+  text-indent: -5px;
+}
+
+.content li::before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+.content li:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .content p:first-of-type {
@@ -62,7 +90,19 @@ body {
   margin-top: 2rem;
 }
 
-.lees-meer {
-  text-align: center;
-  margin-top: 2rem;
+.center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 8rem;
+}
+
+.maak-afspraak {
+  color: #fff;
+  background-color: #51615f;
+  height: 40px;
+  width: 265px;
+  box-shadow: none;
+  border: none;
 }

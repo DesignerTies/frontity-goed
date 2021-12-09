@@ -20,24 +20,29 @@ const TCPosts = ({ state, actions, libraries }) => {
           postsPerCategory.map(({ posts, category }, index) => (
             <BoxCategory key={index} className="wrapper-articles">
                 {posts.map((post, index) => (
-                  <article key={index} className="article-tc">                    
-                    {state.theme.featured.showOnPost && (
-                      <FeaturedMedia id={post.featured_media} className="img-container" />
-                    )}                       
-                    <div>
-                      <div px={2}>
-                        <Link link={post.link}>
-                          <h2 className="article-tc-title">
-                            <Html2React html={post.title.rendered} />
-                          </h2>
-                        </Link>
-                        <p className="content">
-                          <Html2React html={post.content.rendered} />
-                        </p>
-                        <p className="lees-meer">Lees Meer</p>
-                      </div> 
-                    </div>
-                  </article>
+                  <>
+                    <article key={index} className="article-tc">                    
+                      {state.theme.featured.showOnPost && (
+                        <FeaturedMedia id={post.featured_media} className="img-container" />
+                      )}                       
+                      <div>
+                        <div px={2}>
+                          <Link link={post.link}>
+                            <h2 className="article-tc-title">
+                              <Html2React html={post.title.rendered} />
+                            </h2>
+                          </Link>
+                          <p className="content">
+                            <Html2React html={post.content.rendered} />
+                          </p>
+                          <div className="center-button">
+                            <button className="maak-afspraak">MAAK EEN AFSPRAAK</button>
+                          </div>
+                        </div> 
+                      </div>
+                    </article>
+                    <hr />
+                  </>
                   ))}
             </BoxCategory>
           ))
