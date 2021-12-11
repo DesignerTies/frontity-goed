@@ -18,3 +18,7 @@ export const categorieWidgetOver = {
   "over": 6
 }
 
+export const categorieWidgetWerkwijze = {
+  "werkwijze": 7
+}
+

@@ -115,4 +115,7 @@ body {
     margin: 2rem;
     margin-left: 6rem;
   }
+  .title-over-page h1 {
+    font-size: 13px;
+  }
 }

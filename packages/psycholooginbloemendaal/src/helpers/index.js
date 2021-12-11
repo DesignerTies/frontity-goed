@@ -1,4 +1,4 @@
-import {categorieWidgetKaas, categorieWidgetBlog, categorieWidgetTC, categorieWidgetReviews, categorieWidgetOver} from '../config'
+import {categorieWidgetKaas, categorieWidgetBlog, categorieWidgetTC, categorieWidgetReviews, categorieWidgetOver, categorieWidgetWerkwijze} from '../config'
 const MAXIMUM_POSTS = 1
 
 const getPostsFromCategoryKaas = ({ post }, categoryId) =>
@@ -66,6 +66,20 @@ export const getPostsGroupedByCategoryOver = source =>  {
   return Object.values(categorieWidgetOver)
     .reduce((acc, categoryId) => {
       const posts = getPostsFromCategoryOver(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1).slice(0,MAXIMUM_POSTS)
+      const category = source.category[categoryId] 
+      return [...acc, {posts, category}]
+    }, [])
+}
+
+const getPostsFromCategoryWerkwijze = ({ post }, categoryId) =>
+  Object.keys(post)
+    .map(postID => post[postID])
+    .filter(({categories}) => categories.includes(parseInt(categoryId)) )
+
+export const getPostsGroupedByCategoryWerkwijze = source =>  {
+  return Object.values(categorieWidgetWerkwijze)
+    .reduce((acc, categoryId) => {
+      const posts = getPostsFromCategoryWerkwijze(source, categoryId).sort((a, b) => a.date < b.date ? 1 : -1).slice(0,MAXIMUM_POSTS)
       const category = source.category[categoryId] 
       return [...acc, {posts, category}]
     }, [])
