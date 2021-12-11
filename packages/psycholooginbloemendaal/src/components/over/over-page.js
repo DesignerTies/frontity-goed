@@ -6,6 +6,11 @@ import externalCss from "../style/over-page.css"
 const OverPage = () => {
 	return (
 		<>
+			<div className="banner-over-page" role="img">
+				<div className="title-over-page">
+					<h1>OVER MIJ</h1>
+				</div>
+			</div>
 			<div className="flex-over-wrapper">
 				<div className="img-over-page" role="img" />
 				<OverPosts />
