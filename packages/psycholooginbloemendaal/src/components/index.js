@@ -12,6 +12,7 @@ import Kaas from "./kaas/kaas"
 import Blog from "./blog/blogposts"
 import Footer from "./footer"
 import TcPage from "./tc-page/tc-page"
+import OverPage from './over/over-page';
 import Link from "./link"
 
 /**
@@ -97,9 +98,9 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          
           <Home when={state.router.link == '/'} />
           <TcPage when={state.router.link == '/therapie-coaching/'} />
+          <OverPage when={state.router.link == '/over/'} />
           <Kaas when={state.router.link == '/kaas/'} />
           <Blog when={state.router.link == '/blog/'} />
           <List when={data.isArchive} />

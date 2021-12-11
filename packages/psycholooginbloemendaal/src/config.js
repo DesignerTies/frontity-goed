@@ -14,3 +14,7 @@ export const categorieWidgetReviews = {
   "reviews": 5
 }
 
+export const categorieWidgetOver = {
+  "over": 6
+}
+

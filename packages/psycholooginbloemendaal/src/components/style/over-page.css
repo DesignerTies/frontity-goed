@@ -1,0 +1,65 @@
+body {
+  background-color: #fff;
+}
+
+.flex-over-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 10rem;
+  max-width: 900px;
+  width: 90%;
+  height: 650px;
+  background-color: #f4f4f4;
+}
+
+.ei4n3jh1 {
+  width: 30% !important;
+}
+
+.over-wrapper {
+  width: unset !important;
+}
+
+.img-over-page {
+  background-image: url("https://live.staticflickr.com/65535/51737244151_3d5f0ea86b_b.jpg");
+  width: 370px;
+  height: 500px;
+  background-size: cover;
+  margin: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.over-wrapper {
+  width: unset !important;
+}
+
+.article-over-grid-stoof {
+  margin: 0 1rem;
+}
+
+.article-over-grid-stoof div div div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.article-over-grid-stoof div div div p:first-of-type::before {
+  content: "\A \A \A";
+}
+
+.article-over-grid-stoof div div div p::before {
+  content: "\A";
+  white-space: pre !important;
+}
+
+.text-wrapper-over-page {
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.text-wrapper-over-page p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
