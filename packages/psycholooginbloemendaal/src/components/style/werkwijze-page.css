@@ -2,6 +2,39 @@ body {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+.banner-werkwijze-tarieven {
+  width: 100%;
+  height: 420px;
+  background-image: url("https://live.staticflickr.com/65535/51742593618_a0db240583_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: 100% 50%;
+}
+
+.title-werkwijze-tarieven {
+  width: 30%;
+  height: 145px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 350px;
+  margin: auto;
+}
+
+.title-werkwijze-tarieven h1 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.page-wrapper-werkwijze {
+  margin: auto;
+  margin-top: 30rem;
+}
+
 .werkwijze-page-wrapper {
   display: flex;
   flex-direction: column;
@@ -33,4 +66,42 @@ body {
   margin-left: 2rem;
   margin-bottom: 2rem;
   object-fit: cover;
+}
+
+.center-button {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.center-button button {
+  border: none;
+  background-color: #51615f;
+  width: 20%;
+  height: 35px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.center-button button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .title-werkwijze-tarieven h1 {
+    font-size: 11px;
+  }
+  .pictures-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .center-button button {
+    width: 35%;
+  }
 }
