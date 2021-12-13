@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -7,14 +7,15 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-import Home from "./home/home"
-import Kaas from "./kaas/kaas"
-import Blog from "./blog/blogposts"
-import Footer from "./footer"
-import TcPage from "./tc-page/tc-page"
-import OverPage from './over/over-page';
-import WerkwijzePage from './werkwijze/werkwijze-page'
-import Link from "./link"
+import Home from "./home/home";
+import Kaas from "./kaas/kaas";
+import Blog from "./blog/blogposts";
+import Footer from "./footer";
+import TcPage from "./tc-page/tc-page";
+import OverPage from "./over/over-page";
+import WerkwijzePage from "./werkwijze/werkwijze-page";
+import ReviewsPage from "./reviews/reviews-page";
+import Link from "./link";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -27,25 +28,22 @@ import Link from "./link"
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  const [colorChange, setColorchange] = useState('');
+  const [colorChange, setColorchange] = useState("");
   const [dropDown, setDropDown] = useState(false);
   const classes = `${colorChange} dropdown-container`;
-  const linkClasses = `${colorChange} link-header`
-  const linkClassesDropdown = `${colorChange} nav-link-dropdown-container`
-
-
+  const linkClasses = `${colorChange} link-header`;
+  const linkClassesDropdown = `${colorChange} nav-link-dropdown-container`;
 
   if (typeof window !== "undefined") {
-      const changeColorNavbar = () => {
-        if(window.scrollY >= 40) {
-          setColorchange('colorChanged')
-        } else {
-          setColorchange('')
-        }
-      };
-      window.addEventListener("scroll", changeColorNavbar);
+    const changeColorNavbar = () => {
+      if (window.scrollY >= 40) {
+        setColorchange("colorChanged");
+      } else {
+        setColorchange("");
+      }
+    };
+    window.addEventListener("scroll", changeColorNavbar);
   }
-
 
   return (
     <>
@@ -67,31 +65,68 @@ const Theme = ({ state }) => {
           </div> */}
           <nav>
             <ul className="main-nav-list">
-              <li><Link link="/therapie-coaching/" className={linkClasses}>THERAPIE & COACHING</Link></li>    
-              <li><Link link="/over/" className={linkClasses}>OVER</Link></li>
-              <li><Link link="/werkwijze-tarieven/" className={linkClasses}>WERKWIJZE & TARIEVEN</Link></li>
-              <li><Link link="/werkwijze/" className={linkClasses}>REVIEWS</Link></li>
-              <li className={`${colorChange} dropdown-trigger`} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+              <li>
+                <Link link="/therapie-coaching/" className={linkClasses}>
+                  THERAPIE & COACHING
+                </Link>
+              </li>
+              <li>
+                <Link link="/over/" className={linkClasses}>
+                  OVER
+                </Link>
+              </li>
+              <li>
+                <Link link="/werkwijze-tarieven/" className={linkClasses}>
+                  WERKWIJZE & TARIEVEN
+                </Link>
+              </li>
+              <li>
+                <Link link="/reviews/" className={linkClasses}>
+                  REVIEWS
+                </Link>
+              </li>
+              <li
+                className={`${colorChange} dropdown-trigger`}
+                onMouseEnter={() => setDropDown(true)}
+                onMouseLeave={() => setDropDown(false)}
+              >
                 &MEER ▼
               </li>
-              <li><Link link="/contact/" className={linkClasses}>CONTACT</Link></li>
+              <li>
+                <Link link="/contact/" className={linkClasses}>
+                  CONTACT
+                </Link>
+              </li>
             </ul>
-            {dropDown && (     
-             <div className={classes} onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>
+            {dropDown && (
+              <div
+                className={classes}
+                onMouseEnter={() => setDropDown(true)}
+                onMouseLeave={() => setDropDown(false)}
+              >
                 <ul className={colorChange}>
-                  <li className="dropdown-item"><Link link="/blog/" className={linkClassesDropdown}>BLOG</Link></li>
-                  <li className="dropdown-item"><a link="#" className={linkClassesDropdown}>E-BOOKS</a></li>
-                  <li className="dropdown-item"><Link link="/producties/" className={linkClassesDropdown}>PRODUCTIES</Link></li>
+                  <li className="dropdown-item">
+                    <Link link="/blog/" className={linkClassesDropdown}>
+                      BLOG
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <a link="#" className={linkClassesDropdown}>
+                      E-BOOKS
+                    </a>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link link="/producties/" className={linkClassesDropdown}>
+                      PRODUCTIES
+                    </Link>
+                  </li>
                 </ul>
-              </div>    
-            )}  
+              </div>
+            )}
 
-            <Header className="navigation" colorChange={colorChange}/> 
-          </nav> 
-
-        </header>            
-
-        
+            <Header className="navigation" colorChange={colorChange} />
+          </nav>
+        </header>
       </div>
 
       {/* Add the main section. It renders a different component depending
@@ -99,22 +134,23 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          <Home when={state.router.link == '/'} />
-          <TcPage when={state.router.link == '/therapie-coaching/'} />
-          <OverPage when={state.router.link == '/over/'} />
-          <WerkwijzePage when={state.router.link == '/werkwijze-tarieven/'} />
-          <Kaas when={state.router.link == '/kaas/'} />
-          <Blog when={state.router.link == '/blog/'} />
+          <Home when={state.router.link == "/"} />
+          <TcPage when={state.router.link == "/therapie-coaching/"} />
+          <OverPage when={state.router.link == "/over/"} />
+          <WerkwijzePage when={state.router.link == "/werkwijze-tarieven/"} />
+          <ReviewsPage when={state.router.link == "/reviews/"} />
+          <Kaas when={state.router.link == "/kaas/"} />
+          <Blog when={state.router.link == "/blog/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
-        
       </Main>
-      
-      <Link link="/" className="logo"><div></div></Link>
+
+      <Link link="/" className="logo">
+        <div></div>
+      </Link>
       <Footer />
-      
     </>
   );
 };
@@ -245,7 +281,7 @@ const globalStyles = css`
 // const HeadContainer = styled.div`
 //   display: flex;
 //   flex-direction: column;
-//   background-color: transparent; 
+//   background-color: transparent;
 //   width: 100%;
 //   height: 40px;
 //   position: fixed;
