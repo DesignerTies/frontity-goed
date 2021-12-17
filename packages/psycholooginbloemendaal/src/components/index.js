@@ -15,6 +15,7 @@ import TcPage from "./tc-page/tc-page";
 import OverPage from "./over/over-page";
 import WerkwijzePage from "./werkwijze/werkwijze-page";
 import ReviewsPage from "./reviews/reviews-page";
+import BlogPage from "./blog/blogPage";
 import Link from "./link";
 
 /**
@@ -140,7 +141,7 @@ const Theme = ({ state }) => {
           <WerkwijzePage when={state.router.link == "/werkwijze-tarieven/"} />
           <ReviewsPage when={state.router.link == "/reviews/"} />
           <Kaas when={state.router.link == "/kaas/"} />
-          <Blog when={state.router.link == "/blog/"} />
+          <BlogPage when={state.router.link == "/blog/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />

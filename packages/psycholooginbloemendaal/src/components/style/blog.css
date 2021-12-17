@@ -1,0 +1,83 @@
+@import url(//db.onlinewebfonts.com/c/9f94dc20bb2a09c15241d3a880b7ad01?family=Menlo);
+
+.blog-page-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.blog-posts-wrapper {
+  margin-top: 10rem;
+}
+
+.blog-article {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin: auto;
+}
+
+.banner-blog-page {
+  width: 100%;
+  height: 445px;
+  background-image: url("https://live.staticflickr.com/65535/51752751153_91b667c6d6_b.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
+}
+
+.title-blog-page {
+  width: 30%;
+  height: 145px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 390px;
+  margin: auto;
+}
+
+.title-blog-page h1 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.e1k478qz0 {
+  display: unset !important;
+}
+
+.etzcgit1 {
+  margin-top: 0 !important;
+  display: unset !important;
+}
+
+.frontity-lazy-image {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  object-position: 100% 20% !important;
+  margin: auto;
+  margin-top: 0;
+}
+
+.title-blog-post {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  color: #51615f;
+  margin: 1rem 0 3rem 0 !important;
+}
+
+p {
+  font-family: "Menlo", sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+.lees-meer {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
