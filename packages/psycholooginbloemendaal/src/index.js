@@ -39,20 +39,19 @@ const psycholooginbloemendaal = {
       },
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
-      },      
-      beforeSSR: async ({actions}) => {
+      },
+      beforeSSR: async ({ actions }) => {
         await Promise.all([
           actions.source.fetch("/contact-form"),
           actions.source.fetch("/category/blog"),
-          actions.source.fetch("/category/test"),
+          actions.source.fetch("/category/producties"),
           actions.source.fetch("/category/tc"),
           actions.source.fetch("/category/reviews"),
           actions.source.fetch("/category/over"),
-          actions.source.fetch("/category/werkwijze")
-        ])
+          actions.source.fetch("/category/werkwijze"),
+        ]);
       },
-
-    },  
+    },
   },
   libraries: {
     html2react: {

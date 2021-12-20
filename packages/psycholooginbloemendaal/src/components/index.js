@@ -8,14 +8,14 @@ import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home";
-import Kaas from "./kaas/kaas";
-import Blog from "./blog/blogposts";
 import Footer from "./footer";
 import TcPage from "./tc-page/tc-page";
 import OverPage from "./over/over-page";
 import WerkwijzePage from "./werkwijze/werkwijze-page";
 import ReviewsPage from "./reviews/reviews-page";
 import BlogPage from "./blog/blogPage";
+import ProductiesPage from "./producties/producties-page";
+import ContactPage from "./contact/contact-page";
 import Link from "./link";
 
 /**
@@ -140,8 +140,9 @@ const Theme = ({ state }) => {
           <OverPage when={state.router.link == "/over/"} />
           <WerkwijzePage when={state.router.link == "/werkwijze-tarieven/"} />
           <ReviewsPage when={state.router.link == "/reviews/"} />
-          <Kaas when={state.router.link == "/kaas/"} />
           <BlogPage when={state.router.link == "/blog/"} />
+          <ProductiesPage when={state.router.link == "/producties/"} />
+          <ContactPage when={state.router.link == "/contact/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />

@@ -1,24 +1,27 @@
 export const categorieWidgetKaas = {
-  "test": 3,
-}
+  test: 3,
+};
 
 export const categorieWidgetBlog = {
-  "blog": 2,
-}
+  blog: 2,
+};
 
 export const categorieWidgetTC = {
-  "TC": 4
-}
+  TC: 4,
+};
 
 export const categorieWidgetReviews = {
-  "reviews": 5
-}
+  reviews: 5,
+};
 
 export const categorieWidgetOver = {
-  "over": 6
-}
+  over: 6,
+};
 
 export const categorieWidgetWerkwijze = {
-  "werkwijze": 7
-}
+  werkwijze: 7,
+};
 
+export const categorieWidgetProducties = {
+  producties: 8,
+};

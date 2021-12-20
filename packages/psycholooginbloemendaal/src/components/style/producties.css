@@ -1,0 +1,62 @@
+@import url(//db.onlinewebfonts.com/c/9f94dc20bb2a09c15241d3a880b7ad01?family=Menlo);
+
+body {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.producties-page-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  margin-top: 10rem;
+}
+
+.excerpt-beginning-page {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  width: 70%;
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+}
+
+.etzcgit1 {
+  margin-top: 0 !important;
+}
+
+.producties-article {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  margin: 2rem auto;
+}
+
+.producties-article img {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover !important;
+}
+
+.producties-article h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #51615f;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.producties-article p {
+  font-family: "Menlo", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  width: 90%;
+  margin: 2rem auto 2rem auto;
+}
+
+.producties-article a {
+  font-family: "Menlo", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  width: 90%;
+  margin: 2rem auto 2rem auto;
+}
