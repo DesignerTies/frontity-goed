@@ -1,3 +1,92 @@
+body {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.contact-page-banner {
+  width: 100%;
+  height: 445px;
+  background-image: url("https://live.staticflickr.com/65535/51761402653_2d8493622a_k.jpg");
+}
+
+.contact-page-title {
+  width: 30%;
+  height: 145px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 400px;
+  margin: auto;
+}
+
+.contact-page-title h1 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.e1k478qz0 {
+  display: unset !important;
+}
+
 .contact-wrapper {
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+form {
+  margin: 2rem auto;
+}
+
+input {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  height: 1px;
+  width: 30vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  background-color: none !important;
+}
+
+input:first-of-type {
+  margin-top: 2rem;
+}
+
+input:focus {
+  border: 1px solid #33c3f0;
+  outline: 0;
+}
+
+.center-button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 110px;
+  height: 30px;
+}
+
+button:hover {
+  transition: 1s ease-in-out;
+  background: #ebebeb;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 5rem !important;
 }

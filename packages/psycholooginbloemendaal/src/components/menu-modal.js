@@ -34,7 +34,7 @@ const MenuModal = ({ ...props }) => {
 };
 
 const MenuOverlay = styled.div`
-  background-color: #1f38c5;
+  background-color: #51615f;
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
@@ -47,15 +47,15 @@ const MenuOverlay = styled.div`
 const MenuContent = styled.div`
   z-index: 3;
   position: relative;
-  padding-top: 25em !important;
+  padding-top: 32em !important;
 `;
 
 const MenuLink = styled(Link)`
   width: 100%;
   display: inline-block;
   outline: 0;
-  font-size: 11px;
-  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 10px;
+  font-family: "Helvetica, Arial, sans-serif" !important;
   color: white !important;
   text-align: center;
   padding: 1.2rem 0;
@@ -65,7 +65,7 @@ const MenuLink = styled(Link)`
   }
   /* styles for active link */
   &[aria-current="page"] {
-    color: yellow;
+    font-family: "Helvetica, Arial, sans-serif" !important;
     font-weight: bold;
   }
 `;
@@ -76,6 +76,6 @@ const globalStyles = css`
       font-size: smaller;
     }
   }
-`
+`;
 
 export default connect(MenuModal, { injectProps: false });
