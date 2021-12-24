@@ -34,7 +34,7 @@ const ProductiesPost = ({ state, actions, libraries }) => {
                     </Link>
 
                     <Html2React html={post.excerpt.rendered} />
-                    <a
+                    {/* <a
                       href={
                         (dummyString = post.content.rendered
                           .split("=")[2]
@@ -45,7 +45,8 @@ const ProductiesPost = ({ state, actions, libraries }) => {
                       className="download-link"
                     >
                       <p>Download PDF</p>
-                    </a>
+                    </a> */}
+                    <Html2React html={post.content.rendered} />
                     {/* <p className="datum">
                       {dayjs(post.date).format("DD/MM/YY")}
                     </p> */}
