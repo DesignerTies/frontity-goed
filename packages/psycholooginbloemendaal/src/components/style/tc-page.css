@@ -128,12 +128,20 @@ body {
 }
 
 .maak-afspraak {
-  color: #fff;
   background-color: #51615f;
   height: 40px;
   width: 265px;
   box-shadow: none;
   border: none;
+  cursor: pointer;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-button {
+  color: #fff;
 }
 
 #citate-tc {

@@ -17,6 +17,7 @@ import BlogPage from "./blog/blogPage";
 import ProductiesPage from "./producties/producties-page";
 import ContactPage from "./contact/contact-page";
 import Link from "./link";
+import logo from "../../static/logo.svg";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -150,7 +151,7 @@ const Theme = ({ state }) => {
       </Main>
 
       <Link link="/" className="logo">
-        <div></div>
+        <img src={logo} />
       </Link>
       <Footer />
     </>
@@ -223,9 +224,8 @@ const globalStyles = css`
   .logo {
     width: 180px;
     height: 95px;
-    background-image: url("https://raw.githubusercontent.com/DesignerTies/frontity-goed/d0d88f9ce49c54e427a21dae30888eeef80f8967/packages/psycholooginbloemendaal/src/components/assets/logo.svg");
     position: absolute;
-    top: -5%;
+    top: -3%;
     left: 2%;
     transform: translate(50%, 50%);
   }

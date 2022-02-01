@@ -101,7 +101,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  margin-top: 24px;
+  margin-top: 10rem;
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
 `;
