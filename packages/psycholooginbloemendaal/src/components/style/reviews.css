@@ -104,4 +104,17 @@ body {
   .review-page-wrapper img {
     top: 110px;
   }
+  .inner-wrapper-review-posts {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-review-page {
+    height: 300px;
+  }
+  .title-review-page {
+    height: 120px;
+    top: 240px;
+  }
 }

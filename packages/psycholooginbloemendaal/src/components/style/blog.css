@@ -81,3 +81,19 @@ p {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 992px) {
+  .blog-posts-wrapper {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-blog-page {
+    height: 300px;
+  }
+  .title-blog-page {
+    height: 120px;
+    top: 240px;
+  }
+}

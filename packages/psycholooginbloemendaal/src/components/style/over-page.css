@@ -122,4 +122,11 @@ body {
   .title-over-page h1 {
     font-size: 13px;
   }
+  .title-over-page {
+    top: 240px;
+    height: 120px;
+  }
+  .banner-over-page {
+    height: 300px;
+  }
 }

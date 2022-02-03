@@ -90,3 +90,20 @@ button:hover {
 footer {
   margin-top: 5rem !important;
 }
+
+@media screen and (max-width: 992px) {
+  input {
+    width: 95%;
+    padding-left: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-page-banner {
+    height: 300px;
+  }
+  .contact-page-title {
+    height: 120px;
+    top: 240px;
+  }
+}

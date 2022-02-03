@@ -16,7 +16,7 @@ body {
 .banner-tc {
   width: 100%;
   height: 445px;
-  background-image: url("https://live.staticflickr.com/65535/51736233127_5f3b5ec49b_b.jpg");
+  background-image: url("https://live.staticflickr.com/65535/51736233127_67dd7bd950_k.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
@@ -156,7 +156,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .banner-tc {
-    height: 400px;
+    height: 300px;
+  }
+  .title-tc-page {
+    top: 240px;
+    height: 120px;
   }
   .title-tc-page h1 {
     font-size: 14px;
