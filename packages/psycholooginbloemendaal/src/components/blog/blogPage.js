@@ -8,6 +8,7 @@ const BlogPage = ({ state, actions }) => {
   useEffect(async () => {
     await actions.source.fetch("/category/blog");
   }, [actions.source]);
+
   return data.isReady ? (
     <>
       <div className="banner-blog-page">
