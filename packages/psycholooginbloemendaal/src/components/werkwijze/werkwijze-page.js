@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import connect from "@frontity/connect";
 import WerkwijzePosts from "./werkwijzePosts";
 
-const WerkwijzePage = () => {
-  return (
+const WerkwijzePage = ({ actions, state }) => {
+  const data = state.source.get(state.router.link);
+
+  useEffect(async () => {
+    await actions.source.fetch("/category/werkwijze");
+  }, [actions.source]);
+
+  return data.isReady ? (
     <>
       <div className="banner-werkwijze-tarieven">
         <div className="title-werkwijze-tarieven">
@@ -28,7 +35,7 @@ const WerkwijzePage = () => {
         </div>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default connect(WerkwijzePage);

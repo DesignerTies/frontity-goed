@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import connect from "@frontity/connect";
 import Blog from "./blogposts";
 
-const BlogPage = () => {
-  return (
+const BlogPage = ({ state, actions }) => {
+  const data = state.source.get(state.router.link);
+
+  useEffect(async () => {
+    await actions.source.fetch("/category/blog");
+  }, [actions.source]);
+  return data.isReady ? (
     <>
       <div className="banner-blog-page">
         <div className="title-blog-page">
@@ -13,7 +19,7 @@ const BlogPage = () => {
         <Blog />
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default connect(BlogPage);

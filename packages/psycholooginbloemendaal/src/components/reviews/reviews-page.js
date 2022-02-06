@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import connect from "@frontity/connect";
 import ReviewPostsPage from "./reviewPosts";
 import citate from "../../../static/citate.svg";
 
-const ReviewsPage = () => {
-  return (
+const ReviewsPage = ({ actions, state }) => {
+  const data = state.source.get(state.router.link);
+
+  useEffect(async () => {
+    await actions.source.fetch("/category/reviews");
+  }, [actions.source]);
+
+  return data.isReady ? (
     <>
       <div className="banner-review-page">
         <div className="title-review-page">
@@ -18,7 +25,7 @@ const ReviewsPage = () => {
         </div>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default connect(ReviewsPage);

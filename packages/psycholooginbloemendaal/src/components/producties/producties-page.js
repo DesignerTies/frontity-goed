@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { connect } from "frontity";
 import ProductiesPost from "./productiesPost";
 
-const ProductiesPage = () => {
-  return (
+const ProductiesPage = ({ state, actions }) => {
+  const data = state.source.get(state.router.link);
+
+  useEffect(async () => {
+    await actions.source.fetch("/category/producties");
+  }, [actions.source]);
+
+  return data.isReady ? (
     <div className="producties-page-wrapper">
       <p className="excerpt-beginning-page">
         Al meer dan twintig jaar schrijf ik voor verschillende media, zowel voor
@@ -14,7 +21,7 @@ const ProductiesPage = () => {
       </p>
       <ProductiesPost />
     </div>
-  );
+  ) : null;
 };
 
 export default connect(ProductiesPage);
