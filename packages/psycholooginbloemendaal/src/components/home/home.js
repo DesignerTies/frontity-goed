@@ -11,12 +11,12 @@ import WerkwijzePrev from "./werkwijze";
 import MeerPreview from "./meer";
 
 const Home = ({ state, actions }) => {
-  const data = state.source.get(state.router.link);
+  const data = state.source.get("/category/reviews");
 
   useEffect(async () => {
     await Promise.all([
       actions.source.fetch("/category/tc"),
-      actions.source.fetc("/category/reviews"),
+      actions.source.fetch("/category/reviews"),
     ]);
   }, [actions.source]);
 
