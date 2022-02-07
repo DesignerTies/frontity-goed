@@ -63,7 +63,7 @@ const Footer = () => {
               <a href="https://instagram.com/franciscakramerpsycholoog">
                 <img src={instaIcon} alt="" />
               </a>
-              <a href="https://www.facebook.com/francisca.kramer.5">
+              <a href="https://www.facebook.com/FranciscaKramerPsycholoog">
                 <img src={facebookIcon} alt="" />
               </a>
               <a href="https://nl.linkedin.com/in/francisca-kramer-0038ab9?trk=author_mini-profile_title">

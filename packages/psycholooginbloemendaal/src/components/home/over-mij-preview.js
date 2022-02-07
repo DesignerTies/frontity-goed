@@ -7,8 +7,8 @@ const OverPreview = () => {
       <div className="over-inner-wrapper">
         <div className="over-text-wrapper">
           <h2>OVER MIJ</h2>
-          <h4 className="name-over-preview">FRANCISCA KRAMER</h4>
-          <h4>MSC NIP PSYCHOLOOG</h4>
+          <h4 className="name-over-preview">FRANCISCA KRAMER MSc</h4>
+          <h4>PSYCHOLOOG NIP</h4>
           <p>
             Ik ben een psycholoog uit Bloemendaal met Urker wortels stevig in
             mij verankerd. Ik wil mensen meer vrijheid laten ervaren en beter

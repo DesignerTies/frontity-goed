@@ -23,9 +23,8 @@ const OverPage = ({ state, actions }) => {
         <OverPosts />
         <div className="text-wrapper-over-page">
           <p>
-            Quote QuoteQuoteQuoteQuoteQuoteQuoteQuoteQuoteQuoteQuoteQuoteQuote
-            QuoteQuote QuoteQuoteQuoteQuote QuoteQuoteQuoteQuote
-            QuoteQuoteQuoteQuoteQuoteQuote
+            'You can't go back and change the beginning, but you can start where
+            you are and change the ending' <br /> <span>C.S. Lewis</span>
           </p>
         </div>
       </div>
