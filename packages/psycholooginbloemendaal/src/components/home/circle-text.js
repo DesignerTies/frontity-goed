@@ -1,6 +1,5 @@
 import connect from "@frontity/connect";
 import React, { Component } from "react";
-import { ArcText } from "@arctext/react";
 
 const RoundedDiv = () => {
   return (

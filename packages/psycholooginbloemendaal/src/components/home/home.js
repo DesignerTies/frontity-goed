@@ -23,7 +23,7 @@ const Home = ({ state, actions }) => {
   return data.isReady ? (
     <>
       <div className="flex-div">
-        <Banner></Banner>
+        <Banner />
         <RoundedDiv />
         <TcHome />
         <Reviews />
