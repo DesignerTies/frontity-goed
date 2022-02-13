@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import connect from "@frontity/connect";
 import ReviewPostsPage from "./reviewPosts";
 import citate from "../../../static/citate.svg";
+import Link from "@frontity/components/link";
 
 const ReviewsPage = ({ actions, state }) => {
   const data = state.source.get(state.router.link);
@@ -21,7 +22,9 @@ const ReviewsPage = ({ actions, state }) => {
         <img src={citate} alt="citate reviews image" />
         <ReviewPostsPage />
         <div className="center-button">
-          <button className="contact">NEEM CONTACT OP</button>
+          <Link className="contact" link={"/contact"}>
+            NEEM CONTACT OP
+          </Link>
         </div>
       </div>
     </>

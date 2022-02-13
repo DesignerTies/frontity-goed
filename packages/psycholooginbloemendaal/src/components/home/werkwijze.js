@@ -1,4 +1,5 @@
 import connect from "@frontity/connect";
+import Link from "@frontity/components/link";
 
 const WerkwijzePrev = () => {
   return (
@@ -29,7 +30,7 @@ const WerkwijzePrev = () => {
             accusaminvidunt ut labore et dolore magna{" "}
           </p>
         </div>
-        <a href="">Lees meer</a>
+        <Link link={"/werkwijze-tarieven"}>Lees meer</Link>
       </div>
     </div>
   );

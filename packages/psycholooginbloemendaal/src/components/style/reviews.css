@@ -53,7 +53,7 @@ body {
   justify-content: center;
   background-color: #fff;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .review-posts-article {
@@ -64,7 +64,7 @@ body {
 .review-posts-article h2,
 .review-posts-article p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .review-posts-article h2 {
@@ -102,7 +102,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .review-page-wrapper img {
-    top: 110px;
+    top: 50px;
   }
   .inner-wrapper-review-posts {
     margin-top: 1rem;

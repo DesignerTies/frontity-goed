@@ -23,9 +23,9 @@ const ReviewPostsPage = ({ state, actions, libraries }) => {
                   <h2>
                     <Html2React html={post.title.rendered} />
                   </h2>
-                  <p>
+                  <div>
                     <Html2React html={post.content.rendered} />
-                  </p>
+                  </div>
                   {/* <p>
 							  <Html2React html={post.author} />
 						  </p> */}

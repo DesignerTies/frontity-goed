@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import connect from "@frontity/connect";
 import WerkwijzePosts from "./werkwijzePosts";
+import Link from "@frontity/components/link";
 
 const WerkwijzePage = ({ actions, state }) => {
   const data = state.source.get(state.router.link);
@@ -31,7 +32,7 @@ const WerkwijzePage = ({ actions, state }) => {
           </div>
         </div>
         <div className="center-button">
-          <button>NEEM CONTACT OP</button>
+          <Link link={"/contact"}>Neem contact op</Link>
         </div>
       </div>
     </>
