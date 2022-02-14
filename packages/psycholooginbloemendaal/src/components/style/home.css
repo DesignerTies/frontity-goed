@@ -392,13 +392,13 @@ a {
   margin-top: 4rem;
 }
 
-.over-text-wrapper a {
-  font-size: 11px;
+.meer-link-over {
+  font-size: 12.5px;
   font-weight: bold;
 }
 
 .over-text-wrapper p {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: normal;
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -450,15 +450,16 @@ a {
 }
 
 .werkwijze-outer-wrapper {
-  height: 130vh;
+  /* height: 130vh; */
   color: rgba(0, 0, 0, 0.02);
   overflow-y: hidden;
   margin-top: 5rem;
+  margin-top: 20rem;
 }
 
 .werkwijze-inner-wrapper {
   margin: auto;
-  margin-top: 35vh;
+  /* margin-top: 35vh; */
   text-align: center;
   overflow-y: hidden;
 }
@@ -567,9 +568,6 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-  .werkwijze-outer-wrapper {
-    margin-top: 7rem;
-  }
   .werkwijze-inner-wrapper h2:before {
     margin-left: 0;
     margin-top: 4rem;

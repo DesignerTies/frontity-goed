@@ -14,7 +14,9 @@ const OverPreview = () => {
             mij verankerd. Ik wil mensen meer vrijheid laten ervaren en beter
             leren omgaan met emoties.
           </p>
-          <Link link={"/over/"}>Lees meer</Link>
+          <Link link={"/over/"} className="meer-link-over">
+            Lees meer
+          </Link>
         </div>
         <img
           src="https://live.staticflickr.com/65535/51772859929_c2b3c6b864_c.jpg"
