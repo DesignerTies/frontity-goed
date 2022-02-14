@@ -25,6 +25,7 @@ const settings = {
             ["JOURNALISTIEKE PRODUCTIES", "/producties/"],
             ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
             ["BLOG", "/blog/"],
+            ["IN DE MEDIA", "/media/"],
             ["CONTACT", "/contact/"],
           ],
           featured: {

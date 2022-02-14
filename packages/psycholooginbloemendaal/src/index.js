@@ -59,6 +59,9 @@ const psycholooginbloemendaal = {
         if (state.router.link === "/producties/") {
           await actions.source.fetch("/category/producties");
         }
+        if (state.router.link === "/media/") {
+          await actions.source.fetch("/category/media");
+        }
       },
     },
   },

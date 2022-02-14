@@ -6,6 +6,7 @@ import {
   categorieWidgetOver,
   categorieWidgetWerkwijze,
   categorieWidgetProducties,
+  categorieWidgetMedia,
 } from "../config";
 
 const MAXIMUM_POSTS = 1;
@@ -122,6 +123,21 @@ export const getPostsGroupedByCategoryProducties = (source) => {
   return Object.values(categorieWidgetProducties).reduce((acc, categoryId) => {
     const posts = getPostsFromCategoryProducties(source, categoryId).sort(
       (a, b) => (a.date < b.date ? 1 : -1)
+    );
+    const category = source.category[categoryId];
+    return [...acc, { posts, category }];
+  }, []);
+};
+
+const getPostsFromCategoryMedia = ({ post }, categoryId) =>
+  Object.keys(post)
+    .map((postID) => post[postID])
+    .filter(({ categories }) => categories.includes(parseInt(categoryId)));
+
+export const getPostsGroupedByCategoryMedia = (source) => {
+  return Object.values(categorieWidgetMedia).reduce((acc, categoryId) => {
+    const posts = getPostsFromCategoryMedia(source, categoryId).sort((a, b) =>
+      a.date < b.date ? 1 : -1
     );
     const category = source.category[categoryId];
     return [...acc, { posts, category }];

@@ -25,3 +25,7 @@ export const categorieWidgetWerkwijze = {
 export const categorieWidgetProducties = {
   producties: 8,
 };
+
+export const categorieWidgetMedia = {
+  media: 10,
+};

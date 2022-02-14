@@ -15,6 +15,7 @@ import WerkwijzePage from "./werkwijze/werkwijze-page";
 import ReviewsPage from "./reviews/reviews-page";
 import BlogPage from "./blog/blogPage";
 import ProductiesPage from "./producties/producties-page";
+import MediaPage from "./media/media-page";
 import ContactPage from "./contact/contact-page";
 import Link from "./link";
 import logo from "../../static/logo.svg";
@@ -122,6 +123,11 @@ const Theme = ({ state }) => {
                       PRODUCTIES
                     </Link>
                   </li>
+                  <li className="dropdown-item">
+                    <Link link="/media/" className={linkClassesDropdown}>
+                      IN DE MEDIA
+                    </Link>
+                  </li>
                 </ul>
               </div>
             )}
@@ -143,6 +149,7 @@ const Theme = ({ state }) => {
           <ReviewsPage when={state.router.link == "/reviews/"} />
           <BlogPage when={state.router.link == "/blog/"} />
           <ProductiesPage when={state.router.link == "/producties/"} />
+          <MediaPage when={state.router.link == "/media/"} />
           <ContactPage when={state.router.link == "/contact/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
