@@ -17,7 +17,15 @@ const ProductiesPage = ({ state, actions }) => {
         Volkskrant Magazine, Flow, Psychologie Magazine, Elle en Libelle schreef
         ik over onderwerpen als depressie, narcisme, hechting en seksualiteit.
         In 2017 verscheen mijn eerste boek: Psychologisch handboek voor de niet
-        zo perfecte vrouw, dat hier te bestellen is.
+        zo perfecte vrouw, dat{" "}
+        <a
+          classname="bestel-boek"
+          href="https://www.bol.com/nl/nl/p/psychologisch-handboek-voor-de-niet-zo-perfecte-vrouw/9200000071852426/?bltgh=sUZsnYBz1CTw34Ss8vVKDw.2_9.10.ProductImage"
+          style={{ textDecoration: "underline" }}
+        >
+          hier
+        </a>{" "}
+        te bestellen is.
       </p>
       <ProductiesPost />
     </div>

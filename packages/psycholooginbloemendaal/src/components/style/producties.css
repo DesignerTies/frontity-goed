@@ -12,8 +12,10 @@ body {
 }
 
 .excerpt-beginning-page {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-family: "Arial";
+  font-size: 13px;
+  word-spacing: 2px;
+  font-weight: lighter !important;
   width: 70%;
   text-align: center;
   margin: 2rem auto 1rem auto;
@@ -47,8 +49,10 @@ body {
 
 .producties-article p {
   font-family: "Menlo", sans-serif;
-  font-size: 11px;
+  font-size: 12.5px;
+  word-spacing: 2px;
   text-align: center;
+  color: #444444;
   width: 90%;
   margin: 2rem auto 2rem auto;
 }

@@ -23,11 +23,14 @@ const WerkwijzePrev = () => {
         </div>
         <div className="werkwijze-tarieven-text-wrapper">
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusaminvidunt ut labore et dolore magna{" "}
+            Gesprekken vinden plaats in mijn praktijk aan huis, toegankelijk via
+            een buitentrap naar het souterrain. In een warme, huiselijke
+            omgeving maken we uitgebreid kennis en bespreken we de hulpvraag.
+            Daarna volgt een voorstel voor behandeling. Naast gesprekken in de
+            praktijk, is het ook mogelijk online therapie te volgen of
+            wandelsessies te doen rondom de Oosterplas, een prachtig gebied in
+            de Kennemerduinen, op loopafstand van de praktijk. De afwisseling
+            vinden veel cliënten erg prettig.
           </p>
         </div>
         <Link link={"/werkwijze-tarieven"}>Lees meer</Link>

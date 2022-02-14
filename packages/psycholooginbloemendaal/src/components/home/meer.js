@@ -10,10 +10,9 @@ const MeerPreview = () => {
           <div className="prev-text-wrapper">
             <h4>IN DE MEDIA</h4>
             <p>
-              Naast het zijn van psycholoog heb ik ook een journalistieke
-              achtergrond. Regelmatig schrijf ik artikelen voor diverse
-              magazines. Wil je mijn als journalist inschakelen, neem dan
-              contact op.
+              Door lange ervaring in de journalistiek word ik soms benaderd door
+              collega-journalisten om een onderwerp psychologisch te belichten
+              in magazines, op websites en op tv.
             </p>
             <Link link={"/producties"}>Lees meer</Link>
           </div>
@@ -29,10 +28,9 @@ const MeerPreview = () => {
           <div className="prev-text-wrapper">
             <h4>BLOG</h4>
             <p>
-              Naast het zijn van psycholoog heb ik ook een journalistieke
-              achtergrond. Regelmatig schrijf ik artikelen voor diverse
-              magazines. Wil je mijn als journalist inschakelen, neem dan
-              contact op.
+              Als psycholoog hoor ik de meest intieme en kwetsbare verhalen.
+              Mijn cliënten verbazen mij dagelijks met hun veerkracht. Zij zijn
+              de inspiratie voor mijn blogs, uiteraard volledig geanonimiseerd.
             </p>
             <Link link={"/blog"}>Lees meer</Link>
           </div>
