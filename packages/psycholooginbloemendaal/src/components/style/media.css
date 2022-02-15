@@ -1,0 +1,56 @@
+@import url(//db.onlinewebfonts.com/c/9f94dc20bb2a09c15241d3a880b7ad01?family=Menlo);
+
+.e1k478qz0 {
+  flex-direction: column;
+}
+
+.banner-media-page {
+  width: 100%;
+  height: 520px;
+  background-image: url("https://live.staticflickr.com/65535/51883144082_7c72eee258_k.jpg");
+  background-size: cover;
+  background-position: 10% 20%;
+}
+
+.media-page-title {
+  width: 30%;
+  height: 145px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 420px;
+  margin: auto;
+}
+
+.media-page-title h1 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.gray-line {
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.media-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.text-wrapper-media-page {
+  font-family: "Menlo, sans-serif";
+  font-size: 13px;
+  word-spacing: 2px;
+}
+
+.media-posts-article {
+  background-color: rgba(0, 0, 0, 0.04);
+}

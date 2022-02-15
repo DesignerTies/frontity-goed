@@ -16,7 +16,17 @@ const MediaPage = ({ actions, state }) => {
           <h1>IN DE MEDIA</h1>
         </div>
       </div>
-      <MediaPostsPage />
+      <div className="gray-line" />
+      <div className="media-page-wrapper">
+        <div className="text-wrapper-media-page">
+          <p>
+            Door lange ervaring in de journalistiek word ik soms benaderd door
+            collega-journalisten om een onderwerp psychologisch te belichten in
+            magazines, op websites en op tv.
+          </p>
+        </div>
+        <MediaPostsPage />
+      </div>
     </>
   ) : null;
 };

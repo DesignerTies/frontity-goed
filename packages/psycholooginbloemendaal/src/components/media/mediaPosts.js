@@ -17,7 +17,10 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
             <article key={index} className="media-posts-article">
               <div>
                 <div px={2} className="article-inner-wrapper-media">
-                  <Html2React html={post.title.rendered} />
+                  <h2>
+                    {" "}
+                    <Html2React html={post.title.rendered} />
+                  </h2>
                   <div>
                     <Html2React html={post.content.rendered} />
                   </div>
