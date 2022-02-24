@@ -1,13 +1,18 @@
-import connect from '@frontity/connect';
-import ReviewPosts from './reviews-posts';
+import connect from "@frontity/connect";
+import ReviewPosts from "./reviews-posts";
+import { useLayoutEffect } from "react";
 
-const Reviews = () => {
-	return (
-		<div className="reviews-wrapper">
-			<h1 className="reviews-title">Reviews</h1>
-			<ReviewPosts className="review-tekst"/>
-		</div>
-	)
-}
+const Reviews = ({ actions }) => {
+  useLayoutEffect(() => {
+    actions.source.fetch("/category/reviews");
+  }, [actions.source]);
 
-export default connect(Reviews)
+  return (
+    <div className="reviews-wrapper">
+      <h1 className="reviews-title">Reviews</h1>
+      <ReviewPosts className="review-tekst" />
+    </div>
+  );
+};
+
+export default connect(Reviews);
