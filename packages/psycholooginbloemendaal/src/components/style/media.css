@@ -53,4 +53,34 @@
 
 .media-posts-article {
   background-color: rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+}
+
+.article-inner-wrapper-media div {
+  display: flex;
+  flex-direction: row;
+  height: 325px;
+  order: -1;
+}
+
+.article-inner-wrapper-media div p {
+  width: 65%;
+  margin-top: 2rem;
+  margin-left: calc(125px + 7rem);
+}
+
+strong {
+  text-align: center;
+}
+
+strong::after {
+  content: "\A\A";
+  white-space: pre;
+}
+
+.media-posts-article figure img {
+  width: 195px;
+  height: 325px;
+  object-fit: cover;
+  object-position: center;
 }
