@@ -1,3 +1,4 @@
+import Link from "@frontity/components/link";
 import connect from "@frontity/connect";
 import { useEffect } from "react";
 import MediaPostsPage from "./mediaPosts";
@@ -20,12 +21,25 @@ const MediaPage = ({ actions, state }) => {
       <div className="media-page-wrapper">
         <div className="text-wrapper-media-page">
           <p>
-            Door lange ervaring in de journalistiek word ik soms benaderd door
-            collega-journalisten om een onderwerp psychologisch te belichten in
-            magazines, op websites en op tv.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            reprehenderit sint, dolor quam sapiente totam sunt mollitia enim eum
+            rerum vel magnam exercitationem illo vero debitis veniam iusto
+            inventore. Odio, magnam? Error, cupiditate magni? Deleniti natus
+            autem impedit porro illo vitae? Voluptatem vero facilis veritatis
+            ratione inventore, perspiciatis dolorem ab at itaque doloremque cum
+            odio explicabo! Odio magnam quibusdam impedit distinctio enim
+            reprehenderit eveniet debitis repellat. Totam illum eligendi et,
+            nisi adipisci sed sapiente! A neque reiciendis sed asperiores ad
+            error, maiores omnis culpa deleniti dolores ea optio dolorem maxime
+            velit rem labore expedita praesentium quas facere placeat nulla.
+            Error?
           </p>
         </div>
         <MediaPostsPage />
+        <div className="links-wrapper">
+          <Link link="/blog">MEER BLOGS</Link>
+          <Link link="/producties">JOURNALISTIEKE PRODUCTIES</Link>
+        </div>
       </div>
     </>
   ) : null;

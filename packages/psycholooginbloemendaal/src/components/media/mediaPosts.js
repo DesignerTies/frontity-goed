@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import { Global, css } from "frontity";
 import { getPostsGroupedByCategoryMedia } from "../../helpers";
 import externalCss from "../style/media.css";
+import Link from "@frontity/components/link";
 
 const MediaPostsPage = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -17,12 +18,15 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
             <article key={index} className="media-posts-article">
               <div>
                 <div px={2} className="article-inner-wrapper-media">
-                  <div>
+                  <div className="content-wrapper">
                     <Html2React html={post.content.rendered} />
                   </div>
-                  {/* <p>
-							  <Html2React html={post.author} />
-						  </p> */}
+                  {post.title.rendered === "OP TV" && (
+                    <Link link="/">BEKIJK HIER HET FILMPJE</Link>
+                  )}
+                  {post.title.rendered === "IN DE KRANT" && (
+                    <Link link="/">GA NAAR HET ARTIKEL</Link>
+                  )}
                 </div>
               </div>
             </article>
