@@ -85,7 +85,17 @@ const Footer = () => {
         </h4>
         <p className="info-makers">
           Deze site is ontworpen door Willemijn van Hardeveld en gebouwd door
-          Ties Hoenderdos
+          <a
+            href="https://tieshoenderdos.nl"
+            style={{
+              color: "white",
+              fontWeight: "lighter",
+              textDecoration: "underline",
+            }}
+          >
+            {" "}
+            Ties Hoenderdos
+          </a>
         </p>
       </footer>
       <Global styles={css(externalCss)} />
