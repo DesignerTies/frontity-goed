@@ -12,7 +12,7 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
 
   return (
     <>
-      {postsPerCategory.map(({ posts, category }, index) => (
+      {postsPerCategory.map(({ posts }, index) => (
         <BoxCategory key={index} className="inner-wrapper-media-posts">
           {posts.map((post, index) => (
             <article key={index} className="media-posts-article">
