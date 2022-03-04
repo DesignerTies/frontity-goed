@@ -4,6 +4,7 @@ import externalCss from "./style/footer.css";
 import instaIcon from "../../static/instagram-icon.svg";
 import facebookIcon from "../../static/facebook-icon.svg";
 import linkedIcon from "../../static/linkedin-icon.svg";
+import Link from "@frontity/components/link";
 
 const Footer = () => {
   return (
@@ -14,61 +15,63 @@ const Footer = () => {
             <ul>
               <li>Therapie & coaching</li>
               <li>
-                <a href="">Individuele therapie</a>
+                <Link link="/therapie-coaching">Individuele therapie</Link>
               </li>
               <li>
-                <a href="">Relatietherapie</a>
+                <Link link="/therapie-coaching">Relatietherapie</Link>
               </li>
               <li>
-                <a href="">Business coaching</a>
+                <Link link="/therapie-coaching">Business coaching</Link>
               </li>
               <li>
-                <a href="">Trainingen / workshops</a>
+                <Link link="/therapie-coaching">Trainingen / workshops</Link>
               </li>
             </ul>
             <ul>
               <li>Psycholoog Bloemendaal</li>
               <li>
-                <a href="">Werkwijze & tarieven</a>
+                <Link link="/werkwijze-tarieven">Werkwijze & tarieven</Link>
               </li>
               <li>
-                <a href="">Over mij</a>
+                <Link link="/tarieven">Over mij</Link>
               </li>
               <li>
-                <a href="">Reviews</a>
+                <Link link="/reviews">Reviews</Link>
               </li>
             </ul>
             <ul>
               <li>En meer</li>
               <li>
-                <a href="">Blogs</a>
+                <Link link="/blog">Blogs</Link>
               </li>
               <li>
-                <a href="">Koop een e-boek</a>
+                <Link link="/">Koop een e-boek</Link>
               </li>
               <li>
-                <a href="">Bekijk mijn journalistieke producties</a>
+                <Link link="/producties">
+                  Bekijk mijn journalistieke producties
+                </Link>
               </li>
               <li>
-                <a href="">In de media</a>
+                <Link link="/media">In de media</Link>
               </li>
               <li>
-                <a href="">Huur mij in als journalist</a>
+                <Link link="/contact">Huur mij in als journalist</Link>
               </li>
             </ul>
           </div>
           <div className="socials-wrapper">
             <h5>Volg mij op</h5>
             <div className="social-img-wrapper">
-              <a href="https://instagram.com/franciscakramerpsycholoog">
+              <Link link="https://instagram.com/franciscakramerpsycholoog">
                 <img src={instaIcon} alt="" />
-              </a>
-              <a href="https://www.facebook.com/FranciscaKramerPsycholoog">
+              </Link>
+              <Link link="https://www.facebook.com/FranciscaKramerPsycholoog">
                 <img src={facebookIcon} alt="" />
-              </a>
-              <a href="https://nl.linkedin.com/in/francisca-kramer-0038ab9?trk=author_mini-profile_title">
+              </Link>
+              <Link link="https://nl.linkedin.com/in/francisca-kramer-0038ab9?trk=author_mini-profile_title">
                 <img src={linkedIcon} alt="" />
-              </a>
+              </Link>
             </div>
             <ul>
               <li>Praktijk: Brederodelaan 54, 2061 KK Bloemendaal</li>
