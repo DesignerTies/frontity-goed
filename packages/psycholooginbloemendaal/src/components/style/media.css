@@ -103,8 +103,8 @@ strong {
 .article-inner-wrapper-media a {
   float: right;
   position: relative;
-  top: -50px;
-  right: 15rem;
+  top: -6vh;
+  right: 25%;
   color: white;
 }
 
@@ -115,4 +115,47 @@ strong {
 .links-wrapper a {
   margin-top: 8rem;
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .article-inner-wrapper-media a {
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .article-inner-wrapper-media div figure span img,
+  .article-inner-wrapper-media div figure {
+    margin: auto;
+    margin-right: 0.5rem;
+    width: 90%;
+    height: 80%;
+
+    margin-top: 1rem;
+  }
+
+  .article-inner-wrapper-media {
+    padding-bottom: 1rem;
+  }
+
+  .article-inner-wrapper-media div p {
+    width: 90%;
+    margin-top: unset;
+    margin-left: unset;
+    text-align: center;
+    margin: auto;
+  }
+
+  .article-inner-wrapper-media a {
+    float: unset;
+    position: unset;
+    top: unset;
+    right: unset;
+    margin: 1rem auto auto auto;
+  }
 }
