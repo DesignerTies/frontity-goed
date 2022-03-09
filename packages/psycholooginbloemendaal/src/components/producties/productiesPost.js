@@ -32,12 +32,11 @@ const ProductiesPost = ({ state, actions, libraries }) => {
                         <Html2React html={post.title.rendered} />
                       </h2>
                     </Link>
-
                     <Html2React html={post.excerpt.rendered} />
                     <a
                       href={
                         (dummyString = post.content.rendered
-                          .split("=")[2]
+                          .split("=")[3]
                           .split(">")[0]
                           .replaceAll('"', ""))
                       }

@@ -19,7 +19,7 @@ const ProductiesPage = ({ state, actions }) => {
         In 2017 verscheen mijn eerste boek: Psychologisch handboek voor de niet
         zo perfecte vrouw, dat{" "}
         <a
-          classname="bestel-boek"
+          className="bestel-boek"
           href="https://www.bol.com/nl/nl/p/psychologisch-handboek-voor-de-niet-zo-perfecte-vrouw/9200000071852426/?bltgh=sUZsnYBz1CTw34Ss8vVKDw.2_9.10.ProductImage"
           style={{ textDecoration: "underline" }}
         >
