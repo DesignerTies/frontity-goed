@@ -22,11 +22,9 @@ const ProductiesPost = ({ state, actions, libraries }) => {
               <article key={index} className="producties-article">
                 <div>
                   <div px={2}>
-                    <Link link={post.link}>
-                      {state.theme.featured.showOnPost && (
-                        <FeaturedMedia id={post.featured_media} />
-                      )}
-                    </Link>
+                    {state.theme.featured.showOnPost && (
+                      <FeaturedMedia id={post.featured_media} />
+                    )}
                     <Link link={post.link}>
                       <h2 className="title-producties-post">
                         <Html2React html={post.title.rendered} />
