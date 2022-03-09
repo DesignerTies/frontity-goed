@@ -1,13 +1,8 @@
 import connect from "@frontity/connect";
 import React from "react";
-import { useLayoutEffect } from "react";
 import TCPosts from "./tc-posts";
 
 const TcHome = ({ actions }) => {
-  useLayoutEffect(() => {
-    actions.source.fetch("/category/tc");
-  }, [actions.source]);
-
   return (
     <div className="tc-outer-container">
       <div className="tc-inner-container">

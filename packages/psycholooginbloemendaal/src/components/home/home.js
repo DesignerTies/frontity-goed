@@ -13,6 +13,13 @@ import MeerPreview from "./meer";
 const Home = ({ state, actions }) => {
   const data = state.source.get("/category/reviews");
 
+  useEffect(async () => {
+    await Promise.all([
+      actions.source.fetch("/category/tc"),
+      actions.source.fetch("/category/reviews"),
+    ]);
+  }, [actions.source]);
+
   return data.isReady ? (
     <>
       <div className="flex-div">
