@@ -143,18 +143,18 @@ body {
   font-weight: bold;
 }
 
-.how-help {
+.tc-outer-container .how-help {
   margin-top: 20rem;
   margin-left: 13rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
-.ther-coach {
+.tc-outer-container .ther-coach {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px !important;
-  font-weight: normal !important;
+  font-weight: lighter !important;
   color: #51615f;
   margin-left: 13rem;
   margin-top: 1rem;

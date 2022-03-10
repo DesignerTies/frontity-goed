@@ -6,7 +6,7 @@ const TcHome = ({ actions }) => {
   return (
     <div className="tc-outer-container">
       <div className="tc-inner-container">
-        <h4 className="how-help">Hoe kan ik je helpen?</h4>
+        <h4 className="how-help">HOE KAN IK JE HELPEN?</h4>
         <h4 className="ther-coach">THERAPIE & COACHING</h4>
         <TCPosts />
       </div>

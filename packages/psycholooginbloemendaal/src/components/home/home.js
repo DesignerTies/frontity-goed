@@ -9,6 +9,7 @@ import Reviews from "./reviews";
 import OverPreview from "./over-mij-preview";
 import WerkwijzePrev from "./werkwijze";
 import MeerPreview from "./meer";
+import Loading from "../loading";
 
 const Home = ({ state, actions }) => {
   const data = state.source.get("/category/reviews");
@@ -33,7 +34,18 @@ const Home = ({ state, actions }) => {
       </div>
       <Global styles={css(externalCss)} />
     </>
-  ) : null;
+  ) : (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
+      <Loading />
+    </div>
+  );
 };
 
 export default connect(Home);
