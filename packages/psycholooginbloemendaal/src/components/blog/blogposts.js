@@ -21,11 +21,11 @@ const Blog = ({ state, actions, libraries }) => {
               <article key={index} className="blog-article">
                 <div>
                   <div px={2}>
-                    <Link link={post.link}>
+                    <div>
                       {state.theme.featured.showOnPost && (
                         <FeaturedMedia id={post.featured_media} />
                       )}
-                    </Link>
+                    </div>
                     <Link link={post.link}>
                       <h2 className="title-blog-post">
                         <Html2React html={post.title.rendered} />
