@@ -1,5 +1,14 @@
 @import url(//db.onlinewebfonts.com/c/9f94dc20bb2a09c15241d3a880b7ad01?family=Menlo);
 
+:root {
+  --main-font: arial, helvetica, sans-serif;
+  --main-size: 13px;
+  --main-spacing: 1px;
+  --main-weight: normal;
+  --main-color: #444444;
+  --alt-size: 15px;
+}
+
 body {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -12,10 +21,12 @@ body {
 }
 
 .excerpt-beginning-page {
-  font-family: "Arial";
-  font-size: 13px;
+  font-family: var(--main-font);
+  font-size: var(--main-size);
   word-spacing: 2px;
-  font-weight: lighter !important;
+  letter-spacing: var(--main-spacing);
+  font-weight: var(--main-weight);
+  color: var(--main-color);
   width: 70%;
   text-align: center;
   margin: 2rem auto 1rem auto;

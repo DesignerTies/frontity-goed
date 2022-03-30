@@ -1,4 +1,11 @@
-@import url(//db.onlinewebfonts.com/c/9f94dc20bb2a09c15241d3a880b7ad01?family=Menlo);
+:root {
+  --main-font: arial, helvetica, sans-serif;
+  --main-size: 13px;
+  --main-spacing: 1px;
+  --main-weight: normal;
+  --main-color: #444444;
+  --alt-size: 15px;
+}
 
 .e1k478qz0 {
   flex-direction: column;
@@ -46,14 +53,19 @@
 }
 
 .text-wrapper-media-page {
-  font-family: "Menlo, sans-serif";
-  font-size: 13px;
+  font-family: var(--main-font);
+  font-size: var(--main-size);
+  font-weight: var(--main-weight);
+  color: var(--main-color);
+  letter-spacing: var(--main-spacing);
   word-spacing: 2px;
 }
 
 .text-wrapper-media-page p {
-  font-size: 12px;
-  font-family: "Menlo";
+  font-size: var(--main-size);
+  font-family: var(--main-font);
+  letter-spacing: var(--main-spacing);
+  font-weight: var(--main-weight);
   text-align: center;
 }
 
@@ -73,6 +85,10 @@
   width: 65%;
   margin-top: 2rem;
   margin-left: calc(125px + 7rem);
+  font-size: var(--main-size);
+  font-family: var(--main-font);
+  letter-spacing: var(--main-spacing);
+  font-weight: var(--main-weight);
 }
 
 strong {

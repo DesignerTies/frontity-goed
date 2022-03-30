@@ -20,10 +20,10 @@ const settings = {
 
             ["THERAPIE & COACHING", "/therapie-coaching/"],
             ["OVER", "/over/"],
-            ["WERJWIJZE & TARIEVEN", "/werkwijze-tarieven/"],
+            ["WERKWIJZE & TARIEVEN", "/werkwijze-tarieven/"],
             ["REVIEWS", "/reviews/"],
             ["JOURNALISTIEKE PRODUCTIES", "/producties/"],
-            ["E-BOEKEN", "http://127.0.0.1:4242/checkout.html"],
+            ["E-BOEKEN", "/e-books/"],
             ["BLOG", "/blog/"],
             ["IN DE MEDIA", "/media/"],
             ["CONTACT", "/contact/"],

@@ -55,8 +55,9 @@ const MenuLink = styled(Link)`
   display: inline-block;
   outline: 0;
   font-size: 10px;
-  font-family: "Helvetica, Arial, sans-serif" !important;
-  color: white !important;
+  font-family: arial, helvetica, sans-serif !important;
+  letter-spacing: 1px;
+  color: #dfdfdf !important;
   text-align: center;
   padding: 1.2rem 0;
   &:hover,
@@ -65,7 +66,7 @@ const MenuLink = styled(Link)`
   }
   /* styles for active link */
   &[aria-current="page"] {
-    font-family: "Helvetica, Arial, sans-serif" !important;
+    font-family: arial, helvetica, sans-serif !important;
     font-weight: bold;
   }
 `;

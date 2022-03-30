@@ -17,6 +17,7 @@ import BlogPage from "./blog/blogPage";
 import ProductiesPage from "./producties/producties-page";
 import MediaPage from "./media/media-page";
 import ContactPage from "./contact/contact-page";
+import Ebooks from "./e-books";
 import Link from "./link";
 import logo from "../../static/logo.svg";
 
@@ -114,9 +115,9 @@ const Theme = ({ state }) => {
                     </Link>
                   </li>
                   <li className="dropdown-item">
-                    <a link="#" className={linkClassesDropdown}>
+                    <Link link="/e-books/" className={linkClassesDropdown}>
                       E-BOOKS
-                    </a>
+                    </Link>
                   </li>
                   <li className="dropdown-item">
                     <Link link="/producties/" className={linkClassesDropdown}>
@@ -151,6 +152,7 @@ const Theme = ({ state }) => {
           <ProductiesPage when={state.router.link == "/producties/"} />
           <MediaPage when={state.router.link == "/media/"} />
           <ContactPage when={state.router.link == "/contact/"} />
+          <Ebooks when={state.router.link == "/e-books/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
