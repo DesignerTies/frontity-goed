@@ -1,5 +1,8 @@
 import connect from "@frontity/connect";
 import Link from "@frontity/components/link";
+import radarPic from "../../../static/radar-sex.png";
+import typmachinePic from "../../../static/typmachine.jpeg";
+import santePic from "../../../static/sante.jpg";
 
 const MeerPreview = () => {
   return (
@@ -19,7 +22,7 @@ const MeerPreview = () => {
           <div className="prev-img-wrapper">
             <img
               id="media-prev-img"
-              src="https://live.staticflickr.com/65535/51696707569_bb73de1ddb_b.jpg"
+              src={santePic}
               alt="journalistieke producties preview"
             />
           </div>
@@ -27,19 +30,16 @@ const MeerPreview = () => {
         <div className="blog-prev inside-inner-wrapper-div">
           <div className="prev-text-wrapper">
             <h4>BLOG</h4>
-            <p>
-              Als psycholoog hoor ik de meest intieme en kwetsbare verhalen.
+            <p id="blog-text-wrapper">
               Mijn cliënten verbazen mij dagelijks met hun veerkracht. Zij zijn
               de inspiratie voor mijn blogs, uiteraard volledig geanonimiseerd.
+              Soms zijn de verhalen gecombineerd met die van andere cliënten,
+              maar altijd op waarheid gebaseerd.
             </p>
             <Link link={"/blog"}>Lees meer</Link>
           </div>
           <div className="prev-img-wrapper">
-            <img
-              id="blog-prev-img"
-              src="https://live.staticflickr.com/65535/51696707569_bb73de1ddb_b.jpg"
-              alt="blog preview"
-            />
+            <img id="blog-prev-img" src={typmachinePic} alt="blog preview" />
           </div>
         </div>
         <div className="journ-prod-prev inside-inner-wrapper-div">
@@ -56,7 +56,7 @@ const MeerPreview = () => {
           <div className="prev-img-wrapper">
             <img
               id="journ-prod-prev-img"
-              src="https://live.staticflickr.com/65535/51696707569_bb73de1ddb_b.jpg"
+              src={radarPic}
               alt="in de media preview"
             />
           </div>

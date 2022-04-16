@@ -56,11 +56,9 @@ const Post = ({ state, actions, libraries }) => {
         {!data.isPage && (
           <div>
             {author && (
-              <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
-              </StyledLink>
+              <Author>
+                By <b>{author.name}</b>
+              </Author>
             )}
             <DateWrapper>
               {" "}

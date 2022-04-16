@@ -22,10 +22,19 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
                     <Html2React html={post.content.rendered} />
                   </div>
                   {post.title.rendered === "OP TV" && (
-                    <Link link="/">BEKIJK HIER HET FILMPJE</Link>
+                    <Link link="https://www.npostart.nl/KN_1727568">
+                      BEKIJK HIER HET FILMPJE
+                    </Link>
                   )}
                   {post.title.rendered === "IN DE KRANT" && (
-                    <Link link="/">GA NAAR HET ARTIKEL</Link>
+                    <Link link="https://www.rtlnieuws.nl/editienl/laatste-videos-editienl/video/5212796/mama-waarom-schreeuw-je-zo">
+                      GA NAAR HET ARTIKEL
+                    </Link>
+                  )}
+                  {post.title.rendered === "PODCAST" && (
+                    <Link link="https://podcastluisteren.nl/pod/When-Im-64">
+                      Luister de podcast
+                    </Link>
                   )}
                 </div>
               </div>

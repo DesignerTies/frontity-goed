@@ -29,8 +29,7 @@ const WerkwijzePrev = () => {
             Daarna volgt een voorstel voor behandeling. Naast gesprekken in de
             praktijk, is het ook mogelijk online therapie te volgen of
             wandelsessies te doen rondom de Oosterplas, een prachtig gebied in
-            de Kennemerduinen, op loopafstand van de praktijk. De afwisseling
-            vinden veel cliënten erg prettig.
+            de Kennemerduinen, op loopafstand van de praktijk.
           </p>
         </div>
         <Link link={"/werkwijze-tarieven"}>Lees meer</Link>

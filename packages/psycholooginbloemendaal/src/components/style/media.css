@@ -99,7 +99,7 @@ strong {
   width: 195px;
   height: 325px;
   object-fit: cover;
-  object-position: center;
+  object-position: 30% 100%;
 }
 
 .media-page-wrapper a {
