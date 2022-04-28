@@ -43,13 +43,14 @@ const MeerPreview = () => {
           </div>
         </div>
         <div className="journ-prod-prev inside-inner-wrapper-div">
-          <div className="prev-text-wrapper">
+          <div className="prev-text-wrapper" id="journ-text-wrapper">
             <h4 className="title-journ-prod">JOURNALISTIEKE PRODUCTIES</h4>
             <p>
-              Naast het zijn van psycholoog heb ik ook een journalistieke
-              achtergrond. Regelmatig schrijf ik artikelen voor diverse
-              magazines. Wil je mijn als journalist inschakelen, neem dan
-              contact op.
+              Ruim 25 jaar schrijf ik voor kranten, magazines en websites.
+              Doordat ik steeds meer over psychologie schreef, besloot ik na
+              mijn veertigste psychologie te gaan studeren. Inmiddels combineer
+              ik beide beroepen en schrijf ik graag en vaak over allerlei
+              psychologische onderwerpen en ben ik in te huren voor interviews.
             </p>
             <Link link={"/producties"}>Lees meer</Link>
           </div>

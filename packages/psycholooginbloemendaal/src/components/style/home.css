@@ -684,8 +684,8 @@ a {
   margin-bottom: 5rem;
 }
 
-.title-journ-prod {
-  margin-bottom: 4rem !important;
+#journ-text-wrapper h4 {
+  margin-bottom: 1.5rem;
 }
 
 .prev-text-wrapper p {
@@ -695,6 +695,10 @@ a {
   color: var(--main-color);
   letter-spacing: var(--main-spacing);
   margin-bottom: 2rem;
+}
+
+#journ-text-wrapper p {
+  margin-bottom: 1rem;
 }
 
 #blog-text-wrapper {
@@ -727,6 +731,21 @@ a {
     height: 195px;
     width: 140px;
     margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .prev-text-wrapper {
+    padding: 0;
+  }
+  .prev-text-wrapper h4 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .prev-text-wrapper p {
+    margin-bottom: 1rem;
   }
 }
 
