@@ -49,7 +49,7 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container>
-      <div>
+      <div style={{ marginBottom: "5rem" }}>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
         {/* Hide author and date on pages */}
@@ -69,9 +69,11 @@ const Post = ({ state, actions, libraries }) => {
       </div>
 
       {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
+      <FeaturedImage>
+        {state.theme.featured.showOnPost && (
+          <FeaturedMedia id={post.featured_media} />
+        )}
+      </FeaturedImage>
 
       {data.isAttachment ? (
         // If the post is an attachment, just render the description property,
@@ -112,6 +114,7 @@ const Author = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
+  margin-bottom: 5rem;
 `;
 
 const DateWrapper = styled.p`
@@ -124,6 +127,15 @@ const DateWrapper = styled.p`
  * This component is the parent of the `content.rendered` HTML. We can use nested
  * selectors to style that HTML.
  */
+
+const FeaturedImage = styled.div`
+  img {
+    width: 100% !important;
+    height: 100% !important;
+    margin-bottom: 5rem;
+  }
+`;
+
 const Content = styled.div`
   color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
@@ -134,6 +146,7 @@ const Content = styled.div`
 
   p {
     line-height: 1.6em;
+    margin-top: 5rem;
   }
 
   img {

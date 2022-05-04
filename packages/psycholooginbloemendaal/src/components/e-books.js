@@ -6,6 +6,9 @@ const Ebooks = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        width: "90%",
+        textAlign: "center",
+        maxWidth: "1150px",
       }}
     >
       <p
@@ -16,7 +19,7 @@ const Ebooks = () => {
           color: "#444444",
         }}
       >
-        In de loop van 2022 wordt de E-books pagina gepubliceerd.
+        Eerste hulp bij somberheid wordt hier gepubliceerd op 10 juni 2022.
       </p>
     </div>
   );

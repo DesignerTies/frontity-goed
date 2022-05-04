@@ -73,7 +73,7 @@ body {
 }
 
 /* .article-tc div div {
-  text-align: center;
+  
 } */
 
 .article-tc-title {
@@ -103,7 +103,7 @@ body {
   font-family: var(--main-font);
   font-size: var(--main-size);
   letter-spacing: var(--main-spacing);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .content li {
@@ -129,7 +129,7 @@ body {
 }
 
 .content p:nth-of-type(3) {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .center-button {
@@ -164,7 +164,7 @@ body {
   font-weight: bold;
   width: 40%;
   margin: auto;
-  text-align: center;
+
   margin-top: 4rem;
 }
 
@@ -178,7 +178,6 @@ body {
   }
   .title-tc-page h1 {
     font-size: 14px;
-    text-align: center;
   }
   .article-tc-title {
     margin-top: 1rem;

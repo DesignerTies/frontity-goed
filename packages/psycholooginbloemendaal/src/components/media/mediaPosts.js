@@ -21,19 +21,22 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
                   <div className="content-wrapper">
                     <Html2React html={post.content.rendered} />
                   </div>
-                  {post.title.rendered === "OP TV" && (
+                  {post.title.rendered === "OP TV 1" && (
                     <Link link="https://www.npostart.nl/KN_1727568">
-                      BEKIJK HIER HET FILMPJE
+                      BEKIJK DE UITZENDING
+                    </Link>
+                  )}
+                  {post.title.rendered === "OP TV 2" && (
+                    <Link link="https://www.rtlnieuws.nl/editienl/laatste-videos-editienl/video/5212796/mama-waarom-schreeuw-je-zo">
+                      BEKIJK DE UITZENDING
                     </Link>
                   )}
                   {post.title.rendered === "IN DE KRANT" && (
-                    <Link link="https://www.rtlnieuws.nl/editienl/laatste-videos-editienl/video/5212796/mama-waarom-schreeuw-je-zo">
-                      GA NAAR HET ARTIKEL
-                    </Link>
+                    <Link link="">GA NAAR HET ARTIKEL</Link>
                   )}
                   {post.title.rendered === "PODCAST" && (
                     <Link link="https://podcastluisteren.nl/pod/When-Im-64">
-                      Luister de podcast
+                      LUISTER DE PODCAST
                     </Link>
                   )}
                 </div>

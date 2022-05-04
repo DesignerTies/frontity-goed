@@ -136,7 +136,9 @@ const getPostsFromCategoryMedia = ({ post }, categoryId) =>
 
 export const getPostsGroupedByCategoryMedia = (source) => {
   return Object.values(categorieWidgetMedia).reduce((acc, categoryId) => {
-    const posts = getPostsFromCategoryMedia(source, categoryId);
+    const posts = getPostsFromCategoryMedia(source, categoryId).sort((a, b) =>
+      b.date < a.date ? 1 : -1
+    );
     const category = source.category[categoryId];
     return [...acc, { posts, category }];
   }, []);

@@ -36,7 +36,7 @@ body {
 
 .rounded-div {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   width: 90%;
   max-width: 730px;
   position: absolute;
@@ -220,7 +220,7 @@ article h2 {
   font-weight: bold;
   color: #51615f;
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 article p {
@@ -231,7 +231,7 @@ article p {
   letter-spacing: var(--main-spacing);
   margin: 2rem auto;
   width: 90%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 article:first-of-type p:first-of-type {
@@ -244,7 +244,7 @@ article:first-of-type p:first-of-type {
   font-size: 11px;
   margin: 2rem auto;
   width: 90%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 @media screen and (max-width: 1100px) {
@@ -293,7 +293,7 @@ article:first-of-type p:first-of-type {
 }
 
 .reviews-wrapper {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -373,7 +373,7 @@ article:first-of-type p:first-of-type {
 }
 
 .over-text-wrapper {
-  text-align: center;
+  /* text-align: center; */
   width: 290px;
   margin: auto;
 }
@@ -484,11 +484,17 @@ a {
   overflow-y: hidden;
 }
 
+.werkwijze-inner-wrapper p {
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
 .werkwijze-inner-wrapper h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: black;
+  letter-spacing: 1px;
 }
 
 .werkwijze-inner-wrapper h2::before {
@@ -540,7 +546,7 @@ a {
   color: var(--main-color);
   letter-spacing: var(--main-spacing);
   width: 90%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .werkwijze-inner-wrapper a {
@@ -672,7 +678,7 @@ a {
   bottom: 0;
   margin: auto;
   transform: rotate(180deg);
-  text-align: center;
+  /* text-align: center; */
   padding: 1.5rem;
 }
 

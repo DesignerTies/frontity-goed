@@ -63,6 +63,7 @@ body {
   letter-spacing: var(--main-spacing);
   font-family: var(--main-font);
   font-weight: normal;
+  text-align: center;
 }
 
 .article-werkwijze div div div p::before {

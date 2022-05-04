@@ -13,9 +13,8 @@ const MeerPreview = () => {
           <div className="prev-text-wrapper">
             <h4>IN DE MEDIA</h4>
             <p>
-              Door lange ervaring in de journalistiek word ik soms benaderd door
-              collega-journalisten om een onderwerp psychologisch te belichten
-              in magazines, op websites en op tv.
+              In magazines, op websites, tv en in podcasts mag ik als psycholoog
+              mijn licht laten schijnen over verschillende onderwerpen.
             </p>
             <Link link={"/producties"}>Lees meer</Link>
           </div>
