@@ -63,7 +63,6 @@ body {
   letter-spacing: var(--main-spacing);
   font-family: var(--main-font);
   font-weight: normal;
-  text-align: center;
 }
 
 .article-werkwijze div div div p::before {
@@ -75,6 +74,10 @@ strong::after,
 strong::before {
   content: "\A";
   white-space: pre;
+}
+
+.content-werkwijze {
+  margin-left: 4rem;
 }
 
 .pictures-wrapper img {
@@ -109,6 +112,18 @@ strong::before {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1035px) {
+  .content-werkwijze {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .article-werkwijze {
+    max-width: 95%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .werkwijze-page-wrapper {
     margin-top: -1rem;
@@ -118,6 +133,9 @@ strong::before {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .content-werkwijze {
+    margin-left: unset;
   }
   .center-button button {
     width: 35%;

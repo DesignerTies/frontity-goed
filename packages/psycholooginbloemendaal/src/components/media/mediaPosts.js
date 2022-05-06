@@ -31,7 +31,7 @@ const MediaPostsPage = ({ state, actions, libraries }) => {
                       BEKIJK DE UITZENDING
                     </Link>
                   )}
-                  {post.title.rendered === "IN DE KRANT" && (
+                  {post.title.rendered === "IN MAGAZINES" && (
                     <Link link="">GA NAAR HET ARTIKEL</Link>
                   )}
                   {post.title.rendered === "PODCAST" && (

@@ -128,6 +128,10 @@ body {
   margin-top: 3rem !important;
 }
 
+.content p #1273170363 {
+  text-align: center !important;
+}
+
 .content p:nth-of-type(3) {
   margin-top: 1rem;
 }

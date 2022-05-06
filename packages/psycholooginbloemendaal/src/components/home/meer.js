@@ -3,6 +3,7 @@ import Link from "@frontity/components/link";
 import radarPic from "../../../static/radar-sex.png";
 import typmachinePic from "../../../static/typmachine.jpeg";
 import santePic from "../../../static/sante.jpg";
+import logo64 from "../../../static/logo-64.jpg";
 
 const MeerPreview = () => {
   return (
@@ -21,7 +22,7 @@ const MeerPreview = () => {
           <div className="prev-img-wrapper">
             <img
               id="media-prev-img"
-              src={santePic}
+              src={logo64}
               alt="journalistieke producties preview"
             />
           </div>

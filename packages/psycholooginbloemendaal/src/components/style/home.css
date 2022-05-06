@@ -154,7 +154,7 @@ body {
 
 .tc-outer-container .how-help {
   margin-top: 20rem;
-  margin-left: 13rem;
+  margin-left: 6rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -165,7 +165,7 @@ body {
   font-size: 13px !important;
   font-weight: lighter !important;
   color: #51615f;
-  margin-left: 13rem;
+  margin-left: 6rem;
   margin-top: 1rem;
 }
 
@@ -173,8 +173,8 @@ body {
   content: "";
   margin-top: -1rem;
   position: absolute;
-  right: 6rem;
-  left: 13rem;
+  right: 10rem;
+  left: 6rem;
   border-bottom: 3px solid black;
   z-index: -1;
 }
@@ -189,7 +189,7 @@ body {
 
 .wrapper-articles {
   display: flex;
-  margin: auto auto auto 13rem;
+  margin: auto;
   width: 90%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -202,6 +202,7 @@ article {
   margin: auto;
   margin-top: 5rem;
   margin-right: 1rem;
+  padding-bottom: 10rem;
   background-color: #fff;
   flex: 0 0 auto;
 }
@@ -220,7 +221,7 @@ article h2 {
   font-weight: bold;
   color: #51615f;
   margin-top: 1rem;
-  /* text-align: center; */
+  text-align: center;
 }
 
 article p {
@@ -230,8 +231,9 @@ article p {
   color: var(--main-color);
   letter-spacing: var(--main-spacing);
   margin: 2rem auto;
+  margin-bottom: 2rem;
   width: 90%;
-  /* text-align: center; */
+  text-align: center;
 }
 
 article:first-of-type p:first-of-type {
@@ -242,7 +244,6 @@ article:first-of-type p:first-of-type {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 11px;
-  margin: 2rem auto;
   width: 90%;
   /* text-align: center; */
 }
@@ -388,6 +389,7 @@ a {
 
 .over-text-wrapper h2 {
   font-size: 40px;
+  text-align: center;
 }
 
 .over-text-wrapper h2::after {
@@ -541,7 +543,7 @@ a {
 
 .werkwijze-tarieven-text-wrapper p {
   font-family: var(--main-font);
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: normal;
   color: var(--main-color);
   letter-spacing: var(--main-spacing);
