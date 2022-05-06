@@ -230,9 +230,12 @@ article p {
   font-weight: var(--main-weight);
   color: var(--main-color);
   letter-spacing: var(--main-spacing);
-  margin: 2rem auto;
+  margin: 2rem auto 2rem 1.5rem;
   margin-bottom: 2rem;
   width: 90%;
+}
+
+article a {
   text-align: center;
 }
 
