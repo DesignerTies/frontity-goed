@@ -329,7 +329,7 @@ article:first-of-type p:first-of-type {
   width: 70%;
   margin: 1rem 0 0 1rem;
   font-size: 15px;
-  color: var(--main-font);
+  color: var(--main-color);
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   letter-spacing: var(--main-spacing);
