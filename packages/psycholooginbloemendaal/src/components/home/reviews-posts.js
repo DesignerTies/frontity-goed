@@ -23,6 +23,7 @@ const ReviewPosts = ({ state, actions, libraries }) => {
                 <div px={2} className="article-inner-wrapper-reviews">
                   <img src={citate} alt="" id="citate" />
                   <p>
+                    &#8192; <Html2React html={post.title.rendered} />
                     <Html2React html={post.content.rendered} />
                   </p>
                   {/* <p>

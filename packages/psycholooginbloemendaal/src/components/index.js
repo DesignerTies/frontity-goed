@@ -143,16 +143,21 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          <Home when={state.router.link == "/"} />
-          <TcPage when={state.router.link == "/therapie-coaching/"} />
-          <OverPage when={state.router.link == "/over/"} />
-          <WerkwijzePage when={state.router.link == "/werkwijze-tarieven/"} />
-          <ReviewsPage when={state.router.link == "/reviews/"} />
-          <BlogPage when={state.router.link == "/blog/"} />
-          <ProductiesPage when={state.router.link == "/producties/"} />
-          <MediaPage when={state.router.link == "/media/"} />
-          <ContactPage when={state.router.link == "/contact/"} />
-          <Ebooks when={state.router.link == "/e-books/"} />
+          <Home
+            when={
+              state.router.link === "/" ||
+              state.router.link === "RegExp:/?([=-_a-zA-Z0-9]{1,})"
+            }
+          />
+          <TcPage when={state.router.link === "/therapie-coaching/"} />
+          <OverPage when={state.router.link === "/over/"} />
+          <WerkwijzePage when={state.router.link === "/werkwijze-tarieven/"} />
+          <ReviewsPage when={state.router.link === "/reviews/"} />
+          <BlogPage when={state.router.link === "/blog/"} />
+          <ProductiesPage when={state.router.link === "/producties/"} />
+          <MediaPage when={state.router.link === "/media/"} />
+          <ContactPage when={state.router.link === "/contact/"} />
+          <Ebooks when={state.router.link === "/e-books/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />

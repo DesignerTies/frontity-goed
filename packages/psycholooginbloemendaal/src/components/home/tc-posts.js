@@ -29,10 +29,17 @@ const TCPosts = ({ state, actions, libraries }) => {
                         <Html2React html={post.title.rendered} />
                       </h2>
                     </Link>
-                    <Html2React html={post.excerpt.rendered} />
-                    <Link link={`/therapie-coaching`}>
-                      <p className="lees-meer">Lees Meer</p>
-                    </Link>
+                    <div className="excerpt-wrapper">
+                      <Html2React html={post.excerpt.rendered} />
+                    </div>
+                    <p className="lees-meer-tc-p">
+                      <Link
+                        link={`/therapie-coaching`}
+                        className="lees-meer-tc"
+                      >
+                        Lees meer
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </article>

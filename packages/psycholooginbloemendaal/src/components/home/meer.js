@@ -17,7 +17,11 @@ const MeerPreview = () => {
               In magazines, op websites, tv en in podcasts mag ik als psycholoog
               mijn licht laten schijnen over verschillende onderwerpen.
             </p>
-            <Link link={"/producties"}>Lees meer</Link>
+            <p className="lees-meer-p">
+              <Link link={"/producties"} className="lees-meer">
+                Lees meer
+              </Link>
+            </p>
           </div>
           <div className="prev-img-wrapper">
             <img
@@ -36,7 +40,11 @@ const MeerPreview = () => {
               Soms zijn de verhalen gecombineerd met die van andere cliënten,
               maar altijd op waarheid gebaseerd.
             </p>
-            <Link link={"/blog"}>Lees meer</Link>
+            <p className="lees-meer-p">
+              <Link link={"/blog"} className="lees-meer">
+                Lees meer
+              </Link>
+            </p>
           </div>
           <div className="prev-img-wrapper">
             <img id="blog-prev-img" src={typmachinePic} alt="blog preview" />
@@ -52,7 +60,11 @@ const MeerPreview = () => {
               ik beide beroepen en schrijf ik graag en vaak over allerlei
               psychologische onderwerpen en ben ik in te huren voor interviews.
             </p>
-            <Link link={"/producties"}>Lees meer</Link>
+            <p className="lees-meer-p">
+              <Link link={"/producties"} className="lees-meer">
+                Lees meer
+              </Link>
+            </p>
           </div>
           <div className="prev-img-wrapper">
             <img

@@ -144,9 +144,13 @@ const Content = styled.div`
     max-width: 100%;
   }
 
+  p:first-of-type {
+    margin-top: 5rem;
+  }
+
   p {
     line-height: 1.6em;
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 
   img {

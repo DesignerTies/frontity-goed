@@ -21,7 +21,7 @@ const MediaPage = ({ actions, state }) => {
       <div className="media-page-wrapper">
         <MediaPostsPage />
         <div className="links-wrapper">
-          <Link link="/blog">MEER BLOGS</Link>
+          <Link link="/blog">BLOGS</Link>
           <Link link="/producties">JOURNALISTIEKE PRODUCTIES</Link>
         </div>
       </div>

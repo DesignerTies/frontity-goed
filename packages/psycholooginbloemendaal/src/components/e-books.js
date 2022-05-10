@@ -19,7 +19,7 @@ const Ebooks = () => {
           color: "#444444",
         }}
       >
-        Eerste hulp bij somberheid wordt hier gepubliceerd op 10 juni 2022.
+        Eerste hulp bij depressie wordt hier gepubliceerd op 10 juni 2022.
       </p>
     </div>
   );
