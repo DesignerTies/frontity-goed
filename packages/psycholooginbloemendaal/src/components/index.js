@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -48,6 +48,12 @@ const Theme = ({ state }) => {
     };
     window.addEventListener("scroll", changeColorNavbar);
   }
+
+  useEffect(() => {
+    if (state.router.link === "/fb/") {
+      state.router.link = "/";
+    }
+  });
 
   return (
     <>

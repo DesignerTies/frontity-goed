@@ -42,16 +42,6 @@ const settings = {
           url: "https://corleone-paah.nl/wp",
           postsPage: "/posts",
           homepage: "/home",
-          // data: {
-          //   "/": {
-          //     isReady: false,
-          //     isRedirection: true,
-          //     is301: true,
-          //     redirectionStatus: 301,
-          //     isExternal: false,
-          //     location: "/",
-          //   },
-          // },
         },
       },
     },

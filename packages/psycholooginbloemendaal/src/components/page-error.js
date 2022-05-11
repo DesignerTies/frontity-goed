@@ -1,4 +1,5 @@
 import { styled, connect } from "frontity";
+import { useEffect } from "react";
 
 const description404 = (
   <>
@@ -24,8 +25,16 @@ const Page404 = ({ state }) => {
   const title = "Oops! Something went wrong";
   const title404 = "Oops! 404";
 
+  useEffect(() => {
+    state.router.link = "/";
+  }, []);
+
   return (
     <Container>
+      <img
+        src="https://live.staticflickr.com/65535/51772859944_88de55233a_b.jpg"
+        alt="Hero picture"
+      />
       <Title>{data.is404 ? title404 : title}</Title>
       <Description>{data.is404 ? description404 : description}</Description>
     </Container>
