@@ -61,7 +61,16 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <html lang="nl" />
+        <meta property="og:title" content="Psycholoog in Bloemendaal" />
+        <meta
+          property="og:url"
+          content="https://www.psycholooginbloemendaal.nl"
+        />
+        <meta
+          property="og:image"
+          content="https://live.staticflickr.com/65535/51695227602_0d0eecb4d7_b.jpg"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 

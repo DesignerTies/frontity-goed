@@ -4,7 +4,7 @@ const settings = {
     frontity: {
       url: "https://test.frontity.org",
       title: "Psycholoog Bloemendaal",
-      description: "Website voor psycholooginbloemendaal.nl",
+      description: "Website van Psycholoog in Bloemendaal",
     },
   },
   packages: [
