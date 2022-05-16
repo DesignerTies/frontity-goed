@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import connect from "@frontity/connect";
+import { Head } from "frontity";
 import Blog from "./blogposts";
 import Loading from "../loading";
 

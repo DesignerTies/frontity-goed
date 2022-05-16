@@ -33,10 +33,7 @@ const TCPosts = ({ state, actions, libraries }) => {
                       <Html2React html={post.excerpt.rendered} />
                     </div>
                     <p className="lees-meer-tc-p">
-                      <Link
-                        link={`/therapie-coaching`}
-                        className="lees-meer-tc"
-                      >
+                      <Link link={`therapie-coaching`} className="lees-meer-tc">
                         Lees meer
                       </Link>
                     </p>

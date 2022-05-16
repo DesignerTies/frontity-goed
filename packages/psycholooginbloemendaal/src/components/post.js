@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, Head } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
@@ -48,46 +48,54 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
-      <div style={{ marginBottom: "5rem" }}>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+    <>
+      <Head>
+        <meta property="og:title" content={post.title.rendered} />
+      </Head>
 
-        {/* Hide author and date on pages */}
-        {!data.isPage && (
-          <div>
-            {author && (
-              <Author>
-                By <b>{author.name}</b>
-              </Author>
-            )}
-            <DateWrapper>
-              {" "}
-              on <b>{date.toDateString()}</b>
-            </DateWrapper>
-          </div>
+      <Container>
+        <div style={{ marginBottom: "5rem" }}>
+          <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+
+          {/* Hide author and date on pages */}
+          {!data.isPage && (
+            <div>
+              {author && (
+                <Author>
+                  By <b>{author.name}</b>
+                </Author>
+              )}
+              <DateWrapper>
+                {" "}
+                on <b>{date.toDateString()}</b>
+              </DateWrapper>
+            </div>
+          )}
+        </div>
+
+        {/* Look at the settings to see if we should include the featured image */}
+        <FeaturedImage>
+          {state.theme.featured.showOnPost && (
+            <FeaturedMedia id={post.featured_media} />
+          )}
+        </FeaturedImage>
+
+        {data.isAttachment ? (
+          // If the post is an attachment, just render the description property,
+          // which already contains the thumbnail.
+          <div
+            dangerouslySetInnerHTML={{ __html: post.description.rendered }}
+          />
+        ) : (
+          // Render the content using the Html2React component so the HTML is
+          // processed by the processors we included in the
+          // libraries.html2react.processors array.
+          <Content>
+            <Html2React html={post.content.rendered} />
+          </Content>
         )}
-      </div>
-
-      {/* Look at the settings to see if we should include the featured image */}
-      <FeaturedImage>
-        {state.theme.featured.showOnPost && (
-          <FeaturedMedia id={post.featured_media} />
-        )}
-      </FeaturedImage>
-
-      {data.isAttachment ? (
-        // If the post is an attachment, just render the description property,
-        // which already contains the thumbnail.
-        <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
-      ) : (
-        // Render the content using the Html2React component so the HTML is
-        // processed by the processors we included in the
-        // libraries.html2react.processors array.
-        <Content>
-          <Html2React html={post.content.rendered} />
-        </Content>
-      )}
-    </Container>
+      </Container>
+    </>
   ) : null;
 };
 

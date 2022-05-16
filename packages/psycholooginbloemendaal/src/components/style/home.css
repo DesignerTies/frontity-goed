@@ -294,6 +294,11 @@ article:first-of-type p:first-of-type {
   .wrapper-articles {
     margin-left: 1rem;
   }
+  .lees-meer-tc-p {
+    position: unset;
+    margin: auto;
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
