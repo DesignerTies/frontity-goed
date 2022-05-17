@@ -19,11 +19,7 @@ const TCPosts = ({ state, actions, libraries }) => {
           <BoxCategory key={index} className="wrapper-articles">
             {posts.map((post, index) => (
               <>
-                <article
-                  key={index}
-                  className="article-tc"
-                  id={post.title.rendered}
-                >
+                <article className="article-tc" id={post.title.rendered}>
                   {state.theme.featured.showOnPost && (
                     <FeaturedMedia
                       id={post.featured_media}
@@ -32,11 +28,9 @@ const TCPosts = ({ state, actions, libraries }) => {
                   )}
                   <div>
                     <div px={2}>
-                      <Link link={post.link}>
-                        <h2 className="article-tc-title">
-                          <Html2React html={post.title.rendered} />
-                        </h2>
-                      </Link>
+                      <h2 className="article-tc-title">
+                        <Html2React html={post.title.rendered} />
+                      </h2>
                       <p className="content">
                         <Html2React html={post.content.rendered} />
                       </p>

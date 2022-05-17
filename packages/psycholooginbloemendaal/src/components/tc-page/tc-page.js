@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import connect from "@frontity/connect";
 import { Global, css } from "frontity";
 import externalCss from "../style/tc-page.css";
@@ -7,10 +7,19 @@ import BannerTC from "./banner";
 
 const TcPage = ({ actions, state }) => {
   const data = state.source.get(state.router.link);
+  const [section, setSection] = useState();
 
   useEffect(async () => {
     await actions.source.fetch("/category/tc");
-  }, [actions.source]);
+    console.log(state.router.link);
+    if (state.frontity.options.section) {
+      setSection(state.frontity.options.section);
+    }
+  }, [actions.source, state.frontity.options.section]);
+
+  if (section) {
+    window.location.replace(`#${section}`);
+  }
 
   return data.isReady ? (
     <>

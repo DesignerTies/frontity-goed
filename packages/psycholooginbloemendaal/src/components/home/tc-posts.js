@@ -24,18 +24,19 @@ const TCPosts = ({ state, actions, libraries }) => {
                 )}
                 <div>
                   <div px={2}>
-                    <Link link={post.link}>
-                      <h2>
-                        <Html2React html={post.title.rendered} />
-                      </h2>
-                    </Link>
+                    <h2>
+                      <Html2React html={post.title.rendered} />
+                    </h2>
                     <div className="excerpt-wrapper">
                       <Html2React html={post.excerpt.rendered} />
                     </div>
                     <p className="lees-meer-tc-p">
-                      <Link link={`therapie-coaching`} className="lees-meer-tc">
+                      <a
+                        href={`therapie-coaching?frontity_section=${post.title.rendered}`}
+                        className="lees-meer-tc"
+                      >
                         Lees meer
-                      </Link>
+                      </a>
                     </p>
                   </div>
                 </div>
