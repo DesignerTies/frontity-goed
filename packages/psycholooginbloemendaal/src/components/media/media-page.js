@@ -1,7 +1,8 @@
 import Link from "@frontity/components/link";
 import connect from "@frontity/connect";
+import { loadable } from "frontity";
 import { useEffect } from "react";
-import MediaPostsPage from "./mediaPosts";
+const MediaPostsPage = loadable(() => import("./mediaPosts"));
 
 const MediaPage = ({ actions, state }) => {
   const data = state.source.get(state.router.link);

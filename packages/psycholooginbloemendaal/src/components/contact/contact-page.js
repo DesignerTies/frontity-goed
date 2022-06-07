@@ -31,7 +31,8 @@ const ContactPage = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              // alert(JSON.stringify(values, null, 2));
+              alert("De e-mail is verzonden.");
               emailjs
                 .sendForm("service_g86r2il", "template_i7f32xz", "form")
                 .then(

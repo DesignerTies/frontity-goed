@@ -12,9 +12,15 @@
 
 .blog-article {
   width: 300px;
+  height: 490px;
   background-color: rgba(0, 0, 0, 0.04);
   margin: auto;
   margin-bottom: 2rem;
+}
+
+.blog-article div div {
+  display: flex;
+  flex-direction: column;
 }
 
 .banner-blog-page {
@@ -68,7 +74,7 @@
   font-weight: lighter;
   text-align: center;
   color: #51615f;
-  margin: 1rem 0 3rem 0 !important;
+  margin: 1rem 0 1rem 0 !important;
 }
 
 p {
@@ -77,11 +83,15 @@ p {
   text-align: center;
 }
 
+.lees-meer-p {
+  justify-content: end;
+}
+
 .lees-meer {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
   font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 992px) {

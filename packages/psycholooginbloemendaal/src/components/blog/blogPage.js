@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import connect from "@frontity/connect";
-import { Head } from "frontity";
-import Blog from "./blogposts";
-import Loading from "../loading";
+import { loadable } from "frontity";
+const Blog = loadable(() => import("./blogposts"));
+const Loading = loadable(() => import("../loading"));
 
 const BlogPage = ({ state, actions }) => {
   const [ready, setReady] = useState(false);

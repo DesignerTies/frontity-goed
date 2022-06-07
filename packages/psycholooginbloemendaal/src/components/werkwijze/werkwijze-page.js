@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import connect from "@frontity/connect";
-import WerkwijzePosts from "./werkwijzePosts";
+import { loadable } from "frontity";
+const WerkwijzePosts = loadable(() => import("./werkwijzePosts"));
 import Link from "@frontity/components/link";
 
 const WerkwijzePage = ({ actions, state }) => {

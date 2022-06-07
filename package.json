@@ -18,12 +18,6 @@
   "prettier": {},
   "dependencies": {
     "@aamodtgroup/frontity-contact-form-7": "^0.2.7",
-    "@arctext/react": "^1.0.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
     "@frontity/core": "^1.14.3",
     "@frontity/html2react": "^1.7.0",
     "@frontity/tiny-router": "^1.4.4",
@@ -33,7 +27,6 @@
     "formik": "^2.2.9",
     "frontity": "^1.17.0",
     "frontity-contact-form-7": "^0.1.7",
-    "psycholooginbloemendaal": "./packages/psycholooginbloemendaal",
-    "react-slideshow-image": "^3.6.0"
+    "psycholooginbloemendaal": "./packages/psycholooginbloemendaal"
   }
 }

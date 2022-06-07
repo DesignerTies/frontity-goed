@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import connect from "@frontity/connect";
-import ReviewPostsPage from "./reviewPosts";
+import { loadable } from "frontity";
+const ReviewPostsPage = loadable(() => import("./reviewPosts"));
 import citate from "../../../static/citate.svg";
 import Link from "@frontity/components/link";
 

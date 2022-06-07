@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import connect from "@frontity/connect";
-import { Global, css } from "frontity";
-import OverPosts from "./over-post";
+import { loadable, Global, css } from "frontity";
+const OverPosts = loadable(() => import("./over-post"));
 import externalCss from "../style/over-page.css";
 
 const OverPage = ({ state, actions }) => {

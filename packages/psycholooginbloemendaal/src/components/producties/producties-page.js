@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { connect } from "frontity";
-import ProductiesPost from "./productiesPost";
+import { loadable, connect } from "frontity";
+const ProductiesPost = loadable(() => import("./productiesPost"));
 
 const ProductiesPage = ({ state, actions }) => {
   const data = state.source.get(state.router.link);

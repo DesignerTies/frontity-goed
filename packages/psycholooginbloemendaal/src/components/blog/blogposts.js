@@ -34,9 +34,11 @@ const Blog = ({ state, actions, libraries }) => {
 
                     <Html2React html={post.excerpt.rendered} />
 
-                    <Link link={post.link}>
-                      <p className="lees-meer">Lees meer</p>
-                    </Link>
+                    <p className="lees-meer-p">
+                      <Link link={post.link} className="lees-meer">
+                        Lees Meer
+                      </Link>
+                    </p>
                     {/* <p className="datum">
                       {dayjs(post.date).format("DD/MM/YY")}
                     </p> */}

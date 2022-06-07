@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Global, css, connect, styled, Head } from "frontity";
+import { loadable, Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
 import List from "./list";
@@ -9,15 +9,15 @@ import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home";
 import Footer from "./footer";
-import TcPage from "./tc-page/tc-page";
-import OverPage from "./over/over-page";
-import WerkwijzePage from "./werkwijze/werkwijze-page";
-import ReviewsPage from "./reviews/reviews-page";
-import BlogPage from "./blog/blogPage";
-import ProductiesPage from "./producties/producties-page";
-import MediaPage from "./media/media-page";
-import ContactPage from "./contact/contact-page";
-import Ebooks from "./e-books";
+const TcPage = loadable(() => import("./tc-page/tc-page"));
+const OverPage = loadable(() => import("./over/over-page"));
+const WerkwijzePage = loadable(() => import("./werkwijze/werkwijze-page"));
+const ReviewsPage = loadable(() => import("./reviews/reviews-page"));
+const BlogPage = loadable(() => import("./blog/blogPage"));
+const ProductiesPage = loadable(() => import("./producties/producties-page"));
+const MediaPage = loadable(() => import("./media/media-page"));
+const ContactPage = loadable(() => import("./contact/contact-page"));
+const Ebooks = loadable(() => import("./e-books"));
 import Link from "./link";
 import logo from "../../static/logo.svg";
 
@@ -74,8 +74,6 @@ const Theme = ({ state }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      {/* Add some global styles for the whole site, like body or a's. 
-      Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
       {/* Add the header of the site. */}
       <div className="App">

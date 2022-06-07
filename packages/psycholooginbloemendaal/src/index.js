@@ -41,26 +41,22 @@ const psycholooginbloemendaal = {
         state.theme.isMobileMenuOpen = false;
       },
       beforeSSR: async ({ state, actions }) => {
-        if (state.router.link === "/") {
-          await Promise.all([
-            actions.source.fetch("/category/tc"),
-            actions.source.fetch("/category/reviews"),
-          ]);
-        }
-        if (state.router.link === "/over/") {
-          await actions.source.fetch("/category/over");
-        }
-        if (state.router.link === "/werkwijze-tarieven/") {
-          await actions.source.fetch("/category/werkwijze");
-        }
-        if (state.router.link === "/blog/") {
-          await actions.source.fetch("/category/blog");
-        }
-        if (state.router.link === "/producties/") {
-          await actions.source.fetch("/category/producties");
-        }
-        if (state.router.link === "/media/") {
-          await actions.source.fetch("/category/media");
+        switch (state.router.link) {
+          case "/":
+            await Promise.all([
+              actions.source.fetch("/category/tc"),
+              actions.source.fetch("/category/reviews"),
+            ]);
+          case "/over/":
+            await actions.source.fetch("/category/over");
+          case "/werkwijze-tarieven":
+            await actions.source.fetch("/category/werkwijze");
+          case "/blog/":
+            await actions.source.fetch("/category/blog");
+          case "/producties":
+            await actions.source.fetch("/category/producties");
+          case "/media/":
+            await actions.source.fetch("/category/media");
         }
       },
     },

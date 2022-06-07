@@ -1,8 +1,8 @@
 const settings = {
-  name: "test-frontity",
+  name: "psycholooginbloemendaal",
   state: {
     frontity: {
-      url: "https://test.frontity.org",
+      url: "https://psycholooginbloemendaal.nl",
       title: "Psycholoog Bloemendaal",
       description: "Website van Psycholoog in Bloemendaal",
     },

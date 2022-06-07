@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import connect from "@frontity/connect";
-import { Global, css } from "frontity";
+import { loadable, Global, css } from "frontity";
 import externalCss from "../style/tc-page.css";
-import TCPosts from "./tc-posts";
-import BannerTC from "./banner";
+const TCPosts = loadable(() => import("./tc-posts"));
+const BannerTC = loadable(() => import("./banner"));
 
 const TcPage = ({ actions, state }) => {
   const data = state.source.get(state.router.link);
