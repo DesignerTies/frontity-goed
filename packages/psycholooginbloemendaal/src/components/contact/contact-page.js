@@ -37,10 +37,14 @@ const ContactPage = () => {
                 .sendForm("service_g86r2il", "template_i7f32xz", "form")
                 .then(
                   function (response) {
-                    console.log("SUCCESS!", response.status, response.text);
+                    console.log(
+                      "Email gestuurd",
+                      response.status,
+                      response.text
+                    );
                   },
                   function (error) {
-                    console.log("FAILED...", error);
+                    console.log("Er is iets fout gegaan...", error);
                   }
                 );
               setSubmitting(false);
