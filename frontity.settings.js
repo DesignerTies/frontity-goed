@@ -39,7 +39,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://corleone-paah.nl/wp",
+          url: "https://wp.psycholooginbloemendaal.nl/wp",
           postsPage: "/posts",
           homepage: "/home",
         },
