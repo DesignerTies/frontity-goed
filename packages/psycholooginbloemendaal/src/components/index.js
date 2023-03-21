@@ -202,6 +202,17 @@ const globalStyles = css`
   #root {
     overflow-x: hidden;
   }
+  .col-2 span {
+    padding-bottom: 0 !important;
+  }
+  @media only screen and (max-width: 835px) {
+    .col-2 {
+      /* background-color: black;  */
+      grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+      justify-items: center;
+      align-items: center;
+    }
+  }
   a,
   a:visited {
     text-decoration: none;
