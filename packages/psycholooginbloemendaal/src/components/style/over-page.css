@@ -50,7 +50,8 @@ body {
   margin-top: 10rem;
   max-width: 900px;
   width: 90%;
-  height: 650px;
+  /* height: 650px; */
+  padding-bottom: 20px;
   background-color: #f4f4f4;
 }
 
@@ -63,10 +64,7 @@ body {
 }
 
 .img-over-page {
-  background-image: url("https://live.staticflickr.com/65535/51737244151_3d5f0ea86b_b.jpg");
-  width: 370px;
-  height: 500px;
-  background-size: cover;
+  height: 500px !important;
   margin: 2rem !important;
   margin-bottom: 1rem !important;
 }
@@ -118,7 +116,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .flex-over-wrapper {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -144,4 +142,12 @@ body {
   .banner-over-page {
     height: 300px;
   }
+}
+
+.css-10q6ofw-Container {
+  height: 500px !important;
+}
+
+.css-1n7cuw1 {
+  height: 500px !important;
 }

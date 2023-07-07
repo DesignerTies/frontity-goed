@@ -10,7 +10,7 @@ import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home";
 import Footer from "./footer";
-const OverPage = loadable(() => import("./over/over-page"));
+import Over from "./over/over";
 const WerkwijzePage = loadable(() => import("./werkwijze/werkwijze-page"));
 const ReviewsPage = loadable(() => import("./reviews/reviews-page"));
 const BlogPage = loadable(() => import("./blog/blogPage"));
@@ -157,7 +157,7 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <Home when={state.router.link === "/"} />
-          <OverPage when={state.router.link === "/over/"} />
+          <Over when={data.isPage && data.id === 82} />
           <WerkwijzePage when={state.router.link === "/werkwijze-tarieven/"} />
           <ReviewsPage when={state.router.link === "/reviews/"} />
           <BlogPage when={state.router.link === "/blog/"} />

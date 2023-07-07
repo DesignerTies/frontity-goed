@@ -10,7 +10,7 @@ import Image from "@frontity/components/image";
  *
  * @returns A react component.
  */
-const FeaturedMedia = ({ state, id }) => {
+const FeaturedMedia = ({ state, id, height }) => {
   const media = state.source.attachment[id];
 
   if (!media) return null;
