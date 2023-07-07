@@ -3,13 +3,13 @@ import { loadable, Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
 import List from "./list";
+import ArchiveTc from "./tc-page/archive-tc";
 import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home/home";
 import Footer from "./footer";
-const TcPage = loadable(() => import("./tc-page/tc-page"));
 const OverPage = loadable(() => import("./over/over-page"));
 const WerkwijzePage = loadable(() => import("./werkwijze/werkwijze-page"));
 const ReviewsPage = loadable(() => import("./reviews/reviews-page"));
@@ -156,13 +156,7 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          <Home
-            when={
-              state.router.link === "/" ||
-              state.router.link === "RegExp:/?([=-_a-zA-Z0-9]{1,})"
-            }
-          />
-          <TcPage when={state.router.link === "/therapie-coaching/"} />
+          <Home when={state.router.link === "/"} />
           <OverPage when={state.router.link === "/over/"} />
           <WerkwijzePage when={state.router.link === "/werkwijze-tarieven/"} />
           <ReviewsPage when={state.router.link === "/reviews/"} />
@@ -171,12 +165,11 @@ const Theme = ({ state }) => {
           <MediaPage when={state.router.link === "/media/"} />
           <ContactPage when={state.router.link === "/contact/"} />
           <Ebooks when={state.router.link === "/e-books/"} />
-          <List when={data.isArchive} />
+          <ArchiveTc when={data.isTherapieCoachingArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
-
       <Link link="/" className="logo">
         <img src={logo} />
       </Link>
@@ -315,8 +308,7 @@ const globalStyles = css`
       transform: translateY(0%);
       transform: translate(23%, 40%)
     }
-  }
-`;
+  }`;
 
 // const HeadContainer = styled.div`
 //   display: flex;

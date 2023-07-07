@@ -5,6 +5,7 @@ const settings = {
       url: "https://psycholooginbloemendaal.nl",
       title: "Psycholoog Bloemendaal",
       description: "Website van Psycholoog in Bloemendaal",
+      debug: true,
     },
   },
   packages: [
@@ -39,9 +40,14 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://wp.psycholooginbloemendaal.nl/wp",
-          postsPage: "/posts",
-          homepage: "/home",
+          api: "https://wp.psycholooginbloemendaal.nl/wp/wp-json/",
+          postTypes: [
+            {
+              type: "therapie_coaching",
+              endpoint: "therapie_coaching",
+              archive: "/therapie-coaching",
+            },
+          ],
         },
       },
     },

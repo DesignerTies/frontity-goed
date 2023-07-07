@@ -32,7 +32,7 @@ const TCPosts = ({ state, actions, libraries }) => {
                     </div>
                     <p className="lees-meer-tc-p">
                       <a
-                        href={`therapie-coaching?frontity_section=${post.title.rendered}`}
+                        href={`therapie-coaching#${post.title.rendered}`}
                         className="lees-meer-tc"
                       >
                         Lees meer

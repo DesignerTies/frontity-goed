@@ -1,26 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect, styled } from "frontity";
 import { Global, css } from "frontity";
-import { getPostsGroupedByCategoryTC } from "../../helpers";
 import externalCss from "../style/tc-page.css";
 import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
-import dayjs from "dayjs";
 
-const TCPosts = ({ state, actions, libraries }) => {
-  const data = state.source.get(state.router.link);
-  const postsPerCategory = getPostsGroupedByCategoryTC(state.source);
+const TCPostList = ({ state, libraries, posts }) => {
   const Html2React = libraries.html2react.Component;
-
   return (
     <>
       <FlexContainer>
-        {postsPerCategory.map(({ posts, category }, index) => (
-          <BoxCategory key={index} className="wrapper-articles">
-            {posts.map((post, index) => (
-              <>
+        <BoxCategory className="wrapper-articles">
+          {posts.items.map(({ type, id }, i) => {
+            const post = state.source[type][id];
+            return (
+              <div key={i}>
                 <article className="article-tc" id={post.title.rendered}>
-                  {state.theme.featured.showOnPost && (
+                  {post.featured_media && (
                     <FeaturedMedia
                       id={post.featured_media}
                       className="img-container"
@@ -31,9 +27,9 @@ const TCPosts = ({ state, actions, libraries }) => {
                       <h2 className="article-tc-title">
                         <Html2React html={post.title.rendered} />
                       </h2>
-                      <p className="content">
+                      <div className="content">
                         <Html2React html={post.content.rendered} />
-                      </p>
+                      </div>
                       <div className="center-button">
                         <div className="maak-afspraak">
                           <Link className="text-button" link="/contact">
@@ -45,10 +41,10 @@ const TCPosts = ({ state, actions, libraries }) => {
                   </div>
                 </article>
                 <hr />
-              </>
-            ))}
-          </BoxCategory>
-        ))}
+              </div>
+            );
+          })}
+        </BoxCategory>
       </FlexContainer>
       <Global styles={css(externalCss)} />
     </>
@@ -64,4 +60,4 @@ const FlexContainer = styled.div`
 
 const BoxCategory = styled.div``;
 
-export default connect(TCPosts);
+export default connect(TCPostList);

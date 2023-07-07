@@ -3,7 +3,8 @@ import { useEffect } from "react";
 
 const description404 = (
   <>
-    That page can’t be found{" "}
+    Deze pagina kan niet worden gevonden, wacht even en je wordt waarschijnlijk
+    doorgeleid
     <span role="img" aria-label="confused face">
       😕
     </span>
@@ -26,15 +27,11 @@ const Page404 = ({ state }) => {
   const title404 = "Oops! 404";
 
   useEffect(() => {
-    state.router.link = "/";
+    // state.router.link = "/";
   }, []);
 
   return (
     <Container>
-      <img
-        src="https://live.staticflickr.com/65535/51772859944_88de55233a_b.jpg"
-        alt="Hero picture"
-      />
       <Title>{data.is404 ? title404 : title}</Title>
       <Description>{data.is404 ? description404 : description}</Description>
     </Container>

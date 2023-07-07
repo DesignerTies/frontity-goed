@@ -109,11 +109,13 @@ body {
 
 .content li {
   list-style-type: none;
+  padding-left: 0.35rem;
   text-indent: -5px;
 }
 
 .content li::before {
   content: "- ";
+  margin-left: -0.35rem;
   text-indent: -5px;
 }
 
