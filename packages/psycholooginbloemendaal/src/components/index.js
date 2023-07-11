@@ -49,27 +49,63 @@ const Theme = ({ state }) => {
     window.addEventListener("scroll", changeColorNavbar);
   }
 
-  useEffect(() => {
-    if (state.router.link === "/fb/") {
-      state.router.link = "/";
+  function titleCase(str) {
+    var splitStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < splitStr.length; i++) {
+      // You do not need to check if i is larger than splitStr length, as your for does that for you
+      // Assign it back to the array
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
-  });
+    // Directly return the joined string
+    return splitStr.join(" ");
+  }
+
+  const pageTitle = titleCase(
+    state.router.link.replaceAll("/", "").replaceAll("-", " & ")
+  );
 
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
-      <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="nl" />
-        <meta property="og:title" content="Psycholoog in Bloemendaal" />
+        <title>
+          {data.isHome
+            ? "Psycholoog in Bloemendaal - Home"
+            : `Psycholoog in Bloemendaal - ${pageTitle}`}
+        </title>
         <meta
-          property="og:url"
-          content="https://www.psycholooginbloemendaal.nl"
+          property="og:title"
+          content={
+            data.isHome
+              ? "Psycholoog in Bloemendaal"
+              : `Psycholoog in Bloemendaal - ${pageTitle}`
+          }
         />
+        <meta property="og:url" content={state.router.link} />
         <meta
           property="og:image"
-          content="https://live.staticflickr.com/65535/51695227602_0d0eecb4d7_b.jpg"
+          content={
+            data.isTherapieCoachingArchive
+              ? "https://live.staticflickr.com/65535/51736233127_67dd7bd950_k.jpg"
+              : data.isPage && data.id === 82
+              ? "https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2023/07/mama-over.webp"
+              : data.isPage && data.id === 84
+              ? "https://live.staticflickr.com/65535/51742593618_a0db240583_k.jpg"
+              : data.isPage && data.id === 145
+              ? "https://live.staticflickr.com/65535/51745530064_a1710777bc_k.jpg"
+              : data.isPage && data.id === 7
+              ? "https://live.staticflickr.com/65535/51752751153_8700be225c_k.jpg"
+              : data.isPage && data.id === 112
+              ? "https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2022/03/Screenshot_2022-03-08_20-15-09-1.png"
+              : data.isPage && data.id === 150
+              ? "https://live.staticflickr.com/65535/51883144082_7c72eee258_k.jpg"
+              : data.isPage && data.id === 109
+              ? "https://live.staticflickr.com/65535/51761402653_2d8493622a_k.jpg"
+              : "https://live.staticflickr.com/65535/51695227602_0d0eecb4d7_b.jpg"
+          }
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -156,16 +192,16 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          <Home when={state.router.link === "/"} />
-          <Over when={data.isPage && data.id === 82} />
-          <WerkwijzePage when={state.router.link === "/werkwijze-tarieven/"} />
-          <ReviewsPage when={state.router.link === "/reviews/"} />
-          <BlogPage when={state.router.link === "/blog/"} />
-          <ProductiesPage when={state.router.link === "/producties/"} />
-          <MediaPage when={state.router.link === "/media/"} />
-          <ContactPage when={state.router.link === "/contact/"} />
-          <Ebooks when={state.router.link === "/e-books/"} />
+          <Home when={data.isHome} />
           <ArchiveTc when={data.isTherapieCoachingArchive} />
+          <Over when={data.isPage && data.id === 82} />
+          <WerkwijzePage when={data.isPage && data.id === 84} />
+          <ReviewsPage when={data.isPage && data.id === 145} />
+          <BlogPage when={data.isPage && data.id === 7} />
+          <ProductiesPage when={data.isPage && data.id === 112} />
+          <MediaPage when={data.isPage && data.id === 150} />
+          <ContactPage when={data.isPage && data.id === 109} />
+          <Ebooks when={state.router.link === "/e-books/"} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>

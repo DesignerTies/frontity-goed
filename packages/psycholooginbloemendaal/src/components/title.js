@@ -29,9 +29,17 @@ const Title = ({ state }) => {
     const cleanTitle = decode(postTitle);
     // 3. Render the proper title.
     title = `${cleanTitle} - ${state.frontity.title}`;
+  } else if (data.isPostTypeArchive) {
+    // Add titles to posts and pages, using the title and ending with the Blog Name.
+    // 1. Get the post entity from the state and get its title.
+    const postTitle = state.source[data.type][data.id].title.rendered;
+    // 2. Remove any HTML tags found in the title.
+    const cleanTitle = decode(postTitle);
+    // 3. Render the proper title.
+    title = `${cleanTitle} - ${state.frontity.title}`;
   } else if (data.is404) {
     // Add titles to 404's.
-    title = `HOME - ${state.frontity.title}`;
+    title = `Psycholoog in Bloemendaal - ${state.frontity.title}`;
   }
 
   return (
