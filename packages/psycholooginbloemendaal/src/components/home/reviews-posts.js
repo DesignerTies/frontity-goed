@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect, styled } from "frontity";
 import { Global, css } from "frontity";
 import { getPostsGroupedByCategoryReviews } from "../../helpers";
@@ -9,38 +9,47 @@ import dayjs from "dayjs";
 import citate from "../../../static/citate.svg";
 
 const ReviewPosts = ({ state, actions, libraries }) => {
-  const data = state.source.get(state.router.link);
-  const postsPerCategory = getPostsGroupedByCategoryReviews(state.source);
+  useEffect(() => {
+    actions.source.fetch("/reviews/");
+  }, []);
+
+  const data = state.source.get("/reviews/");
+
   const Html2React = libraries.html2react.Component;
 
-  return (
+  return data.isReady ? (
     <>
-      {postsPerCategory.map(({ posts, category }, index) => (
-        <BoxCategory key={index} className="inner-wrapper-review-posts">
-          {posts.map((post, index) => (
-            <article key={index} className="review-posts-article">
-              <div>
-                <div px={2} className="article-inner-wrapper-reviews">
-                  <img src={citate} alt="" id="citate" />
-                  <p>
-                    &#8192; <Html2React html={post.title.rendered} />
-                    <Html2React html={post.content.rendered} />
-                  </p>
-                  {/* <p>
-							  <Html2React html={post.author} />
-						  </p> */}
-                </div>
-              </div>
-            </article>
-          ))}
-        </BoxCategory>
-      ))}
+      <BoxCategory className="inner-wrapper-review-posts">
+        <article className="review-posts-article">
+          <div>
+            <div px={2} className="article-inner-wrapper-reviews">
+              <img src={citate} alt="" id="citate" />
+              <p>
+                &#8192;{" "}
+                <Html2React
+                  html={
+                    state.source[data.items[0].type][data.items[0].id].title
+                      .rendered
+                  }
+                />
+                <Html2React
+                  html={
+                    state.source[data.items[0].type][data.items[0].id].content
+                      .rendered
+                  }
+                />
+              </p>
+              {/* <p>
+  						  <Html2React html={post.author} />
+  					  </p> */}
+            </div>
+          </div>
+        </article>
+      </BoxCategory>
       <Global styles={css(externalCss)} />
     </>
-  );
+  ) : null;
 };
-
-const FlexContainer = styled.div``;
 
 const BoxCategory = styled.div``;
 

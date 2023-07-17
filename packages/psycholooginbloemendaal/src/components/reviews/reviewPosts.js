@@ -34,8 +34,6 @@ const ReviewPostsPage = ({ data, state, libraries }) => {
   );
 };
 
-const FlexContainer = styled.div``;
-
 const BoxCategory = styled.div``;
 
 export default connect(ReviewPostsPage);

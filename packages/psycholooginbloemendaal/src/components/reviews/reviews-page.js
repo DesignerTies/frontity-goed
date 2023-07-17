@@ -5,12 +5,8 @@ const ReviewPostsPage = loadable(() => import("./reviewPosts"));
 import citate from "../../../static/citate.svg";
 import Link from "@frontity/components/link";
 
-const ReviewsPage = ({ actions, state }) => {
+const ReviewsPage = ({ state }) => {
   const data = state.source.get(state.router.link);
-
-  useEffect(async () => {
-    await actions.source.fetch("/category/reviews");
-  }, [actions.source]);
 
   return data.isReady ? (
     <>
