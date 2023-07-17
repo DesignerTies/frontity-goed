@@ -16,12 +16,12 @@ const ReviewsPage = ({ actions, state }) => {
     <>
       <div className="banner-review-page">
         <div className="title-review-page">
-          <h1>REVIEWS</h1>
+          <h1 style={{ textTransform: "uppercase" }}>{data.type}</h1>
         </div>
       </div>
       <div className="review-page-wrapper">
         <img src={citate} alt="citate reviews image" />
-        <ReviewPostsPage />
+        <ReviewPostsPage data={data} />
         <div className="center-button">
           <Link className="contact" link={"/contact"}>
             NEEM CONTACT OP

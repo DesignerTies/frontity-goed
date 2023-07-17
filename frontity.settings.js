@@ -41,11 +41,18 @@ const settings = {
       state: {
         source: {
           api: "https://wp.psycholooginbloemendaal.nl/wp/wp-json/",
+          // api: "http://psycholooginbloemendaal.test/wp-json/",
+          // api: "http://psycholooginbloemendaal.dvl.to/wp-json/",
           postTypes: [
             {
               type: "therapie_coaching",
               endpoint: "therapie_coaching",
               archive: "/therapie-coaching",
+            },
+            {
+              type: "reviews",
+              endpoint: "reviews",
+              archive: "/reviews",
             },
           ],
         },

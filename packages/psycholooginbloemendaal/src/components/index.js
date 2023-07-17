@@ -196,7 +196,7 @@ const Theme = ({ state }) => {
           <ArchiveTc when={data.isTherapieCoachingArchive} />
           <Over when={data.isPage && data.id === 82} />
           <WerkwijzePage when={data.isPage && data.id === 84} />
-          <ReviewsPage when={data.isPage && data.id === 145} />
+          <ReviewsPage when={data.isReviewsArchive} />
           <BlogPage when={data.isPage && data.id === 7} />
           <ProductiesPage when={data.isPage && data.id === 112} />
           <MediaPage when={data.isPage && data.id === 150} />

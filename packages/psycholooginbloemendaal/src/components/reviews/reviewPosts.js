@@ -1,22 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect, styled } from "frontity";
 import { Global, css } from "frontity";
-import { getPostsGroupedByCategoryReviewsPage } from "../../helpers";
 import externalCss from "../style/reviews.css";
-import Link from "@frontity/components/link";
-import FeaturedMedia from "../featured-media";
-import dayjs from "dayjs";
 
-const ReviewPostsPage = ({ state, actions, libraries }) => {
-  const data = state.source.get(state.router.link);
-  const postsPerCategory = getPostsGroupedByCategoryReviewsPage(state.source);
+const ReviewPostsPage = ({ data, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
-
   return (
     <>
-      {postsPerCategory.map(({ posts, category }, index) => (
-        <BoxCategory key={index} className="inner-wrapper-review-posts">
-          {posts.map((post, index) => (
+      <BoxCategory className="inner-wrapper-review-posts">
+        {data.items.map(({ type, id }, index) => {
+          const post = state.source[type][id];
+          return (
             <article key={index} className="review-posts-article">
               <div>
                 <div px={2} className="article-inner-wrapper-reviews">
@@ -27,14 +21,14 @@ const ReviewPostsPage = ({ state, actions, libraries }) => {
                     <Html2React html={post.content.rendered} />
                   </div>
                   {/* <p>
-							  <Html2React html={post.author} />
-						  </p> */}
+  						  <Html2React html={post.author} />
+  					  </p> */}
                 </div>
               </div>
             </article>
-          ))}
-        </BoxCategory>
-      ))}
+          );
+        })}
+      </BoxCategory>
       <Global styles={css(externalCss)} />
     </>
   );

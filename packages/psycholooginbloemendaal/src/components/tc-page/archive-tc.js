@@ -8,7 +8,7 @@ const ArchiveTC = ({ state }) => {
   const data = state.source.get(state.router.link);
   return data.isReady ? (
     <>
-      <BannerTC />
+      <BannerTC data={data} />
       <div className="tc-wrapper">
         <TCPostList posts={data} />
       </div>
