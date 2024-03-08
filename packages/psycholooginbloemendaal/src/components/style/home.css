@@ -140,6 +140,13 @@ body {
   }
 }
 
+.tc-flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: row;
+}
+
 .tc-outer-container {
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
@@ -293,6 +300,7 @@ article:first-of-type p:first-of-type {
     right: 0;
     margin-top: 2rem;
   }
+
   article {
     margin-top: 3rem;
     flex: auto auto auto;

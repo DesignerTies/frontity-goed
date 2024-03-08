@@ -2,7 +2,7 @@ import connect from "@frontity/connect";
 import React from "react";
 import TCPosts from "./tc-posts";
 
-const TcHome = ({ actions }) => {
+const TcHome = () => {
   return (
     <div className="tc-outer-container">
       <div className="tc-inner-container">

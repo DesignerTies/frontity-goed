@@ -3,19 +3,16 @@ import { connect, styled } from "frontity";
 import { Global, css } from "frontity";
 import { getPostsGroupedByCategoryTC } from "../../helpers";
 import externalCss from "../style/home.css";
-import Link from "@frontity/components/link";
 import FeaturedMedia from "../featured-media";
-import dayjs from "dayjs";
 
-const TCPosts = ({ state, actions, libraries }) => {
-  const data = state.source.get(state.router.link);
+const TCPosts = ({ state, libraries }) => {
   const postsPerCategory = getPostsGroupedByCategoryTC(state.source);
   const Html2React = libraries.html2react.Component;
 
   return (
     <>
       <FlexContainer>
-        {postsPerCategory.map(({ posts, category }, index) => (
+        {postsPerCategory.map(({ posts }, index) => (
           <BoxCategory key={index} className="wrapper-articles">
             {posts.map((post, index) => (
               <article key={index}>
