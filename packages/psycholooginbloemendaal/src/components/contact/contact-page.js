@@ -87,7 +87,7 @@ const ContactPage = () => {
                 value={values.subject}
                 placeholder="Telefoonnummer"
               />
-              <input
+              <textarea
                 type="message"
                 name="message"
                 onChange={handleChange}
