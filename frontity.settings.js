@@ -1,16 +1,16 @@
 const settings = {
-  name: "psycholooginbloemendaal",
+  name: 'psycholooginbloemendaal',
   state: {
     frontity: {
-      url: "https://psycholooginbloemendaal.nl",
-      title: "Psycholoog Bloemendaal",
-      description: "Website van Psycholoog in Bloemendaal",
+      url: 'https://psycholooginbloemendaal.nl',
+      title: 'Psycholoog Bloemendaal',
+      description: 'Website van Psycholoog in Bloemendaal',
       debug: true,
     },
   },
   packages: [
     {
-      name: "psycholooginbloemendaal",
+      name: 'psycholooginbloemendaal',
       state: {
         theme: {
           menu: [
@@ -19,15 +19,15 @@ const settings = {
             //   "/"
             // ],
 
-            ["THERAPIE & COACHING", "/therapie-coaching/"],
-            ["OVER", "/over/"],
-            ["WERKWIJZE & TARIEVEN", "/werkwijze-tarieven/"],
-            ["REVIEWS", "/reviews/"],
-            ["JOURNALISTIEKE PRODUCTIES", "/producties/"],
-            ["E-BOEKEN", "/e-books/"],
-            ["BLOG", "/blog/"],
-            ["IN DE MEDIA", "/media/"],
-            ["CONTACT", "/contact/"],
+            ['THERAPIE', '/therapie-coaching/'],
+            ['OVER', '/over/'],
+            ['WERKWIJZE & TARIEVEN', '/werkwijze-tarieven/'],
+            ['REVIEWS', '/reviews/'],
+            ['JOURNALISTIEKE PRODUCTIES', '/producties/'],
+            ['E-BOEKEN', '/e-books/'],
+            ['BLOG', '/blog/'],
+            ['IN DE MEDIA', '/media/'],
+            ['CONTACT', '/contact/'],
           ],
           featured: {
             showOnList: true,
@@ -37,38 +37,38 @@ const settings = {
       },
     },
     {
-      name: "@frontity/wp-source",
+      name: '@frontity/wp-source',
       state: {
         source: {
-          api: "https://wp.psycholooginbloemendaal.nl/wp/wp-json/",
+          api: 'https://wp.psycholooginbloemendaal.nl/wp/wp-json/',
           // api: "http://psycholooginbloemendaal.test/wp-json/",
           // api: "http://psycholooginbloemendaal.dvl.to/wp-json/",
           postTypes: [
             {
-              type: "therapie_coaching",
-              endpoint: "therapie_coaching",
-              archive: "/therapie-coaching",
+              type: 'therapie_coaching',
+              endpoint: 'therapie_coaching',
+              archive: '/therapie-coaching',
             },
             {
-              type: "reviews",
-              endpoint: "reviews",
-              archive: "/reviews",
+              type: 'reviews',
+              endpoint: 'reviews',
+              archive: '/reviews',
             },
           ],
         },
       },
     },
     {
-      name: "@frontity/google-analytics",
+      name: '@frontity/google-analytics',
       state: {
         googleAnalytics: {
-          trackingId: "G-J7TQ44QNCB",
+          trackingId: 'G-J7TQ44QNCB',
         },
       },
     },
-    "@frontity/tiny-router",
-    "@frontity/html2react",
-    "@aamodtgroup/frontity-contact-form-7",
+    '@frontity/tiny-router',
+    '@frontity/html2react',
+    '@aamodtgroup/frontity-contact-form-7',
   ],
 };
 

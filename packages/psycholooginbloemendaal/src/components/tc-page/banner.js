@@ -1,12 +1,10 @@
-import connect from "@frontity/connect";
+import connect from '@frontity/connect';
 
-const BannerTC = ({ data }) => {
+const BannerTC = () => {
   return (
-    <div className="banner-tc" role="img">
-      <div className="title-tc-page">
-        <h1 style={{ textTransform: "uppercase" }}>
-          {data.type.replace("_", " & ")}
-        </h1>
+    <div className='banner-tc' role='img'>
+      <div className='title-tc-page'>
+        <h1 style={{ textTransform: 'uppercase' }}>Therapie</h1>
       </div>
     </div>
   );

@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { loadable, Global, css, connect, styled, Head } from "frontity";
-import Switch from "@frontity/components/switch";
-import Header from "./header";
-import List from "./list";
-import ArchiveTc from "./tc-page/archive-tc";
-import Post from "./post";
-import Loading from "./loading";
-import Title from "./title";
-import PageError from "./page-error";
-import Home from "./home/home";
-import Footer from "./footer";
-import Over from "./over/over";
-const WerkwijzePage = loadable(() => import("./werkwijze/werkwijze-page"));
-const ReviewsPage = loadable(() => import("./reviews/reviews-page"));
-const BlogPage = loadable(() => import("./blog/blogPage"));
-const ProductiesPage = loadable(() => import("./producties/producties-page"));
-const MediaPage = loadable(() => import("./media/media-page"));
-const ContactPage = loadable(() => import("./contact/contact-page"));
-const Ebooks = loadable(() => import("./e-books"));
-import Link from "./link";
-import logo from "../../static/logo.svg";
+import React, { useState, useEffect } from 'react';
+import { loadable, Global, css, connect, styled, Head } from 'frontity';
+import Switch from '@frontity/components/switch';
+import Header from './header';
+import List from './list';
+import ArchiveTc from './tc-page/archive-tc';
+import Post from './post';
+import Loading from './loading';
+import Title from './title';
+import PageError from './page-error';
+import Home from './home/home';
+import Footer from './footer';
+import Over from './over/over';
+const WerkwijzePage = loadable(() => import('./werkwijze/werkwijze-page'));
+const ReviewsPage = loadable(() => import('./reviews/reviews-page'));
+const BlogPage = loadable(() => import('./blog/blogPage'));
+const ProductiesPage = loadable(() => import('./producties/producties-page'));
+const MediaPage = loadable(() => import('./media/media-page'));
+const ContactPage = loadable(() => import('./contact/contact-page'));
+const Ebooks = loadable(() => import('./e-books'));
+import Link from './link';
+import logo from '../../static/logo.svg';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -32,109 +32,100 @@ import logo from "../../static/logo.svg";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  const [colorChange, setColorchange] = useState("");
+  const [colorChange, setColorchange] = useState('');
   const [dropDown, setDropDown] = useState(false);
   const classes = `${colorChange} dropdown-container`;
   const linkClasses = `${colorChange} link-header`;
   const linkClassesDropdown = `${colorChange} nav-link-dropdown-container`;
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     const changeColorNavbar = () => {
       if (window.scrollY >= 40) {
-        setColorchange("colorChanged");
+        setColorchange('colorChanged');
       } else {
-        setColorchange("");
+        setColorchange('');
       }
     };
-    window.addEventListener("scroll", changeColorNavbar);
+    window.addEventListener('scroll', changeColorNavbar);
   }
 
   function titleCase(str) {
-    var splitStr = str.toLowerCase().split(" ");
+    var splitStr = str.toLowerCase().split(' ');
     for (var i = 0; i < splitStr.length; i++) {
       // You do not need to check if i is larger than splitStr length, as your for does that for you
       // Assign it back to the array
-      splitStr[i] =
-        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+      splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     // Directly return the joined string
-    return splitStr.join(" ");
+    return splitStr.join(' ');
   }
 
-  const pageTitle = titleCase(
-    state.router.link.replaceAll("/", "").replaceAll("-", " & ")
-  );
+  const pageTitle = titleCase(state.router.link.replaceAll('/', '').replaceAll('-', ' & '));
 
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
       <Head>
-        <meta name="description" content={state.frontity.description} />
-        <html lang="nl" />
+        <meta name='description' content={state.frontity.description} />
+        <html lang='nl' />
         <title>
-          {data.isHome
-            ? "Psycholoog in Bloemendaal - Home"
-            : `Psycholoog in Bloemendaal - ${pageTitle}`}
+          {data.isHome ? 'Psycholoog in Bloemendaal - Home' : `Psycholoog in Bloemendaal - ${pageTitle}`}
         </title>
         <meta
-          property="og:title"
-          content={
-            data.isHome
-              ? "Psycholoog in Bloemendaal"
-              : `Psycholoog in Bloemendaal - ${pageTitle}`
-          }
+          property='og:title'
+          content={data.isHome ? 'Psycholoog in Bloemendaal' : `Psycholoog in Bloemendaal - ${pageTitle}`}
         />
-        <meta property="og:url" content={state.router.link} />
+        <meta property='og:url' content={state.router.link} />
         <meta
-          property="og:image"
+          property='og:image'
           content={
             data.isTherapieCoachingArchive
-              ? "https://live.staticflickr.com/65535/51736233127_67dd7bd950_k.jpg"
+              ? 'https://live.staticflickr.com/65535/51736233127_67dd7bd950_k.jpg'
               : data.isPage && data.id === 82
-              ? "https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2023/07/mama-over.webp"
-              : data.isPage && data.id === 84
-              ? "https://live.staticflickr.com/65535/51742593618_a0db240583_k.jpg"
-              : data.isPage && data.id === 145
-              ? "https://live.staticflickr.com/65535/51745530064_a1710777bc_k.jpg"
-              : data.isPage && data.id === 7
-              ? "https://live.staticflickr.com/65535/51752751153_8700be225c_k.jpg"
-              : data.isPage && data.id === 112
-              ? "https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2022/03/Screenshot_2022-03-08_20-15-09-1.png"
-              : data.isPage && data.id === 150
-              ? "https://live.staticflickr.com/65535/51883144082_7c72eee258_k.jpg"
-              : data.isPage && data.id === 109
-              ? "https://live.staticflickr.com/65535/51761402653_2d8493622a_k.jpg"
-              : "https://live.staticflickr.com/65535/51695227602_0d0eecb4d7_b.jpg"
+                ? 'https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2023/07/mama-over.webp'
+                : data.isPage && data.id === 84
+                  ? 'https://live.staticflickr.com/65535/51742593618_a0db240583_k.jpg'
+                  : data.isPage && data.id === 145
+                    ? 'https://live.staticflickr.com/65535/51745530064_a1710777bc_k.jpg'
+                    : data.isPage && data.id === 7
+                      ? 'https://live.staticflickr.com/65535/51752751153_8700be225c_k.jpg'
+                      : data.isPage && data.id === 112
+                        ? 'https://wp.psycholooginbloemendaal.nl/wp/wp-content/uploads/2022/03/Screenshot_2022-03-08_20-15-09-1.png'
+                        : data.isPage && data.id === 150
+                          ? 'https://live.staticflickr.com/65535/51883144082_7c72eee258_k.jpg'
+                          : data.isPage && data.id === 109
+                            ? 'https://live.staticflickr.com/65535/51761402653_2d8493622a_k.jpg'
+                            : 'https://live.staticflickr.com/65535/51695227602_0d0eecb4d7_b.jpg'
           }
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
 
       <Global styles={globalStyles} />
       {/* Add the header of the site. */}
-      <div className="App">
+      <div className='App'>
         <header className={colorChange}>
           {/* <div className="logo">
           </div> */}
           <nav>
-            <ul className="main-nav-list">
+            <ul className='main-nav-list'>
               <li>
-                <Link link="/therapie-coaching/" className={linkClasses}>
-                  THERAPIE & COACHING
+                <Link link='/therapie-coaching/' className={linkClasses}>
+                  THERAPIE
                 </Link>
               </li>
               <li>
-                <Link link="/over/" className={linkClasses}>
+                <Link link='/over/' className={linkClasses}>
                   OVER
                 </Link>
               </li>
               <li>
-                <Link link="/werkwijze-tarieven/" className={linkClasses}>
+                <Link link='/werkwijze-tarieven/' className={linkClasses}>
                   WERKWIJZE & TARIEVEN
                 </Link>
               </li>
               <li>
-                <Link link="/reviews/" className={linkClasses}>
+                <Link link='/reviews/' className={linkClasses}>
                   REVIEWS
                 </Link>
               </li>
@@ -146,7 +137,7 @@ const Theme = ({ state }) => {
                 &MEER ▼
               </li>
               <li>
-                <Link link="/contact/" className={linkClasses}>
+                <Link link='/contact/' className={linkClasses}>
                   CONTACT
                 </Link>
               </li>
@@ -158,23 +149,23 @@ const Theme = ({ state }) => {
                 onMouseLeave={() => setDropDown(false)}
               >
                 <ul className={colorChange}>
-                  <li className="dropdown-item">
-                    <Link link="/blog/" className={linkClassesDropdown}>
+                  <li className='dropdown-item'>
+                    <Link link='/blog/' className={linkClassesDropdown}>
                       BLOG
                     </Link>
                   </li>
-                  <li className="dropdown-item">
-                    <Link link="/e-books/" className={linkClassesDropdown}>
+                  <li className='dropdown-item'>
+                    <Link link='/e-books/' className={linkClassesDropdown}>
                       E-BOOKS
                     </Link>
                   </li>
-                  <li className="dropdown-item">
-                    <Link link="/producties/" className={linkClassesDropdown}>
+                  <li className='dropdown-item'>
+                    <Link link='/producties/' className={linkClassesDropdown}>
                       PRODUCTIES
                     </Link>
                   </li>
-                  <li className="dropdown-item">
-                    <Link link="/media/" className={linkClassesDropdown}>
+                  <li className='dropdown-item'>
+                    <Link link='/media/' className={linkClassesDropdown}>
                       IN DE MEDIA
                     </Link>
                   </li>
@@ -182,7 +173,7 @@ const Theme = ({ state }) => {
               </div>
             )}
 
-            <Header className="navigation" colorChange={colorChange} />
+            <Header className='navigation' colorChange={colorChange} />
           </nav>
         </header>
       </div>
@@ -201,12 +192,12 @@ const Theme = ({ state }) => {
           <ProductiesPage when={data.isPage && data.id === 112} />
           <MediaPage when={data.isPage && data.id === 150} />
           <ContactPage when={data.isPage && data.id === 109} />
-          <Ebooks when={state.router.link === "/e-books/"} />
+          <Ebooks when={state.router.link === '/e-books/'} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
-      <Link link="/" className="logo">
+      <Link link='/' className='logo'>
         <img src={logo} />
       </Link>
       <Footer />
@@ -359,9 +350,5 @@ const globalStyles = css`
 const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  background-image: linear-gradient(180deg, rgba(66, 174, 228, 0.1), rgba(66, 174, 228, 0));
 `;
