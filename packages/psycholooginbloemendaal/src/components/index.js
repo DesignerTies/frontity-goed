@@ -10,6 +10,7 @@ import Title from './title';
 import PageError from './page-error';
 import Home from './home/home';
 import Footer from './footer';
+import InstaProm from './insta-prom';
 import Over from './over/over';
 const WerkwijzePage = loadable(() => import('./werkwijze/werkwijze-page'));
 const ReviewsPage = loadable(() => import('./reviews/reviews-page'));
@@ -155,11 +156,6 @@ const Theme = ({ state }) => {
                     </Link>
                   </li>
                   <li className='dropdown-item'>
-                    <Link link='/e-books/' className={linkClassesDropdown}>
-                      E-BOOKS
-                    </Link>
-                  </li>
-                  <li className='dropdown-item'>
                     <Link link='/producties/' className={linkClassesDropdown}>
                       PRODUCTIES
                     </Link>
@@ -200,6 +196,7 @@ const Theme = ({ state }) => {
       <Link link='/' className='logo'>
         <img src={logo} />
       </Link>
+      <InstaProm />
       <Footer />
     </>
   );

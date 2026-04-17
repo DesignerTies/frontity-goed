@@ -13,9 +13,9 @@ const RoundedDiv = () => {
         <h1>WELKOM</h1>
         <h2>Ik help je graag</h2>
         <p>
-          <br /> Als het niet meer gaat zoals je wilt, ligt daar vaak meer onder dan je denkt. Oude patronen
-          en ervaringen sturen hoe je voelt, denkt en reageert. Vaak zonder dat je het doorhebt. Dat kan
-          ervoor zorgen dat je vastloopt, in jezelf of in je relaties. <br />
+          <br /> Als het niet meer gaat zoals je wilt, ligt daar vaak meer onder. Oude patronen en ervaringen
+          sturen hoe je voelt, denkt en reageert. Vaak zonder dat je het doorhebt. Dat kan ervoor zorgen dat
+          je vastloopt, in jezelf of in je relaties. <br />
           <br /> In mijn praktijk werk ik vanuit kennis van trauma, hechting en het brein. Ik ben
           wetenschappelijk opgeleid en heb jarenlange ervaring in de praktijk. <br />
           <br /> We maken inzichtelijk wat jou stuurt. Maar begrijpen alleen is niet genoeg, het gaat ook om
